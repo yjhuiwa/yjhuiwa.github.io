@@ -5,8 +5,8 @@
     
     <entry>
       <title>20221023</title>
-      <link href="/2022/10/23/index/"/>
-      <url>/2022/10/23/index/</url>
+      <link href="/2022/10/23/first/"/>
+      <url>/2022/10/23/first/</url>
       
         <content type="html"><![CDATA[<h1 id="the-first"><a href="#the-first" class="headerlink" title="the first"></a>the first</h1><pre class=" language-c++"><code class="language-c++">#include<iostream>using namespace std;int main(){    cout<<"hello"<<endl;    return 0;}</code></pre><p>$a^2=b^2+c^2$</p>]]></content>
       
