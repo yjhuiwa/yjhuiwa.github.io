@@ -3,11 +3,11 @@
   <title>朝花朝拾</title>
   
   <subtitle>Welcome to here...</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://767879.xyz/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="http://767879.xyz/"/>
   <updated>2022-10-23T15:33:38.671Z</updated>
-  <id>http://example.com/</id>
+  <id>http://767879.xyz/</id>
   
   <author>
     <name>Yjhui</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>线性表</title>
-    <link href="http://example.com/2022/10/23/xian-xing-biao-adt/"/>
-    <id>http://example.com/2022/10/23/xian-xing-biao-adt/</id>
+    <link href="http://767879.xyz/2022/10/23/xian-xing-biao-adt/"/>
+    <id>http://767879.xyz/2022/10/23/xian-xing-biao-adt/</id>
     <published>2022-10-23T15:03:51.117Z</published>
     <updated>2022-10-23T15:33:38.671Z</updated>
     
@@ -28,19 +28,19 @@
     
     
     
-    <category term="数据结构" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="http://767879.xyz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-    <category term="数据结构" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="http://767879.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="链表" scheme="http://example.com/tags/%E9%93%BE%E8%A1%A8/"/>
+    <category term="链表" scheme="http://767879.xyz/tags/%E9%93%BE%E8%A1%A8/"/>
     
   </entry>
   
   <entry>
     <title>stl基础</title>
-    <link href="http://example.com/2022/03/01/stl-ji-chu/"/>
-    <id>http://example.com/2022/03/01/stl-ji-chu/</id>
+    <link href="http://767879.xyz/2022/03/01/stl-ji-chu/"/>
+    <id>http://767879.xyz/2022/03/01/stl-ji-chu/</id>
     <published>2022-03-01T15:02:27.299Z</published>
     <updated>2022-10-23T15:35:34.714Z</updated>
     
@@ -49,19 +49,19 @@
     
     
     
-    <category term="stl" scheme="http://example.com/categories/stl/"/>
+    <category term="stl" scheme="http://767879.xyz/categories/stl/"/>
     
     
-    <category term="c++" scheme="http://example.com/tags/c/"/>
+    <category term="c++" scheme="http://767879.xyz/tags/c/"/>
     
-    <category term="stl" scheme="http://example.com/tags/stl/"/>
+    <category term="stl" scheme="http://767879.xyz/tags/stl/"/>
     
   </entry>
   
   <entry>
     <title>git 提交代码被拒绝</title>
-    <link href="http://example.com/2021/12/25/git-ti-jiao-dai-ma-bei-ju-jue/"/>
-    <id>http://example.com/2021/12/25/git-ti-jiao-dai-ma-bei-ju-jue/</id>
+    <link href="http://767879.xyz/2021/12/25/git-ti-jiao-dai-ma-bei-ju-jue/"/>
+    <id>http://767879.xyz/2021/12/25/git-ti-jiao-dai-ma-bei-ju-jue/</id>
     <published>2021-12-24T16:16:02.922Z</published>
     <updated>2022-10-23T15:34:46.233Z</updated>
     
@@ -70,19 +70,19 @@
     
     
     
-    <category term="git" scheme="http://example.com/categories/git/"/>
+    <category term="git" scheme="http://767879.xyz/categories/git/"/>
     
     
-    <category term="git" scheme="http://example.com/tags/git/"/>
+    <category term="error" scheme="http://767879.xyz/tags/error/"/>
     
-    <category term="error" scheme="http://example.com/tags/error/"/>
+    <category term="git" scheme="http://767879.xyz/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>markdown语法</title>
-    <link href="http://example.com/2021/12/24/markdown-yu-fa/"/>
-    <id>http://example.com/2021/12/24/markdown-yu-fa/</id>
+    <link href="http://767879.xyz/2021/12/24/markdown-yu-fa/"/>
+    <id>http://767879.xyz/2021/12/24/markdown-yu-fa/</id>
     <published>2021-12-24T06:54:34.380Z</published>
     <updated>2022-10-23T15:34:58.970Z</updated>
     
@@ -91,17 +91,17 @@
     
     
     
-    <category term="markdown" scheme="http://example.com/categories/markdown/"/>
+    <category term="markdown" scheme="http://767879.xyz/categories/markdown/"/>
     
     
-    <category term="markdown" scheme="http://example.com/tags/markdown/"/>
+    <category term="markdown" scheme="http://767879.xyz/tags/markdown/"/>
     
   </entry>
   
   <entry>
     <title>嵌入式H2数据库</title>
-    <link href="http://example.com/2021/12/24/qian-ru-shi-h2-shu-ju-ku/"/>
-    <id>http://example.com/2021/12/24/qian-ru-shi-h2-shu-ju-ku/</id>
+    <link href="http://767879.xyz/2021/12/24/qian-ru-shi-h2-shu-ju-ku/"/>
+    <id>http://767879.xyz/2021/12/24/qian-ru-shi-h2-shu-ju-ku/</id>
     <published>2021-12-24T06:21:13.981Z</published>
     <updated>2022-10-23T15:31:02.601Z</updated>
     
@@ -110,19 +110,19 @@
     
     
     
-    <category term="数据库" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="http://767879.xyz/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-    <category term="数据库" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="http://767879.xyz/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-    <category term="H2" scheme="http://example.com/tags/H2/"/>
+    <category term="H2" scheme="http://767879.xyz/tags/H2/"/>
     
   </entry>
   
   <entry>
     <title>神奇的网站</title>
-    <link href="http://example.com/2021/12/22/shen-qi-de-wang-zhan/"/>
-    <id>http://example.com/2021/12/22/shen-qi-de-wang-zhan/</id>
+    <link href="http://767879.xyz/2021/12/22/shen-qi-de-wang-zhan/"/>
+    <id>http://767879.xyz/2021/12/22/shen-qi-de-wang-zhan/</id>
     <published>2021-12-21T16:06:05.577Z</published>
     <updated>2022-10-23T15:32:19.087Z</updated>
     
@@ -131,19 +131,19 @@
     
     
     
-    <category term="tools" scheme="http://example.com/categories/tools/"/>
+    <category term="tools" scheme="http://767879.xyz/categories/tools/"/>
     
     
-    <category term="website" scheme="http://example.com/tags/website/"/>
+    <category term="website" scheme="http://767879.xyz/tags/website/"/>
     
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
+    <category term="tools" scheme="http://767879.xyz/tags/tools/"/>
     
   </entry>
   
   <entry>
     <title>XFtp6提示更新无法打开</title>
-    <link href="http://example.com/2021/12/21/xftp6-ti-shi-geng-xin-wu-fa-da-kai/"/>
-    <id>http://example.com/2021/12/21/xftp6-ti-shi-geng-xin-wu-fa-da-kai/</id>
+    <link href="http://767879.xyz/2021/12/21/xftp6-ti-shi-geng-xin-wu-fa-da-kai/"/>
+    <id>http://767879.xyz/2021/12/21/xftp6-ti-shi-geng-xin-wu-fa-da-kai/</id>
     <published>2021-12-21T15:24:38.753Z</published>
     <updated>2022-10-23T15:35:39.898Z</updated>
     
@@ -152,19 +152,19 @@
     
     
     
-    <category term="服务器" scheme="http://example.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="http://767879.xyz/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-    <category term="error" scheme="http://example.com/tags/error/"/>
+    <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-    <category term="服务器" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="error" scheme="http://767879.xyz/tags/error/"/>
     
   </entry>
   
   <entry>
     <title>使用gitee和picgo搭建图床</title>
-    <link href="http://example.com/2021/12/18/shi-yong-gitee-he-picgo-da-jian-tu-chuang/"/>
-    <id>http://example.com/2021/12/18/shi-yong-gitee-he-picgo-da-jian-tu-chuang/</id>
+    <link href="http://767879.xyz/2021/12/18/shi-yong-gitee-he-picgo-da-jian-tu-chuang/"/>
+    <id>http://767879.xyz/2021/12/18/shi-yong-gitee-he-picgo-da-jian-tu-chuang/</id>
     <published>2021-12-18T14:09:55.655Z</published>
     <updated>2022-10-23T15:34:33.585Z</updated>
     
@@ -173,12 +173,12 @@
     
     
     
-    <category term="博客" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="博客" scheme="http://767879.xyz/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-    <category term="Gitee" scheme="http://example.com/tags/Gitee/"/>
+    <category term="Gitee" scheme="http://767879.xyz/tags/Gitee/"/>
     
-    <category term="PicGo" scheme="http://example.com/tags/PicGo/"/>
+    <category term="PicGo" scheme="http://767879.xyz/tags/PicGo/"/>
     
   </entry>
   
