@@ -8,7 +8,7 @@
       <link href="/2022/10/23/first/"/>
       <url>/2022/10/23/first/</url>
       
-        <content type="html"><![CDATA[<h1 id="the-first"><a href="#the-first" class="headerlink" title="the first"></a>the first</h1><pre class=" language-c++"><code class="language-c++">#include<iostream>using namespace std;int main(){    cout<<"hello"<<endl;    return 0;}</code></pre><p>$a^2=b^2+c^2$</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="the-first"><a href="#the-first" class="headerlink" title="the first"></a>the first</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;iostream&gt;using namespace std;int main(){    cout&lt;&lt;"hello"&lt;&lt;endl;    return 0;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>$a^2=b^2+c^2$</p>]]></content>
       
       
       
