@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-10-24T13:10:45.183Z</updated>
+  <updated>2022-10-24T14:14:51.684Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>进程的描述与控制</title>
+    <link href="http://767879.xyz/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/"/>
+    <id>http://767879.xyz/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/</id>
+    <published>2022-10-24T14:11:15.448Z</published>
+    <updated>2022-10-24T14:14:51.684Z</updated>
+    
+    
+    <summary type="html">操作系统基础</summary>
+    
+    
+    
+    <category term="操作系统" scheme="http://767879.xyz/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="操作系统" scheme="http://767879.xyz/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="进程" scheme="http://767879.xyz/tags/%E8%BF%9B%E7%A8%8B/"/>
+    
+    <category term="并行" scheme="http://767879.xyz/tags/%E5%B9%B6%E8%A1%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>操作系统概述</title>
@@ -36,29 +59,6 @@
   </entry>
   
   <entry>
-    <title>进程的描述与控制</title>
-    <link href="http://767879.xyz/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/"/>
-    <id>http://767879.xyz/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/</id>
-    <published>2022-10-24T13:46:20.968Z</published>
-    <updated>2022-10-24T14:08:01.525Z</updated>
-    
-    
-    <summary type="html">操作系统基础</summary>
-    
-    
-    
-    <category term="操作系统" scheme="http://767879.xyz/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-    <category term="操作系统" scheme="http://767879.xyz/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="进程" scheme="http://767879.xyz/tags/%E8%BF%9B%E7%A8%8B/"/>
-    
-    <category term="并行" scheme="http://767879.xyz/tags/%E5%B9%B6%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>XFtp6提示更新无法打开</title>
     <link href="http://767879.xyz/2022/10/24/xftp6-ti-shi-geng-xin-wu-fa-da-kai/"/>
     <id>http://767879.xyz/2022/10/24/xftp6-ti-shi-geng-xin-wu-fa-da-kai/</id>
@@ -73,9 +73,9 @@
     <category term="服务器" scheme="http://767879.xyz/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-    <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
     <category term="error" scheme="http://767879.xyz/tags/error/"/>
+    
+    <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
@@ -174,9 +174,9 @@
     <category term="git" scheme="http://767879.xyz/categories/git/"/>
     
     
-    <category term="error" scheme="http://767879.xyz/tags/error/"/>
-    
     <category term="git" scheme="http://767879.xyz/tags/git/"/>
+    
+    <category term="error" scheme="http://767879.xyz/tags/error/"/>
     
   </entry>
   
