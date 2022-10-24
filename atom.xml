@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-10-24T12:13:00.937Z</updated>
+  <updated>2022-10-24T13:10:45.183Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -17,11 +17,53 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>操作系统概述</title>
+    <link href="http://767879.xyz/2022/10/24/cao-zuo-xi-tong-gai-shu/"/>
+    <id>http://767879.xyz/2022/10/24/cao-zuo-xi-tong-gai-shu/</id>
+    <published>2022-10-24T13:00:54.601Z</published>
+    <updated>2022-10-24T13:10:45.183Z</updated>
+    
+    
+    <summary type="html">操作系统概述</summary>
+    
+    
+    
+    <category term="操作系统" scheme="http://767879.xyz/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="操作系统" scheme="http://767879.xyz/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>进程的描述与控制</title>
+    <link href="http://767879.xyz/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/"/>
+    <id>http://767879.xyz/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/</id>
+    <published>2022-10-24T13:00:54.600Z</published>
+    <updated>2022-10-24T13:09:36.890Z</updated>
+    
+    
+    <summary type="html">操作系统基础</summary>
+    
+    
+    
+    <category term="操作系统" scheme="http://767879.xyz/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="操作系统" scheme="http://767879.xyz/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="进程" scheme="http://767879.xyz/tags/%E8%BF%9B%E7%A8%8B/"/>
+    
+    <category term="并行" scheme="http://767879.xyz/tags/%E5%B9%B6%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>XFtp6提示更新无法打开</title>
     <link href="http://767879.xyz/2022/10/24/xftp6-ti-shi-geng-xin-wu-fa-da-kai/"/>
     <id>http://767879.xyz/2022/10/24/xftp6-ti-shi-geng-xin-wu-fa-da-kai/</id>
     <published>2022-10-24T12:13:06.515Z</published>
-    <updated>2022-10-24T12:13:00.937Z</updated>
+    <updated>2022-10-24T12:57:42.546Z</updated>
     
     
     <summary type="html">XFtp6提示更新错误解决办法</summary>
@@ -38,32 +80,11 @@
   </entry>
   
   <entry>
-    <title>线性表</title>
-    <link href="http://767879.xyz/2022/10/24/xian-xing-biao-adt/"/>
-    <id>http://767879.xyz/2022/10/24/xian-xing-biao-adt/</id>
-    <published>2022-10-24T11:42:24.669Z</published>
-    <updated>2022-10-23T15:33:38.671Z</updated>
-    
-    
-    <summary type="html">线性表基础</summary>
-    
-    
-    
-    <category term="数据结构" scheme="http://767879.xyz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    
-    <category term="数据结构" scheme="http://767879.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="链表" scheme="http://767879.xyz/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
     <title>二分查找</title>
     <link href="http://767879.xyz/2022/10/24/er-fen-cha-zhao/"/>
     <id>http://767879.xyz/2022/10/24/er-fen-cha-zhao/</id>
     <published>2022-10-24T11:22:36.577Z</published>
-    <updated>2022-10-24T11:46:18.390Z</updated>
+    <updated>2022-10-24T13:05:41.906Z</updated>
     
     
       
@@ -91,7 +112,7 @@
     <link href="http://767879.xyz/2022/10/24/x-de-n-ci-fang/"/>
     <id>http://767879.xyz/2022/10/24/x-de-n-ci-fang/</id>
     <published>2022-10-24T11:22:36.575Z</published>
-    <updated>2022-10-24T11:46:03.666Z</updated>
+    <updated>2022-10-24T13:04:47.034Z</updated>
     
     
       
@@ -107,9 +128,9 @@
     <category term="算法" scheme="http://767879.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="递归" scheme="http://767879.xyz/tags/%E9%80%92%E5%BD%92/"/>
-    
     <category term="时间复杂度" scheme="http://767879.xyz/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
+    
+    <category term="递归" scheme="http://767879.xyz/tags/%E9%80%92%E5%BD%92/"/>
     
   </entry>
   
@@ -118,7 +139,7 @@
     <link href="http://767879.xyz/2022/10/24/shi-jian-fu-za-du/"/>
     <id>http://767879.xyz/2022/10/24/shi-jian-fu-za-du/</id>
     <published>2022-10-24T11:22:36.573Z</published>
-    <updated>2022-10-24T11:46:34.838Z</updated>
+    <updated>2022-10-24T12:58:31.335Z</updated>
     
     
       
@@ -164,7 +185,7 @@
     <link href="http://767879.xyz/2021/12/24/markdown-yu-fa/"/>
     <id>http://767879.xyz/2021/12/24/markdown-yu-fa/</id>
     <published>2021-12-24T06:54:34.380Z</published>
-    <updated>2022-10-23T15:34:58.970Z</updated>
+    <updated>2022-10-24T13:04:17.359Z</updated>
     
     
     <summary type="html">markdown基础语法</summary>
@@ -183,7 +204,7 @@
     <link href="http://767879.xyz/2021/12/24/qian-ru-shi-h2-shu-ju-ku/"/>
     <id>http://767879.xyz/2021/12/24/qian-ru-shi-h2-shu-ju-ku/</id>
     <published>2021-12-24T06:21:13.981Z</published>
-    <updated>2022-10-23T15:31:02.601Z</updated>
+    <updated>2022-10-24T12:58:15.832Z</updated>
     
     
     <summary type="html">嵌入式H2数据库配置</summary>

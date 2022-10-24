@@ -4,16 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="线性表, 朝花朝拾">
-    <meta name="description" content="线性表Operation
-InitList(*L)：初始化，创建一个空的线性表
-
-LIstEmpty(L)：判断线性表是否为空表
-
-ClearList(*L)：清空线性表
-
-GetElem(L,i,*e)：将线性表中第i个元素的值返回给e
-">
+    <meta name="keywords" content="操作系统概述, 朝花朝拾">
+    <meta name="description" content="操作系统概述操作系统的概念操作系统的功能和目标–作为系统资源的管理者graph LR
+A[作为系统资源的管理者]--&amp;gt;B[提供的功能]
+A--&amp;gt;C[目标]
+B--&amp;gt;E[处理机管理]
+B--&amp;gt;D[存储器管理]
+B--&amp;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +22,7 @@ GetElem(L,i,*e)：将线性表中第i个元素的值返回给e
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>线性表 | 朝花朝拾</title>
+    <title>操作系统概述 | 朝花朝拾</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -281,12 +278,12 @@ GetElem(L,i,*e)：将线性表中第i个元素的值返回给e
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">线性表</h1>
+                    <h1 class="description center-align post-title">操作系统概述</h1>
                 </div>
             </div>
         </div>
@@ -310,12 +307,8 @@ GetElem(L,i,*e)：将线性表中第i个元素的值返回给e
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">数据结构</span>
-                            </a>
-                        
-                            <a href="/tags/%E9%93%BE%E8%A1%A8/">
-                                <span class="chip bg-color">链表</span>
+                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">操作系统</span>
                             </a>
                         
                     </div>
@@ -326,8 +319,8 @@ GetElem(L,i,*e)：将线性表中第i个元素的值返回给e
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
-                                数据结构
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                操作系统
                             </a>
                         
                     </div>
@@ -346,21 +339,21 @@ GetElem(L,i,*e)：将线性表中第i个元素的值返回给e
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-23
+                    2022-10-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    507
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -378,161 +371,98 @@ GetElem(L,i,*e)：将线性表中第i个元素的值返回给e
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><h2 id="Operation"><a href="#Operation" class="headerlink" title="Operation"></a>Operation</h2><ul>
-<li><p>InitList(*L)：初始化，创建一个空的线性表</p>
-</li>
-<li><p>LIstEmpty(L)：判断线性表是否为空表</p>
-</li>
-<li><p>ClearList(*L)：清空线性表</p>
-</li>
-<li><p>GetElem(L,i,*e)：将线性表中第i个元素的值返回给e</p>
-</li>
-<li><p>LocateElem(L,e)：查找元素位置，0表示是失败</p>
-</li>
-<li><p>ListInsert(*L,i,e)：在指定位置插入元素</p>
-</li>
-<li><p>ListDelete(*L,i,*e)：删除第i个元素</p>
-</li>
-<li><p>ListLength(L)：返回元素个数</p>
-</li>
-</ul>
-<h2 id="线性表的顺序存储结构"><a href="#线性表的顺序存储结构" class="headerlink" title="线性表的顺序存储结构"></a>线性表的顺序存储结构</h2><h3 id="结构定义"><a href="#结构定义" class="headerlink" title="结构定义"></a>结构定义</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span>
-<span class="token punctuation">{</span>
-    ElemType data<span class="token punctuation">[</span>MAXSIZE<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> length<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>SqList<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a>操作系统概述</h1><h2 id="操作系统的概念"><a href="#操作系统的概念" class="headerlink" title="操作系统的概念"></a>操作系统的概念</h2><h3 id="操作系统的功能和目标"><a href="#操作系统的功能和目标" class="headerlink" title="操作系统的功能和目标"></a>操作系统的功能和目标</h3><h4 id="–作为系统资源的管理者"><a href="#–作为系统资源的管理者" class="headerlink" title="–作为系统资源的管理者"></a>–作为系统资源的管理者</h4><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
+A<span class="token text string">[作为系统资源的管理者]</span><span class="token arrow operator">--&gt;</span>B<span class="token text string">[提供的功能]</span>
+A<span class="token arrow operator">--&gt;</span>C<span class="token text string">[目标]</span>
+B<span class="token arrow operator">--&gt;</span>E<span class="token text string">[处理机管理]</span>
+B<span class="token arrow operator">--&gt;</span>D<span class="token text string">[存储器管理]</span>
+B<span class="token arrow operator">--&gt;</span>H<span class="token text string">[文件管理]</span>
+B<span class="token arrow operator">--&gt;</span>F<span class="token text string">[设备管理]</span>
+C<span class="token arrow operator">--&gt;</span>G<span class="token text string">[安全,高效]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h4 id="–作为用户和计算机硬件之间的接口"><a href="#–作为用户和计算机硬件之间的接口" class="headerlink" title="–作为用户和计算机硬件之间的接口"></a>–作为用户和计算机硬件之间的接口</h4><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
+A<span class="token text string">[作为用户和计算机硬件之间的接口]</span><span class="token arrow operator">--&gt;</span>B<span class="token text string">[提供的功能]</span>
+A<span class="token arrow operator">--&gt;</span>C<span class="token text string">[目标]</span>
+C<span class="token arrow operator">--&gt;</span>D<span class="token text string">[方便用户使用]</span>
+B<span class="token arrow operator">--&gt;</span>E<span class="token text string">[命令接口]</span>
+B<span class="token arrow operator">--&gt;</span>F<span class="token text string">[程序接口]</span>
+B<span class="token arrow operator">--&gt;</span>G<span class="token text string">[GUI]</span>
+E<span class="token arrow operator">--&gt;</span>H<span class="token text string">[联机命令接口]</span>
+E<span class="token arrow operator">--&gt;</span>I<span class="token text string">[脱机命令接口]</span>
+H<span class="token arrow operator">---</span>J<span class="token text string">[说一句做一句,说一堆做一堆]</span>
+I<span class="token arrow operator">---</span>J<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h4 id="–作为最接近硬件的层次"><a href="#–作为最接近硬件的层次" class="headerlink" title="–作为最接近硬件的层次"></a>–作为最接近硬件的层次</h4><h3 id="操作系统的四个基本特征"><a href="#操作系统的四个基本特征" class="headerlink" title="操作系统的四个基本特征"></a>操作系统的四个基本特征</h3><h4 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h4><p>微观上交替执行，区别于并行：同时执行</p>
+<h4 id="共享"><a href="#共享" class="headerlink" title="共享"></a>共享</h4><p>共享方式：互斥共享（eg. 摄像头资源）、同时共享（宏观/微观）</p>
+<blockquote>
+<p>并发性与共享性互为存在条件</p>
+</blockquote>
+<h4 id="虚拟"><a href="#虚拟" class="headerlink" title="虚拟"></a>虚拟</h4><p>物理实体和逻辑实体</p>
+<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
+A<span class="token text string">[虚拟技术]</span><span class="token arrow operator">--&gt;</span>B<span class="token text string">[空分复用技术,如虚拟处理器]</span>
+A<span class="token arrow operator">--&gt;</span>C<span class="token text string">[时分复用技术,如虚拟处理器]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="InitList-L"><a href="#InitList-L" class="headerlink" title="InitList(*L)"></a>InitList(*L)</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c">Status <span class="token function">InitList</span><span class="token punctuation">(</span>SqList <span class="token operator">*</span>L<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    L<span class="token operator">-&gt;</span>length<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h4><p>并发性—&gt;异步性</p>
+<h1 id="操作系统的发展过程"><a href="#操作系统的发展过程" class="headerlink" title="操作系统的发展过程"></a>操作系统的发展过程</h1><h3 id="手工操作阶段"><a href="#手工操作阶段" class="headerlink" title="手工操作阶段"></a>手工操作阶段</h3><p>缺点：用户独占全集、人机速度矛盾导致资源利用率极低</p>
+<h3 id="批处理阶段–单道批处理系统"><a href="#批处理阶段–单道批处理系统" class="headerlink" title="批处理阶段–单道批处理系统"></a>批处理阶段–单道批处理系统</h3><p>优点：缓解了一定程度的人机速度矛盾，资源利用率有所提升</p>
+<p>缺点:内存中仅能有一道程序运行，CPU大量的实践是在等待I/O完成</p>
+<h3 id="批处理阶段–多道批处理阶段"><a href="#批处理阶段–多道批处理阶段" class="headerlink" title="批处理阶段–多道批处理阶段"></a>批处理阶段–多道批处理阶段</h3><p>操作系统正式诞生</p>
+<p>优点：躲到程序并发执行，共享计算机资源，资源利用率大幅提升</p>
+<p>缺点：用户响应时间长，没有人机交互功能</p>
+<h3 id="分时操作系统"><a href="#分时操作系统" class="headerlink" title="分时操作系统"></a>分时操作系统</h3><p>优点：以时间片轮转的方式解决人机交互问题</p>
+<p>缺点：不能优先处理一些紧急任务</p>
+<h3 id="实时操作系统"><a href="#实时操作系统" class="headerlink" title="实时操作系统"></a>实时操作系统</h3><p>可以根据任务权重选择优先处理</p>
+<h1 id="OS的运行机制和体系结构"><a href="#OS的运行机制和体系结构" class="headerlink" title="OS的运行机制和体系结构"></a>OS的运行机制和体系结构</h1><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
+a<span class="token text string">[OS的运行机制和体系结构]</span><span class="token arrow operator">--&gt;</span>b<span class="token text string">[运行机制]</span>
+a<span class="token arrow operator">--&gt;</span>c<span class="token text string">[操作系统内核]</span>
+a<span class="token arrow operator">--&gt;</span>d<span class="token text string">[操作系统的体系结构]</span>
+b<span class="token arrow operator">--&gt;</span>e<span class="token text string">[两种指令]</span>
+b<span class="token arrow operator">--&gt;</span>f<span class="token text string">[两种处理器状态]</span>
+b<span class="token arrow operator">--&gt;</span>g<span class="token text string">[两种程序]</span>
+c<span class="token arrow operator">--&gt;</span>h<span class="token text string">[时钟管理]</span>
+c<span class="token arrow operator">--&gt;</span>i<span class="token text string">[中断处理]</span>
+c<span class="token arrow operator">--&gt;</span>j<span class="token text string">[原语]</span>
+c<span class="token arrow operator">--&gt;</span>k<span class="token text string">[对系统资源进行管理的功能]</span>
+d<span class="token arrow operator">--&gt;</span>l<span class="token text string">[大内核]</span>
+d<span class="token arrow operator">--&gt;</span>m<span class="token text string">[微内核]</span>
+e<span class="token arrow operator">--&gt;</span>n<span class="token text string">[特权指令]</span>
+e<span class="token arrow operator">--&gt;</span>o<span class="token text string">[非特权指令]</span>
+f<span class="token arrow operator">--&gt;</span>p<span class="token text string">[核心态]</span>
+f<span class="token arrow operator">--&gt;</span>q<span class="token text string">[用户态]</span>
+g<span class="token arrow operator">--&gt;</span>r<span class="token text string">[内核程序]</span>
+g<span class="token arrow operator">--&gt;</span>s<span class="token text string">[应用程序]</span>
+k<span class="token arrow operator">--&gt;</span>t<span class="token text string">[进程管理]</span>
+k<span class="token arrow operator">--&gt;</span>u<span class="token text string">[储存器管理]</span>
+k<span class="token arrow operator">--&gt;</span>v<span class="token text string">[设备管理]</span>
+n<span class="token arrow operator">-.-</span>p
+n<span class="token arrow operator">-.-</span>r
+p<span class="token arrow operator">-.-</span>r<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="ListInsert-SqList-L-int-i-ElemType-e"><a href="#ListInsert-SqList-L-int-i-ElemType-e" class="headerlink" title="ListInsert(SqList *L,int i,ElemType e)"></a>ListInsert(SqList *L,int i,ElemType e)</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c">Status <span class="token function">ListInsert</span><span class="token punctuation">(</span>SqList <span class="token operator">*</span>L<span class="token punctuation">,</span><span class="token keyword">int</span> i<span class="token punctuation">,</span>ElemType e<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> j<span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">1</span><span class="token operator">||</span>i<span class="token operator">&gt;</span>L<span class="token operator">-&gt;</span>length<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"索引错误"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> ERROR<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>L<span class="token operator">-&gt;</span>length<span class="token operator">==</span>MAXSIZE<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"线性表已满"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> ERROR<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">&lt;=</span>L<span class="token operator">-&gt;</span>lenght<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span>j<span class="token operator">=</span>L<span class="token operator">-&gt;</span>length<span class="token punctuation">;</span>j<span class="token operator">=</span><span class="token operator">&gt;</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            L<span class="token operator">-&gt;</span>data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>L<span class="token operator">-&gt;</span>data<span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    L<span class="token operator">-&gt;</span>data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>e<span class="token punctuation">;</span>
-    L<span class="token operator">-&gt;</span>length<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="操作系统的内核"><a href="#操作系统的内核" class="headerlink" title="操作系统的内核"></a>操作系统的内核</h3><p>内核时计算机配置的底层软件，是操作系统最基本、最核心的部分。</p>
+<h1 id="中断和异常"><a href="#中断和异常" class="headerlink" title="中断和异常"></a>中断和异常</h1><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
+a<span class="token text string">[异常和中断]</span><span class="token arrow operator">--&gt;</span>b<span class="token text string">[中断机制的诞生]</span>
+a<span class="token arrow operator">--&gt;</span>c<span class="token text string">[中断的概念和作用]</span>
+a<span class="token arrow operator">--&gt;</span>d<span class="token text string">[中断的分类]</span>
+d<span class="token arrow operator">--&gt;</span>e<span class="token text string">[内中断,异常]</span>
+d<span class="token arrow operator">--&gt;</span>f<span class="token text string">[外中断]</span>
+a<span class="token arrow operator">--&gt;</span>g<span class="token text string">[外中断的处理过程]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="GetElem-SqList-L-int-i-ElemType-e"><a href="#GetElem-SqList-L-int-i-ElemType-e" class="headerlink" title="GetElem(SqList L,int i,ElemType *e)"></a>GetElem(SqList L,int i,ElemType *e)</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c">Status <span class="token function">GetElem</span><span class="token punctuation">(</span>SqList L<span class="token punctuation">,</span><span class="token keyword">int</span> i<span class="token punctuation">,</span>ElemType <span class="token operator">*</span>e<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">1</span><span class="token operator">||</span>i<span class="token operator">&gt;</span>L<span class="token operator">-&gt;</span>length<span class="token operator">||</span>L<span class="token operator">-&gt;</span>length<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">peintf</span><span class="token punctuation">(</span><span class="token string">"索引错误"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> ERROR<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token operator">*</span>e<span class="token operator">=</span>L<span class="token operator">-&gt;</span>data<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h1><h3 id="系统调用的作用"><a href="#系统调用的作用" class="headerlink" title="系统调用的作用"></a>系统调用的作用</h3><p>应用程序通过系统调用请求操作系统的服务。系统中的各种共享资源都由操作系统统一掌管，因此在用户程序中，凡是与资源有关的操作，都必须通过系统调用的方式向操作系统提出服务请求，由操作系统代为完成。这样可以保证系统的稳定性和安全性，防止用户进行非法操作。</p>
+<h3 id="系统调用与库函数的区别"><a href="#系统调用与库函数的区别" class="headerlink" title="系统调用与库函数的区别"></a>系统调用与库函数的区别</h3><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
+a<span class="token text string">[应用程序]</span><span class="token arrow operator">--&gt;</span>b<span class="token text string">[c库函数]</span>
+b<span class="token arrow operator">--&gt;</span>d<span class="token text string">[系统调用]</span>
+a<span class="token arrow operator">--&gt;</span>d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="ListDelete-SqList-L-int-i-ElemType-e"><a href="#ListDelete-SqList-L-int-i-ElemType-e" class="headerlink" title="ListDelete(SqList *L,int i,ElemType *e)"></a>ListDelete(SqList *L,int i,ElemType *e)</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c">Status <span class="token function">ListDelete</span><span class="token punctuation">(</span>SqList <span class="token operator">*</span>L<span class="token punctuation">,</span><span class="token keyword">int</span> i<span class="token punctuation">,</span>ElemType <span class="token operator">*</span>e<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">1</span><span class="token operator">||</span>i<span class="token operator">&gt;</span>L<span class="token operator">-&gt;</span>length<span class="token operator">||</span>L<span class="token operator">-&gt;</span>length<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"索引错误"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> ERROR<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token operator">*</span>e<span class="token operator">=</span>L<span class="token operator">-&gt;</span>data<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span>L<span class="token operator">-&gt;</span>length<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        L<span class="token operator">-&gt;</span>data<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>L<span class="token operator">-&gt;</span>data<span class="token punctuation">[</span>i<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    L<span class="token operator">-&gt;</span>length<span class="token operator">--</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="系统调用的背后"><a href="#系统调用的背后" class="headerlink" title="系统调用的背后"></a>系统调用的背后</h3><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> TB
+a<span class="token text string">[传递系统调用参数]</span><span class="token arrow operator">--&gt;</span>b<span class="token text string">[执行陷入指令 用户态]</span>
+b<span class="token arrow operator">--&gt;</span>c<span class="token text string">[执行系统调用相应服务程序 核心态]</span>
+c<span class="token arrow operator">--&gt;</span>d<span class="token text string">[返回用户程序]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="ClearList-SqList-L"><a href="#ClearList-SqList-L" class="headerlink" title="ClearList(SqList *L)"></a>ClearList(SqList *L)</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c">Status <span class="token function">ClearList</span><span class="token punctuation">(</span>SqList <span class="token operator">*</span>L<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    L<span class="token operator">-&gt;</span>length<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="线性表的链式存储结构"><a href="#线性表的链式存储结构" class="headerlink" title="线性表的链式存储结构"></a>线性表的链式存储结构</h2><h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><h3 id="结构定义-1"><a href="#结构定义-1" class="headerlink" title="结构定义"></a>结构定义</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">Node</span>
-<span class="token punctuation">{</span>
-    ElemType data<span class="token punctuation">;</span>
-    <span class="token keyword">struct</span> <span class="token class-name">NOde</span><span class="token operator">*</span> next<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>Node<span class="token punctuation">;</span>
-<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">Node</span><span class="token operator">*</span> LinkList<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="整表创建"><a href="#整表创建" class="headerlink" title="整表创建"></a>整表创建</h3><ol>
-<li><p>头插法</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c">Status <span class="token function">CreateListHead</span><span class="token punctuation">(</span>LinkList <span class="token operator">*</span>L<span class="token punctuation">,</span><span class="token keyword">int</span> n<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    LinkList p<span class="token operator">=</span>null<span class="token punctuation">;</span>
-    
-    <span class="token punctuation">(</span><span class="token operator">*</span>L<span class="token punctuation">)</span><span class="token operator">=</span><span class="token punctuation">(</span>Linklist<span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>LinkList<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">(</span><span class="token operator">*</span>L<span class="token punctuation">)</span><span class="token operator">-&gt;</span>next<span class="token operator">=</span>null<span class="token punctuation">;</span>
-    
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        p<span class="token operator">=</span><span class="token punctuation">(</span>LinkList<span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>LinkList<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        p<span class="token operator">-&gt;</span>data<span class="token operator">=</span>i<span class="token punctuation">;</span>
-        p<span class="token operator">-&gt;</span>next<span class="token operator">=</span><span class="token punctuation">(</span><span class="token operator">*</span>L<span class="token punctuation">)</span><span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
-        <span class="token punctuation">(</span><span class="token operator">*</span>L<span class="token punctuation">)</span><span class="token operator">-&gt;</span>next<span class="token operator">=</span>p<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>尾插法</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c">Status <span class="token function">CreateListTail</span><span class="token punctuation">(</span>LinkList <span class="token operator">*</span>L<span class="token punctuation">,</span><span class="token keyword">int</span> n<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    LinkList p<span class="token operator">=</span>null<span class="token punctuation">;</span>
-    LinkList r<span class="token operator">=</span>null<span class="token punctuation">;</span> <span class="token comment">//尾指针</span>
-    
-    <span class="token punctuation">(</span><span class="token operator">*</span>L<span class="token punctuation">)</span><span class="token operator">=</span><span class="token punctuation">(</span>LinkList<span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>LinkList<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">(</span><span class="token operator">*</span>L<span class="token punctuation">)</span><span class="token operator">-&gt;</span>next<span class="token operator">=</span>null<span class="token punctuation">;</span>
-    
-    r<span class="token operator">=</span><span class="token operator">*</span>L<span class="token punctuation">;</span>
-    
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        p<span class="token operator">=</span><span class="token punctuation">(</span>LinkList<span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>LinkList<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        p<span class="token operator">-&gt;</span>data<span class="token operator">=</span>i<span class="token punctuation">;</span>
-        r<span class="token operator">-&gt;</span>next<span class="token operator">=</span>p<span class="token punctuation">;</span>
-        r<span class="token operator">=</span>p<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    r<span class="token operator">-&gt;</span>next<span class="token operator">=</span>null<span class="token punctuation">;</span>
-    <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<ol>
+<li>陷入指令实在用户态执行的，执行陷入指令之后立即引发一个内中断，从而CPU进入核心态</li>
+<li>发出系统调用请求是在用户态，而对系统调用的相应处理在核心态下进行</li>
+<li>陷入指令是唯一一个只能在用户态执行，而不能在核心态执行的指令</li>
 </ol>
-<h3 id="整表删除"><a href="#整表删除" class="headerlink" title="整表删除"></a>整表删除</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c">Status <span class="token function">ClearList</span><span class="token punctuation">(</span>LinkList <span class="token operator">*</span>L<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    linkList p<span class="token operator">=</span>null<span class="token punctuation">;</span>
-    LinkList q<span class="token operator">=</span>null<span class="token punctuation">;</span>
-    p<span class="token operator">=</span><span class="token punctuation">(</span><span class="token operator">*</span>L<span class="token punctuation">)</span><span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
-    
-    <span class="token keyword">while</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        q<span class="token operator">=</span>p<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
-        <span class="token function">free</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        p<span class="token operator">=</span>q<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 
                 
             </div>
@@ -559,7 +489,7 @@ GetElem(L,i,*e)：将线性表中第i个元素的值返回给e
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://767879.xyz/2022/10/24/xian-xing-biao-adt/">http://767879.xyz/2022/10/24/xian-xing-biao-adt/</a>
+                    <a href="http://767879.xyz/2022/10/24/cao-zuo-xi-tong-gai-shu/">http://767879.xyz/2022/10/24/cao-zuo-xi-tong-gai-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -597,12 +527,8 @@ GetElem(L,i,*e)：将线性表中第i个元素的值返回给e
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">数据结构</span>
-                                </a>
-                            
-                                <a href="/tags/%E9%93%BE%E8%A1%A8/">
-                                    <span class="chip bg-color">链表</span>
+                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">操作系统</span>
                                 </a>
                             
                         </div>
@@ -648,70 +574,18 @@ GetElem(L,i,*e)：将线性表中第i个元素的值返回给e
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/10/24/xftp6-ti-shi-geng-xin-wu-fa-da-kai/">
+                <a href="/2022/10/24/cao-zuo-xi-tong-gai-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="XFtp6提示更新无法打开">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="操作系统概述">
                         
-                        <span class="card-title">XFtp6提示更新无法打开</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-24
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="post-category">
-                                    服务器
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-                        <span class="chip bg-color">服务器</span>
-                    </a>
-                    
-                    <a href="/tags/error/">
-                        <span class="chip bg-color">error</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/10/24/er-fen-cha-zhao/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="二分查找">
-                        
-                        <span class="card-title">二分查找</span>
+                        <span class="card-title">操作系统概述</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -728,8 +602,58 @@ GetElem(L,i,*e)：将线性表中第i个元素的值返回给e
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    操作系统
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">操作系统</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="进程的描述与控制">
+                        
+                        <span class="card-title">进程的描述与控制</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    操作系统
                                 </a>
                             
                             
@@ -739,12 +663,16 @@ GetElem(L,i,*e)：将线性表中第i个元素的值返回给e
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E7%BB%84/">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">操作系统</span>
                     </a>
                     
-                    <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                        <span class="chip bg-color">查找</span>
+                    <a href="/tags/%E8%BF%9B%E7%A8%8B/">
+                        <span class="chip bg-color">进程</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%B9%B6%E8%A1%8C/">
+                        <span class="chip bg-color">并行</span>
                     </a>
                     
                 </div>
@@ -941,7 +869,7 @@ GetElem(L,i,*e)：将线性表中第i个元素的值返回给e
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">2.6k</span>
+                        class="white-color">6.6k</span>
             
             
             

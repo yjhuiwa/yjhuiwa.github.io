@@ -339,7 +339,7 @@ H2是一个采用java语言编写的嵌入式数据库引擎，只是一个类�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-23
+                    2022-10-24
                 </div>
                 
 
@@ -374,10 +374,10 @@ H2是一个采用java语言编写的嵌入式数据库引擎，只是一个类�
                 <h1 id="嵌入式H2数据库"><a href="#嵌入式H2数据库" class="headerlink" title="嵌入式H2数据库"></a>嵌入式H2数据库</h1><h2 id="1、H2数据库是一个开源的关系型数据库。"><a href="#1、H2数据库是一个开源的关系型数据库。" class="headerlink" title="1、H2数据库是一个开源的关系型数据库。"></a>1、H2数据库是一个开源的关系型数据库。</h2><p>H2数据库官网：<a target="_blank" rel="noopener" href="https://h2database.com/html/main.html">H2 Database Engine</a></p>
 <p>H2是一个采用java语言编写的嵌入式数据库引擎，只是一个类库（即只有一个 jar 文件），可以直接嵌入到应用项目中，不受平台的限制。</p>
 <h2 id="2、配置H2数据库"><a href="#2、配置H2数据库" class="headerlink" title="2、配置H2数据库"></a>2、配置H2数据库</h2><p>在JavaWeb项目中导入H2的包，并在<code>db-config</code>中配置</p>
-<p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/image-20211224135251551.png" alt="image-20211224135251551"></p>
+<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20211224135251551.png" alt="image-20211224135251551"></p>
 <p><br>这里的url是自己的自定的数据保存地址</p>
 <h2 id="3、初始化数据库"><a href="#3、初始化数据库" class="headerlink" title="3、初始化数据库"></a>3、初始化数据库</h2><p>运行web程序后，在浏览器输入<code>http://localhost:8080/console</code>即可打开控制台</p>
-<p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/image-20211224135658545.png" alt="image-20211224135658545"></p>
+<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20211224135658545.png" alt="image-20211224135658545"></p>
 <p>点击<code>Test Connection</code>会报一个数据库找不到的错误，这里我们需要先对数据库进行初始化，初始化代码如下</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@WebServlet</span><span class="token punctuation">(</span><span class="token string">"/app-init"</span><span class="token punctuation">)</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppInitServlet</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token punctuation">{</span>
@@ -477,12 +477,12 @@ H2是一个采用java语言编写的嵌入式数据库引擎，只是一个类�
 
 
 <p>访问<code>http://localhost:8080/app-init</code>初始化我们的数据库</p>
-<p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/image-20211224141037725.png" alt="image-20211224141037725"></p>
+<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20211224141037725.png" alt="image-20211224141037725"></p>
 <p>然会再次访问<code>console</code>，打开控制台</p>
-<p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/image-20211224141131989.png" alt="image-20211224141131989"></p>
+<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20211224141131989.png" alt="image-20211224141131989"></p>
 <p>现在数据库已经可以连接了，只需要输入我们的用户名<code>root</code>和密码<code>root</code>进行连接。</p>
 <p><strong>$\heartsuit$ 注意，数据库只在最开始初始化一次，后面每次初始化都会清除之前保存的数据。</strong></p>
-<h2 id="3、进入控制台"><a href="#3、进入控制台" class="headerlink" title="3、进入控制台"></a>3、进入控制台</h2><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/image-20211224141551517.png" alt="image-20211224141551517"></p>
+<h2 id="3、进入控制台"><a href="#3、进入控制台" class="headerlink" title="3、进入控制台"></a>3、进入控制台</h2><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20211224141551517.png" alt="image-20211224141551517"></p>
 <p>到这里，数据库就可以使用了。</p>
 
                 
@@ -888,7 +888,7 @@ H2是一个采用java语言编写的嵌入式数据库引擎，只是一个类�
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">2.6k</span>
+                        class="white-color">6.6k</span>
             
             
             

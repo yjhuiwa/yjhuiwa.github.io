@@ -306,12 +306,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%80%92%E5%BD%92/">
-                                <span class="chip bg-color">递归</span>
-                            </a>
-                        
                             <a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
                                 <span class="chip bg-color">时间复杂度</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%80%92%E5%BD%92/">
+                                <span class="chip bg-color">递归</span>
                             </a>
                         
                     </div>
@@ -374,30 +374,30 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="求X的n次方"><a href="#求X的n次方" class="headerlink" title="求X的n次方"></a>求X的n次方</h1><h3 id="时间复杂度-O-n"><a href="#时间复杂度-O-n" class="headerlink" title="时间复杂度 O(n)"></a>时间复杂度 O(n)</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int func(int x,int n) {
-    int result = 1;
-    for (int i = 0; i &lt; n; i++) {
-        result *= x;
-    }
-    return result;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="求X的n次方"><a href="#求X的n次方" class="headerlink" title="求X的n次方"></a>求X的n次方</h1><h3 id="时间复杂度-O-n"><a href="#时间复杂度-O-n" class="headerlink" title="时间复杂度 O(n)"></a>时间复杂度 O(n)</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> result <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        result <span class="token operator">*=</span> x<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="递归解法-O-n"><a href="#递归解法-O-n" class="headerlink" title="递归解法 O(n)"></a>递归解法 O(n)</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int func2(int x,int n) {
-    if (n == 0) {
-        return 1;
-    }
-    return func(x, n-1) * x;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="递归解法-O-n"><a href="#递归解法-O-n" class="headerlink" title="递归解法 O(n)"></a>递归解法 O(n)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">int</span> func2<span class="token punctuation">(</span><span class="token builtin">int</span> x<span class="token punctuation">,</span><span class="token builtin">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> func<span class="token punctuation">(</span>x<span class="token punctuation">,</span> n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> x<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="递归解法2-O-n"><a href="#递归解法2-O-n" class="headerlink" title="递归解法2 O(n)"></a>递归解法2 O(n)</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int func(int x, int n) {
-    if (n == 0) {
-        return 1;
-    }
-    if (n % 2 == 1) {
-        result = func(x, n/2) * func(x, n/2) * x;
-    }
-    return func(x, n/2) * func(x, n/2);
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="递归解法2-O-n"><a href="#递归解法2-O-n" class="headerlink" title="递归解法2 O(n)"></a>递归解法2 O(n)</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        result <span class="token operator">=</span> <span class="token function">func</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> n<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">func</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> n<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">*</span> x<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">func</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> n<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">func</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> n<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="递归解法3-O-logn"><a href="#递归解法3-O-logn" class="headerlink" title="递归解法3 O(logn)"></a>递归解法3 O(logn)</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">// 递归解法2的改进，去掉重复的计算过程</span>
 <span class="token keyword">int</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -475,12 +475,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%80%92%E5%BD%92/">
-                                    <span class="chip bg-color">递归</span>
-                                </a>
-                            
                                 <a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
                                     <span class="chip bg-color">时间复杂度</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%80%92%E5%BD%92/">
+                                    <span class="chip bg-color">递归</span>
                                 </a>
                             
                         </div>
@@ -815,7 +815,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">2.6k</span>
+                        class="white-color">6.6k</span>
             
             
             
