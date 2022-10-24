@@ -20,7 +20,7 @@
     <title>操作系统概述</title>
     <link href="http://767879.xyz/2022/10/24/cao-zuo-xi-tong-gai-shu/"/>
     <id>http://767879.xyz/2022/10/24/cao-zuo-xi-tong-gai-shu/</id>
-    <published>2022-10-24T13:00:54.601Z</published>
+    <published>2022-10-24T13:46:20.969Z</published>
     <updated>2022-10-24T13:10:45.183Z</updated>
     
     
@@ -39,7 +39,7 @@
     <title>进程的描述与控制</title>
     <link href="http://767879.xyz/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/"/>
     <id>http://767879.xyz/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/</id>
-    <published>2022-10-24T13:00:54.600Z</published>
+    <published>2022-10-24T13:46:20.968Z</published>
     <updated>2022-10-24T13:09:36.890Z</updated>
     
     
@@ -73,9 +73,9 @@
     <category term="服务器" scheme="http://767879.xyz/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-    <category term="error" scheme="http://767879.xyz/tags/error/"/>
-    
     <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="error" scheme="http://767879.xyz/tags/error/"/>
     
   </entry>
   
@@ -174,9 +174,9 @@
     <category term="git" scheme="http://767879.xyz/categories/git/"/>
     
     
-    <category term="git" scheme="http://767879.xyz/tags/git/"/>
-    
     <category term="error" scheme="http://767879.xyz/tags/error/"/>
+    
+    <category term="git" scheme="http://767879.xyz/tags/git/"/>
     
   </entry>
   

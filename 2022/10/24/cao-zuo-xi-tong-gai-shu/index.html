@@ -371,26 +371,26 @@ B--&amp;">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a>操作系统概述</h1><h2 id="操作系统的概念"><a href="#操作系统的概念" class="headerlink" title="操作系统的概念"></a>操作系统的概念</h2><h3 id="操作系统的功能和目标"><a href="#操作系统的功能和目标" class="headerlink" title="操作系统的功能和目标"></a>操作系统的功能和目标</h3><h4 id="–作为系统资源的管理者"><a href="#–作为系统资源的管理者" class="headerlink" title="–作为系统资源的管理者"></a>–作为系统资源的管理者</h4><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
-A<span class="token text string">[作为系统资源的管理者]</span><span class="token arrow operator">--&gt;</span>B<span class="token text string">[提供的功能]</span>
-A<span class="token arrow operator">--&gt;</span>C<span class="token text string">[目标]</span>
-B<span class="token arrow operator">--&gt;</span>E<span class="token text string">[处理机管理]</span>
-B<span class="token arrow operator">--&gt;</span>D<span class="token text string">[存储器管理]</span>
-B<span class="token arrow operator">--&gt;</span>H<span class="token text string">[文件管理]</span>
-B<span class="token arrow operator">--&gt;</span>F<span class="token text string">[设备管理]</span>
-C<span class="token arrow operator">--&gt;</span>G<span class="token text string">[安全,高效]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a>操作系统概述</h1><h2 id="操作系统的概念"><a href="#操作系统的概念" class="headerlink" title="操作系统的概念"></a>操作系统的概念</h2><h3 id="操作系统的功能和目标"><a href="#操作系统的功能和目标" class="headerlink" title="操作系统的功能和目标"></a>操作系统的功能和目标</h3><h4 id="–作为系统资源的管理者"><a href="#–作为系统资源的管理者" class="headerlink" title="–作为系统资源的管理者"></a>–作为系统资源的管理者</h4><pre class="mermaid">graph LR
+A[作为系统资源的管理者]--&gt;B[提供的功能]
+A--&gt;C[目标]
+B--&gt;E[处理机管理]
+B--&gt;D[存储器管理]
+B--&gt;H[文件管理]
+B--&gt;F[设备管理]
+C--&gt;G[安全,高效]</pre>
 
-<h4 id="–作为用户和计算机硬件之间的接口"><a href="#–作为用户和计算机硬件之间的接口" class="headerlink" title="–作为用户和计算机硬件之间的接口"></a>–作为用户和计算机硬件之间的接口</h4><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
-A<span class="token text string">[作为用户和计算机硬件之间的接口]</span><span class="token arrow operator">--&gt;</span>B<span class="token text string">[提供的功能]</span>
-A<span class="token arrow operator">--&gt;</span>C<span class="token text string">[目标]</span>
-C<span class="token arrow operator">--&gt;</span>D<span class="token text string">[方便用户使用]</span>
-B<span class="token arrow operator">--&gt;</span>E<span class="token text string">[命令接口]</span>
-B<span class="token arrow operator">--&gt;</span>F<span class="token text string">[程序接口]</span>
-B<span class="token arrow operator">--&gt;</span>G<span class="token text string">[GUI]</span>
-E<span class="token arrow operator">--&gt;</span>H<span class="token text string">[联机命令接口]</span>
-E<span class="token arrow operator">--&gt;</span>I<span class="token text string">[脱机命令接口]</span>
-H<span class="token arrow operator">---</span>J<span class="token text string">[说一句做一句,说一堆做一堆]</span>
-I<span class="token arrow operator">---</span>J<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="–作为用户和计算机硬件之间的接口"><a href="#–作为用户和计算机硬件之间的接口" class="headerlink" title="–作为用户和计算机硬件之间的接口"></a>–作为用户和计算机硬件之间的接口</h4><pre class="mermaid">graph LR
+A[作为用户和计算机硬件之间的接口]--&gt;B[提供的功能]
+A--&gt;C[目标]
+C--&gt;D[方便用户使用]
+B--&gt;E[命令接口]
+B--&gt;F[程序接口]
+B--&gt;G[GUI]
+E--&gt;H[联机命令接口]
+E--&gt;I[脱机命令接口]
+H---J[说一句做一句,说一堆做一堆]
+I---J</pre>
 
 <h4 id="–作为最接近硬件的层次"><a href="#–作为最接近硬件的层次" class="headerlink" title="–作为最接近硬件的层次"></a>–作为最接近硬件的层次</h4><h3 id="操作系统的四个基本特征"><a href="#操作系统的四个基本特征" class="headerlink" title="操作系统的四个基本特征"></a>操作系统的四个基本特征</h3><h4 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h4><p>微观上交替执行，区别于并行：同时执行</p>
 <h4 id="共享"><a href="#共享" class="headerlink" title="共享"></a>共享</h4><p>共享方式：互斥共享（eg. 摄像头资源）、同时共享（宏观/微观）</p>
@@ -398,9 +398,9 @@ I<span class="token arrow operator">---</span>J<span aria-hidden="true" class="l
 <p>并发性与共享性互为存在条件</p>
 </blockquote>
 <h4 id="虚拟"><a href="#虚拟" class="headerlink" title="虚拟"></a>虚拟</h4><p>物理实体和逻辑实体</p>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
-A<span class="token text string">[虚拟技术]</span><span class="token arrow operator">--&gt;</span>B<span class="token text string">[空分复用技术,如虚拟处理器]</span>
-A<span class="token arrow operator">--&gt;</span>C<span class="token text string">[时分复用技术,如虚拟处理器]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="mermaid">graph LR
+A[虚拟技术]--&gt;B[空分复用技术,如虚拟处理器]
+A--&gt;C[时分复用技术,如虚拟处理器]</pre>
 
 <h4 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h4><p>并发性—&gt;异步性</p>
 <h1 id="操作系统的发展过程"><a href="#操作系统的发展过程" class="headerlink" title="操作系统的发展过程"></a>操作系统的发展过程</h1><h3 id="手工操作阶段"><a href="#手工操作阶段" class="headerlink" title="手工操作阶段"></a>手工操作阶段</h3><p>缺点：用户独占全集、人机速度矛盾导致资源利用率极低</p>
@@ -412,51 +412,51 @@ A<span class="token arrow operator">--&gt;</span>C<span class="token text string
 <h3 id="分时操作系统"><a href="#分时操作系统" class="headerlink" title="分时操作系统"></a>分时操作系统</h3><p>优点：以时间片轮转的方式解决人机交互问题</p>
 <p>缺点：不能优先处理一些紧急任务</p>
 <h3 id="实时操作系统"><a href="#实时操作系统" class="headerlink" title="实时操作系统"></a>实时操作系统</h3><p>可以根据任务权重选择优先处理</p>
-<h1 id="OS的运行机制和体系结构"><a href="#OS的运行机制和体系结构" class="headerlink" title="OS的运行机制和体系结构"></a>OS的运行机制和体系结构</h1><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
-a<span class="token text string">[OS的运行机制和体系结构]</span><span class="token arrow operator">--&gt;</span>b<span class="token text string">[运行机制]</span>
-a<span class="token arrow operator">--&gt;</span>c<span class="token text string">[操作系统内核]</span>
-a<span class="token arrow operator">--&gt;</span>d<span class="token text string">[操作系统的体系结构]</span>
-b<span class="token arrow operator">--&gt;</span>e<span class="token text string">[两种指令]</span>
-b<span class="token arrow operator">--&gt;</span>f<span class="token text string">[两种处理器状态]</span>
-b<span class="token arrow operator">--&gt;</span>g<span class="token text string">[两种程序]</span>
-c<span class="token arrow operator">--&gt;</span>h<span class="token text string">[时钟管理]</span>
-c<span class="token arrow operator">--&gt;</span>i<span class="token text string">[中断处理]</span>
-c<span class="token arrow operator">--&gt;</span>j<span class="token text string">[原语]</span>
-c<span class="token arrow operator">--&gt;</span>k<span class="token text string">[对系统资源进行管理的功能]</span>
-d<span class="token arrow operator">--&gt;</span>l<span class="token text string">[大内核]</span>
-d<span class="token arrow operator">--&gt;</span>m<span class="token text string">[微内核]</span>
-e<span class="token arrow operator">--&gt;</span>n<span class="token text string">[特权指令]</span>
-e<span class="token arrow operator">--&gt;</span>o<span class="token text string">[非特权指令]</span>
-f<span class="token arrow operator">--&gt;</span>p<span class="token text string">[核心态]</span>
-f<span class="token arrow operator">--&gt;</span>q<span class="token text string">[用户态]</span>
-g<span class="token arrow operator">--&gt;</span>r<span class="token text string">[内核程序]</span>
-g<span class="token arrow operator">--&gt;</span>s<span class="token text string">[应用程序]</span>
-k<span class="token arrow operator">--&gt;</span>t<span class="token text string">[进程管理]</span>
-k<span class="token arrow operator">--&gt;</span>u<span class="token text string">[储存器管理]</span>
-k<span class="token arrow operator">--&gt;</span>v<span class="token text string">[设备管理]</span>
-n<span class="token arrow operator">-.-</span>p
-n<span class="token arrow operator">-.-</span>r
-p<span class="token arrow operator">-.-</span>r<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="OS的运行机制和体系结构"><a href="#OS的运行机制和体系结构" class="headerlink" title="OS的运行机制和体系结构"></a>OS的运行机制和体系结构</h1><pre class="mermaid">graph LR
+a[OS的运行机制和体系结构]--&gt;b[运行机制]
+a--&gt;c[操作系统内核]
+a--&gt;d[操作系统的体系结构]
+b--&gt;e[两种指令]
+b--&gt;f[两种处理器状态]
+b--&gt;g[两种程序]
+c--&gt;h[时钟管理]
+c--&gt;i[中断处理]
+c--&gt;j[原语]
+c--&gt;k[对系统资源进行管理的功能]
+d--&gt;l[大内核]
+d--&gt;m[微内核]
+e--&gt;n[特权指令]
+e--&gt;o[非特权指令]
+f--&gt;p[核心态]
+f--&gt;q[用户态]
+g--&gt;r[内核程序]
+g--&gt;s[应用程序]
+k--&gt;t[进程管理]
+k--&gt;u[储存器管理]
+k--&gt;v[设备管理]
+n-.-p
+n-.-r
+p-.-r</pre>
 
 <h3 id="操作系统的内核"><a href="#操作系统的内核" class="headerlink" title="操作系统的内核"></a>操作系统的内核</h3><p>内核时计算机配置的底层软件，是操作系统最基本、最核心的部分。</p>
-<h1 id="中断和异常"><a href="#中断和异常" class="headerlink" title="中断和异常"></a>中断和异常</h1><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
-a<span class="token text string">[异常和中断]</span><span class="token arrow operator">--&gt;</span>b<span class="token text string">[中断机制的诞生]</span>
-a<span class="token arrow operator">--&gt;</span>c<span class="token text string">[中断的概念和作用]</span>
-a<span class="token arrow operator">--&gt;</span>d<span class="token text string">[中断的分类]</span>
-d<span class="token arrow operator">--&gt;</span>e<span class="token text string">[内中断,异常]</span>
-d<span class="token arrow operator">--&gt;</span>f<span class="token text string">[外中断]</span>
-a<span class="token arrow operator">--&gt;</span>g<span class="token text string">[外中断的处理过程]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="中断和异常"><a href="#中断和异常" class="headerlink" title="中断和异常"></a>中断和异常</h1><pre class="mermaid">graph LR
+a[异常和中断]--&gt;b[中断机制的诞生]
+a--&gt;c[中断的概念和作用]
+a--&gt;d[中断的分类]
+d--&gt;e[内中断,异常]
+d--&gt;f[外中断]
+a--&gt;g[外中断的处理过程]</pre>
 
 <h1 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h1><h3 id="系统调用的作用"><a href="#系统调用的作用" class="headerlink" title="系统调用的作用"></a>系统调用的作用</h3><p>应用程序通过系统调用请求操作系统的服务。系统中的各种共享资源都由操作系统统一掌管，因此在用户程序中，凡是与资源有关的操作，都必须通过系统调用的方式向操作系统提出服务请求，由操作系统代为完成。这样可以保证系统的稳定性和安全性，防止用户进行非法操作。</p>
-<h3 id="系统调用与库函数的区别"><a href="#系统调用与库函数的区别" class="headerlink" title="系统调用与库函数的区别"></a>系统调用与库函数的区别</h3><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
-a<span class="token text string">[应用程序]</span><span class="token arrow operator">--&gt;</span>b<span class="token text string">[c库函数]</span>
-b<span class="token arrow operator">--&gt;</span>d<span class="token text string">[系统调用]</span>
-a<span class="token arrow operator">--&gt;</span>d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="系统调用与库函数的区别"><a href="#系统调用与库函数的区别" class="headerlink" title="系统调用与库函数的区别"></a>系统调用与库函数的区别</h3><pre class="mermaid">graph LR
+a[应用程序]--&gt;b[c库函数]
+b--&gt;d[系统调用]
+a--&gt;d</pre>
 
-<h3 id="系统调用的背后"><a href="#系统调用的背后" class="headerlink" title="系统调用的背后"></a>系统调用的背后</h3><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> TB
-a<span class="token text string">[传递系统调用参数]</span><span class="token arrow operator">--&gt;</span>b<span class="token text string">[执行陷入指令 用户态]</span>
-b<span class="token arrow operator">--&gt;</span>c<span class="token text string">[执行系统调用相应服务程序 核心态]</span>
-c<span class="token arrow operator">--&gt;</span>d<span class="token text string">[返回用户程序]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="系统调用的背后"><a href="#系统调用的背后" class="headerlink" title="系统调用的背后"></a>系统调用的背后</h3><pre class="mermaid">graph TB
+a[传递系统调用参数]--&gt;b[执行陷入指令 用户态]
+b--&gt;c[执行系统调用相应服务程序 核心态]
+c--&gt;d[返回用户程序]</pre>
 
 <ol>
 <li>陷入指令实在用户态执行的，执行陷入指令之后立即引发一个内中断，从而CPU进入核心态</li>
@@ -800,6 +800,15 @@ c<span class="token arrow operator">--&gt;</span>d<span class="token text string
 
 
     <footer class="page-footer bg-color">
+
+<script src='https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js'></script>
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({theme: 'forest'});
+  }
+</script>
+
+
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>

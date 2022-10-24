@@ -383,44 +383,44 @@ a[进程的特征]--&amp;gt;">
 <p> 引入多道程序技术后：</p>
 <p><strong>进程实体</strong>：由程序段、数据段、PCB构成 <strong>静态</strong></p>
 <p><strong>进程</strong>：程序的一次执行过程 <strong>动态</strong></p>
-<h3 id="进程的组织"><a href="#进程的组织" class="headerlink" title="进程的组织"></a>进程的组织</h3><h4 id="链接方式"><a href="#链接方式" class="headerlink" title="链接方式"></a>链接方式</h4><h4 id="索引方式"><a href="#索引方式" class="headerlink" title="索引方式"></a>索引方式</h4><h3 id="进程的特征"><a href="#进程的特征" class="headerlink" title="进程的特征"></a>进程的特征</h3><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
-a<span class="token text string">[进程的特征]</span><span class="token arrow operator">--&gt;</span>b<span class="token text string">[动态性]</span> &amp; c<span class="token text string">[并发性]</span> &amp; d<span class="token text string">[独立性]</span> &amp; e<span class="token text string">[异步性]</span> &amp; f<span class="token text string">[结构性]</span>
-b<span class="token arrow operator">--&gt;</span>g<span class="token text string">[随着程序的一次执行过程动态产生,变化和消亡]</span>
-c<span class="token arrow operator">--&gt;</span>h<span class="token text string">[内存中有多个进程实体,各进程可并发执行]</span>
-d<span class="token arrow operator">--&gt;</span>i<span class="token text string">[进程是能独立运行,独立获得资源,独立接受调度的基本单位]</span>
-e<span class="token arrow operator">--&gt;</span>j<span class="token text string">[各进程按各自独立的,不可预知的速度向前推进,操作系统要提供 进程同步机制 来解决异步问题]</span>
-f<span class="token arrow operator">--&gt;</span>k<span class="token text string">[每个进程都会配置一个PCB]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="进程的组织"><a href="#进程的组织" class="headerlink" title="进程的组织"></a>进程的组织</h3><h4 id="链接方式"><a href="#链接方式" class="headerlink" title="链接方式"></a>链接方式</h4><h4 id="索引方式"><a href="#索引方式" class="headerlink" title="索引方式"></a>索引方式</h4><h3 id="进程的特征"><a href="#进程的特征" class="headerlink" title="进程的特征"></a>进程的特征</h3><pre class="mermaid">graph LR
+a[进程的特征]--&gt;b[动态性] &amp; c[并发性] &amp; d[独立性] &amp; e[异步性] &amp; f[结构性]
+b--&gt;g[随着程序的一次执行过程动态产生,变化和消亡]
+c--&gt;h[内存中有多个进程实体,各进程可并发执行]
+d--&gt;i[进程是能独立运行,独立获得资源,独立接受调度的基本单位]
+e--&gt;j[各进程按各自独立的,不可预知的速度向前推进,操作系统要提供 进程同步机制 来解决异步问题]
+f--&gt;k[每个进程都会配置一个PCB]</pre>
 
-<h1 id="进程的状态与转换"><a href="#进程的状态与转换" class="headerlink" title="进程的状态与转换"></a>进程的状态与转换</h1><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
-b<span class="token text string">[状态]</span><span class="token arrow operator">---</span>c<span class="token text string">[运行状态]</span>
-b<span class="token arrow operator">---</span>d<span class="token text string">[就绪状态]</span>
-b<span class="token arrow operator">---</span>e<span class="token text string">[阻塞状态]</span>
-b<span class="token arrow operator">---</span>f<span class="token text string">[创建状态]</span>
-b<span class="token arrow operator">---</span>g<span class="token text string">[终止状态]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="进程的状态与转换"><a href="#进程的状态与转换" class="headerlink" title="进程的状态与转换"></a>进程的状态与转换</h1><pre class="mermaid">graph LR
+b[状态]---c[运行状态]
+b---d[就绪状态]
+b---e[阻塞状态]
+b---f[创建状态]
+b---g[终止状态]</pre>
 
-<h4 id="挂起的进程资源将会从内存调度到硬盘，但该进程的PCB一直存放在内从中，等待操作系统的调入。"><a href="#挂起的进程资源将会从内存调度到硬盘，但该进程的PCB一直存放在内从中，等待操作系统的调入。" class="headerlink" title="挂起的进程资源将会从内存调度到硬盘，但该进程的PCB一直存放在内从中，等待操作系统的调入。"></a>挂起的进程资源将会从内存调度到硬盘，但该进程的PCB一直存放在内从中，等待操作系统的调入。</h4><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
-h<span class="token text string">[创建态]</span><span class="token inter-arrow-label"><span class="token arrow-head arrow operator">--</span><span class="token label property">完成创建进程的工作</span><span class="token arrow operator">--&gt;</span></span>i<span class="token text string">[就绪态]</span>
-h<span class="token arrow operator">--&gt;</span>m<span class="token text string">[就绪挂起]</span>
-k<span class="token inter-arrow-label"><span class="token arrow-head arrow operator">--</span><span class="token label property">挂起</span><span class="token arrow operator">--&gt;</span></span>n<span class="token text string">[阻塞挂起]</span>
-j<span class="token inter-arrow-label"><span class="token arrow-head arrow operator">--</span><span class="token label property">运行结束或遇到不可修复的错误</span><span class="token arrow operator">--&gt;</span></span>l<span class="token text string">[终止态]</span>
-j<span class="token inter-arrow-label"><span class="token arrow-head arrow operator">--</span><span class="token label property">主动系统调用 请求系统资源</span><span class="token arrow operator">--&gt;</span></span>k<span class="token text string">[阻塞态]</span>
-i<span class="token inter-arrow-label"><span class="token arrow-head arrow operator">--</span><span class="token label property">进程被调度</span><span class="token arrow operator">--&gt;</span></span>j<span class="token text string">[运行态]</span>
-k<span class="token inter-arrow-label"><span class="token arrow-head arrow operator">--</span><span class="token label property">申请的资源被分配</span><span class="token arrow operator">--&gt;</span></span>i
-j<span class="token inter-arrow-label"><span class="token arrow-head arrow operator">--</span><span class="token label property">时间片到或处理机被抢占</span><span class="token arrow operator">--&gt;</span></span>i
-i<span class="token inter-arrow-label"><span class="token arrow-head arrow operator">--</span><span class="token label property">挂起</span><span class="token arrow operator">--&gt;</span></span>m
-m<span class="token inter-arrow-label"><span class="token arrow-head arrow operator">--</span><span class="token label property">激活</span><span class="token arrow operator">--&gt;</span></span>i
-n<span class="token inter-arrow-label"><span class="token arrow-head arrow operator">--</span><span class="token label property">激活</span><span class="token arrow operator">--&gt;</span></span>k
-j<span class="token arrow operator">--&gt;</span>m
-n<span class="token inter-arrow-label"><span class="token arrow-head arrow operator">--</span><span class="token label property">事件出现</span><span class="token arrow operator">--&gt;</span></span>m<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="挂起的进程资源将会从内存调度到硬盘，但该进程的PCB一直存放在内从中，等待操作系统的调入。"><a href="#挂起的进程资源将会从内存调度到硬盘，但该进程的PCB一直存放在内从中，等待操作系统的调入。" class="headerlink" title="挂起的进程资源将会从内存调度到硬盘，但该进程的PCB一直存放在内从中，等待操作系统的调入。"></a>挂起的进程资源将会从内存调度到硬盘，但该进程的PCB一直存放在内从中，等待操作系统的调入。</h4><pre class="mermaid">graph LR
+h[创建态]--完成创建进程的工作--&gt;i[就绪态]
+h--&gt;m[就绪挂起]
+k--挂起--&gt;n[阻塞挂起]
+j--运行结束或遇到不可修复的错误--&gt;l[终止态]
+j--主动系统调用 请求系统资源--&gt;k[阻塞态]
+i--进程被调度--&gt;j[运行态]
+k--申请的资源被分配--&gt;i
+j--时间片到或处理机被抢占--&gt;i
+i--挂起--&gt;m
+m--激活--&gt;i
+n--激活--&gt;k
+j--&gt;m
+n--事件出现--&gt;m</pre>
 
 <h1 id="进程控制"><a href="#进程控制" class="headerlink" title="进程控制"></a>进程控制</h1><p>基本概念：进程控制就是要实现进程状态的转换。进程控制用原语实现（原语用开/关中断来实现，是一种特殊的程序，原语执行必须一气呵成，不能中断）</p>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
-a<span class="token text string">[相关原语]</span><span class="token arrow operator">---</span>b<span class="token text string">[进程的创建]</span>
-a<span class="token arrow operator">---</span>c<span class="token text string">[进程的终止]</span>
-a<span class="token arrow operator">---</span>d<span class="token text string">[进程的阻塞]</span>
-a<span class="token arrow operator">---</span>e<span class="token text string">[进程的唤醒]</span>
-a<span class="token arrow operator">---</span>f<span class="token text string">[进程的切换]</span>
-e <span class="token operator">&amp;</span> d <span class="token arrow operator">---</span>g<span class="token text string">[阻塞和唤醒要成对出现]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="mermaid">graph LR
+a[相关原语]---b[进程的创建]
+a---c[进程的终止]
+a---d[进程的阻塞]
+a---e[进程的唤醒]
+a---f[进程的切换]
+e &amp; d ---g[阻塞和唤醒要成对出现]</pre>
 
 <h1 id="进程通信"><a href="#进程通信" class="headerlink" title="进程通信"></a>进程通信</h1><p>概念：指进程之间的信息交换</p>
 <p>进程通信方式：共享储存、管道通信、消息传递</p>
@@ -458,11 +458,11 @@ e <span class="token operator">&amp;</span> d <span class="token arrow operator"
 <p>设置多级就绪队列，各级队列优先级由高到低，时间片由小到大。新进程到达时先进入第一级队列，时间片结束时进入下一级队列，若在最后一级，则放入该级队列队尾。新进程优先级高，会抢占当前处理机。</p>
 <p>优点：对各类进程相对公平（FCFS的优点）；每个新到达的进程都可以很快得到响应(RR优点)；短进程只用较少的时间就可以完成（SPF优点）；不必实际估计进程运行时间；可灵活地调整对各类进程的偏好程度。</p>
 <p>当有短进程不断加入时，会导致下级进程饥饿。</p>
-<h1 id="进程互斥、同步"><a href="#进程互斥、同步" class="headerlink" title="进程互斥、同步"></a>进程互斥、同步</h1><h2 id="进程互斥"><a href="#进程互斥" class="headerlink" title="进程互斥"></a>进程互斥</h2><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR
-a<span class="token text string">[两种资源共享方式]</span><span class="token arrow operator">---</span>b<span class="token text string">[互斥共享方式]</span>
-a<span class="token arrow operator">---</span>c<span class="token text string">[同时共享方式]</span>
-b<span class="token arrow operator">--&gt;</span>d<span class="token text string">["一个时间段内只允许一个进程访问该资源(临界资源)"]</span>
-c<span class="token arrow operator">--&gt;</span>e<span class="token text string">["允许“同时”访问"]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="进程互斥、同步"><a href="#进程互斥、同步" class="headerlink" title="进程互斥、同步"></a>进程互斥、同步</h1><h2 id="进程互斥"><a href="#进程互斥" class="headerlink" title="进程互斥"></a>进程互斥</h2><pre class="mermaid">graph LR
+a[两种资源共享方式]---b[互斥共享方式]
+a---c[同时共享方式]
+b--&gt;d["一个时间段内只允许一个进程访问该资源(临界资源)"]
+c--&gt;e["允许“同时”访问"]</pre>
 
 <p>对临界资源的互斥访问逻辑</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">do</span><span class="token punctuation">{</span>
@@ -960,12 +960,12 @@ semaphore mutex<span class="token operator">=</span><span class="token number">1
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/error/">
-                        <span class="chip bg-color">error</span>
-                    </a>
-                    
                     <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
                         <span class="chip bg-color">服务器</span>
+                    </a>
+                    
+                    <a href="/tags/error/">
+                        <span class="chip bg-color">error</span>
                     </a>
                     
                 </div>
@@ -1093,6 +1093,15 @@ semaphore mutex<span class="token operator">=</span><span class="token number">1
 
 
     <footer class="page-footer bg-color">
+
+<script src='https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js'></script>
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({theme: 'forest'});
+  }
+</script>
+
+
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
