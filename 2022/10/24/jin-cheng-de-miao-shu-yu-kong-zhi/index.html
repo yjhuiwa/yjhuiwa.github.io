@@ -5,12 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="进程的描述与控制, 朝花朝拾">
-    <meta name="description" content="进程的描述与控制进程早期：进程就是一个指令序列
+    <meta name="description" content="进程早期：进程就是一个指令序列
  引入多道程序技术后：
 进程实体：由程序段、数据段、PCB构成 静态
 进程：程序的一次执行过程 动态
 进程的组织链接方式索引方式进程的特征graph LR
-a[进程的特征]--&amp;gt;b[动态">
+a[进程的特征]--&amp;gt;b[动态性] &amp;amp;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -379,7 +379,7 @@ a[进程的特征]--&amp;gt;b[动态">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="进程的描述与控制"><a href="#进程的描述与控制" class="headerlink" title="进程的描述与控制"></a>进程的描述与控制</h1><h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><p>早期：进程就是一个指令序列</p>
+                <h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><p>早期：进程就是一个指令序列</p>
 <p> 引入多道程序技术后：</p>
 <p><strong>进程实体</strong>：由程序段、数据段、PCB构成 <strong>静态</strong></p>
 <p><strong>进程</strong>：程序的一次执行过程 <strong>动态</strong></p>
@@ -465,12 +465,12 @@ b--&gt;d["一个时间段内只允许一个进程访问该资源(临界资源)"]
 c--&gt;e["允许“同时”访问"]</pre>
 
 <p>对临界资源的互斥访问逻辑</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">do{
-    entry section; // 进入区，上锁
-    critical section; //临界区 访问
-    exit section; //退出区 解锁
-    remainder section; //剩余区 其他
-} while(true)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">do</span><span class="token punctuation">{</span>
+    entry section<span class="token punctuation">;</span> <span class="token comment">// 进入区，上锁</span>
+    critical section<span class="token punctuation">;</span> <span class="token comment">//临界区 访问</span>
+    exit section<span class="token punctuation">;</span> <span class="token comment">//退出区 解锁</span>
+    remainder section<span class="token punctuation">;</span> <span class="token comment">//剩余区 其他</span>
+<span class="token punctuation">}</span> <span class="token keyword">while</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>互斥访问原则：</p>
 <ol>
@@ -482,86 +482,86 @@ c--&gt;e["允许“同时”访问"]</pre>
 <h3 id="进程互斥的软件实现方法"><a href="#进程互斥的软件实现方法" class="headerlink" title="进程互斥的软件实现方法"></a>进程互斥的软件实现方法</h3><ol>
 <li><p>单标志发</p>
 <p>算法思想：两个进程在访问临界区后会把使用临界区的权限转交给拎一个进程。也就是说每个进程进入临界区的权限只能被另一个进程赋予。</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int turn=0; //turn 表示当前允许进入临界区的进程号
-//p0:
-while(turn!=0);   //进入区
-critical section;	//临界区
-turn=1;		//退出区
-remainder section;	//剩余区
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> turn<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//turn 表示当前允许进入临界区的进程号</span>
+<span class="token comment">//p0:</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>turn<span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">//进入区</span>
+critical section<span class="token punctuation">;</span>	<span class="token comment">//临界区</span>
+turn<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>		<span class="token comment">//退出区</span>
+remainder section<span class="token punctuation">;</span>	<span class="token comment">//剩余区</span>
 
-//p1:
-while(turn!=1);
-critical section;
-turn=0;
-remainder section;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">//p1:</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>turn<span class="token operator">!=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+critical section<span class="token punctuation">;</span>
+turn<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+remainder section<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>特点：对临界区的访问，一定是按顺序交替进行，若p0一直不访问临界资源，则p1也一直不能访问。</p>
 <p>存在的问题： 违背”空闲让进“原则</p>
 </li>
 <li><p>双标志先检查</p>
 <p>算法思想：设置bool型数组flag[ ]，标志各个进程进入临界区的意愿。</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">bool falg[2];
-falg[0]=false;
-flag[1]=false;
-// 先检查，后上锁
-//p0:
-while(flag[1]);  1
-flag[0]=true;	2
-critical section;
-flag[0]=false;
-remainder section;
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">bool falg<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+falg<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+flag<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+<span class="token comment">// 先检查，后上锁</span>
+<span class="token comment">//p0:</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>flag<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token number">1</span>
+flag<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>true<span class="token punctuation">;</span>	<span class="token number">2</span>
+critical section<span class="token punctuation">;</span>
+flag<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+remainder section<span class="token punctuation">;</span>
 
 
-//p1:
-while(flag[0]);	3
-flag[1]=true;	4
-critical section;
-flag[1]=false;
-remainder section;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">//p1:</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>flag<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token number">3</span>
+flag<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>true<span class="token punctuation">;</span>	<span class="token number">4</span>
+critical section<span class="token punctuation">;</span>
+flag<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+remainder section<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>存在的问题：进程执行顺序不可控，若语句执行顺序为：<code>1-&gt;3-&gt;2-&gt;4</code>，则违反”忙则等待“原则。出现这种问题的原因时进入区的”检查“和”上锁“不能一气呵成的执行。</p>
 </li>
 <li><p>双标志后检查</p>
 <p>算法思想：双标志先检查的改版</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">bool falg[2];
-falg[0]=false;
-flag[1]=false;
-// 先上锁，后检查
-//p0:
-flag[0]=true;  1
-while(flag[1]);	2
-critical section;
-flag[0]=false;
-remainder section;
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">bool falg<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+falg<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+flag<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+<span class="token comment">// 先上锁，后检查</span>
+<span class="token comment">//p0:</span>
+flag<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>true<span class="token punctuation">;</span>  <span class="token number">1</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>flag<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token number">2</span>
+critical section<span class="token punctuation">;</span>
+flag<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+remainder section<span class="token punctuation">;</span>
 
-//p1:
-flag[1]=true;	3
-while(flag[0]);	4
-critical section;
-flag[1]=false;
-remainder section;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">//p1:</span>
+flag<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>true<span class="token punctuation">;</span>	<span class="token number">3</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>flag<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token number">4</span>
+critical section<span class="token punctuation">;</span>
+flag<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+remainder section<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>存在的问题：若按照<code>1-&gt;3-&gt;2-&gt;4</code>的顺序，p0和p1都将无法进入临界区，虽解决了”忙则等待“的问题，但是违背了”空闲让进“原则。</p>
 </li>
 <li><p>Peterson算法</p>
 <p> 算法思想：当进程都争取临界区的时候，使其主动让对方先使用临界区</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">bool flag[2];	//		临界区意愿，初始值为false
-int turn=0;	//优先使用临界区的进程
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">bool flag<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>	<span class="token comment">//		临界区意愿，初始值为false</span>
+<span class="token keyword">int</span> turn<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>	<span class="token comment">//优先使用临界区的进程</span>
 
-//p0:
-flag[0]=true;
-turn=1;
-while(flag[1]&amp;&amp;turn==1);
-critical section;
-flag[0]=false;
-reminder section;
-//p1:
-flag[1]=true;
-turn=0;
-while(flag[0]&amp;&amp;turn==0);
-critical section;
-flag[1]=false;
-reminder section;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">//p0:</span>
+flag<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>true<span class="token punctuation">;</span>
+turn<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>flag<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&amp;&amp;</span>turn<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+critical section<span class="token punctuation">;</span>
+flag<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+reminder section<span class="token punctuation">;</span>
+<span class="token comment">//p1:</span>
+flag<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>true<span class="token punctuation">;</span>
+turn<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>flag<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">&amp;&amp;</span>turn<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+critical section<span class="token punctuation">;</span>
+flag<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
+reminder section<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>Peterson算法解决了进程互斥问题，遵循了空闲让进、忙则等待、有限等待三个原则，但是当当前进程不使用临界资源时，仍然会占用CPU进行无意义的while检查，没有遵循让权等待的原则。</p>
 </li>
@@ -574,35 +574,35 @@ reminder section;<span aria-hidden="true" class="line-numbers-rows"><span></span
 </li>
 <li><p><code>TestAndSet</code>指令</p>
 <p>简称TS指令、TSL指令，由硬件实现，执行过程不允许被中断。</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//lock表示当前临界区是否被加锁，true表示已加锁
-bool TestAndSet(bool *lock){
-    bool old;
-    old=*lock;
-    *lock=true;
-    return old;
-}
-//实现互斥算法
-while(TestAndSet(&amp;lock));
-//临界区代码段
-lock=false;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//lock表示当前临界区是否被加锁，true表示已加锁</span>
+bool <span class="token function">TestAndSet</span><span class="token punctuation">(</span>bool <span class="token operator">*</span>lock<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    bool old<span class="token punctuation">;</span>
+    old<span class="token operator">=</span><span class="token operator">*</span>lock<span class="token punctuation">;</span>
+    <span class="token operator">*</span>lock<span class="token operator">=</span>true<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> old<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//实现互斥算法</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">TestAndSet</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//临界区代码段</span>
+lock<span class="token operator">=</span>false<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 </li>
 <li><p><code>Swap</code>指令</p>
 <p>Swap指令，由硬件实现，执行过程不允许被中断。逻辑如下：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//Swap 指令的作用是交换两个变量的值
-Swap(bool *a,bool *b){
-    bool temp;
-    temp=*a;
-    *a=*b;
-    *b=temp;
-}
-//算法逻辑 lock 表示当前临界区是否被加锁
-bool old=true;
-while(old==true)
-    Swap(&amp;lock,&amp;old);
-//临界区代码段
-lock=false;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//Swap 指令的作用是交换两个变量的值</span>
+<span class="token function">Swap</span><span class="token punctuation">(</span>bool <span class="token operator">*</span>a<span class="token punctuation">,</span>bool <span class="token operator">*</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    bool temp<span class="token punctuation">;</span>
+    temp<span class="token operator">=</span><span class="token operator">*</span>a<span class="token punctuation">;</span>
+    <span class="token operator">*</span>a<span class="token operator">=</span><span class="token operator">*</span>b<span class="token punctuation">;</span>
+    <span class="token operator">*</span>b<span class="token operator">=</span>temp<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//算法逻辑 lock 表示当前临界区是否被加锁</span>
+bool old<span class="token operator">=</span>true<span class="token punctuation">;</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>old<span class="token operator">==</span>true<span class="token punctuation">)</span>
+    <span class="token function">Swap</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>lock<span class="token punctuation">,</span><span class="token operator">&amp;</span>old<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//临界区代码段</span>
+lock<span class="token operator">=</span>false<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h1 id="信号量机制"><a href="#信号量机制" class="headerlink" title="信号量机制"></a>信号量机制</h1><p><strong>信号量是一种整数或记录型的变量，用来表示系统中某资源的数量。用户可以使用操作系统提供的一原语<code>wait(S)  P(S)</code>、<code>signal(S) V(S)</code>来对信号量进行操作，从而实现进程互斥、同步问题。</strong></p>
 <h2 id="整型信号量"><a href="#整型信号量" class="headerlink" title="整型信号量"></a>整型信号量</h2><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> S<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>  <span class="token comment">//表示一个资源</span>
@@ -1184,7 +1184,7 @@ semaphore mutex<span class="token operator">=</span><span class="token number">1
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">6.6k</span>
+                        class="white-color">6.5k</span>
             
             
             
