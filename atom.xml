@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-10-23T15:33:38.671Z</updated>
+  <updated>2022-10-24T10:04:28.000Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -17,44 +17,82 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>线性表</title>
-    <link href="http://767879.xyz/2022/10/23/xian-xing-biao-adt/"/>
-    <id>http://767879.xyz/2022/10/23/xian-xing-biao-adt/</id>
-    <published>2022-10-23T15:03:51.117Z</published>
-    <updated>2022-10-23T15:33:38.671Z</updated>
+    <title></title>
+    <link href="http://767879.xyz/2022/10/24/er-fen-cha-zhao/"/>
+    <id>http://767879.xyz/2022/10/24/er-fen-cha-zhao/</id>
+    <published>2022-10-24T11:22:36.577Z</published>
+    <updated>2022-10-24T10:04:28.000Z</updated>
     
     
-    <summary type="html">线性表基础</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;二分查找&quot;&gt;&lt;a href=&quot;#二分查找&quot; class=&quot;headerlink&quot; title=&quot;二分查找&quot;&gt;&lt;/a&gt;二分查找&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;题目描述&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;给定一个 n 个元素有序的（升序）整型数组 nums</summary>
+        
+      
     
     
     
-    <category term="数据结构" scheme="http://767879.xyz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="算法" scheme="http://767879.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="数据结构" scheme="http://767879.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数组" scheme="http://767879.xyz/tags/%E6%95%B0%E7%BB%84/"/>
     
-    <category term="链表" scheme="http://767879.xyz/tags/%E9%93%BE%E8%A1%A8/"/>
+    <category term="查找" scheme="http://767879.xyz/tags/%E6%9F%A5%E6%89%BE/"/>
     
   </entry>
   
   <entry>
-    <title>stl基础</title>
-    <link href="http://767879.xyz/2022/03/01/stl-ji-chu/"/>
-    <id>http://767879.xyz/2022/03/01/stl-ji-chu/</id>
-    <published>2022-03-01T15:02:27.299Z</published>
-    <updated>2022-10-23T15:35:34.714Z</updated>
+    <title></title>
+    <link href="http://767879.xyz/2022/10/24/x-de-n-ci-fang/"/>
+    <id>http://767879.xyz/2022/10/24/x-de-n-ci-fang/</id>
+    <published>2022-10-24T11:22:36.575Z</published>
+    <updated>2022-10-24T11:21:28.000Z</updated>
     
     
-    <summary type="html">C++标准模板库基本用法</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;求X的n次方&quot;&gt;&lt;a href=&quot;#求X的n次方&quot; class=&quot;headerlink&quot; title=&quot;求X的n次方&quot;&gt;&lt;/a&gt;求X的n次方&lt;/h1&gt;&lt;h3 id=&quot;时间复杂度-O-n&quot;&gt;&lt;a href=&quot;#时间复杂度-O-n&quot;</summary>
+        
+      
     
     
     
-    <category term="stl" scheme="http://767879.xyz/categories/stl/"/>
+    <category term="算法" scheme="http://767879.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="c++" scheme="http://767879.xyz/tags/c/"/>
+    <category term="递归" scheme="http://767879.xyz/tags/%E9%80%92%E5%BD%92/"/>
     
-    <category term="stl" scheme="http://767879.xyz/tags/stl/"/>
+    <category term="时间复杂度" scheme="http://767879.xyz/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://767879.xyz/2022/10/24/shi-jian-fu-za-du/"/>
+    <id>http://767879.xyz/2022/10/24/shi-jian-fu-za-du/</id>
+    <published>2022-10-24T11:22:36.573Z</published>
+    <updated>2022-10-24T11:22:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;时间复杂度-O-x&quot;&gt;&lt;a href=&quot;#时间复杂度-O-x&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://767879.xyz/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="时间复杂度" scheme="http://767879.xyz/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
     
   </entry>
   
@@ -158,27 +196,6 @@
     <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     <category term="error" scheme="http://767879.xyz/tags/error/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用gitee和picgo搭建图床</title>
-    <link href="http://767879.xyz/2021/12/18/shi-yong-gitee-he-picgo-da-jian-tu-chuang/"/>
-    <id>http://767879.xyz/2021/12/18/shi-yong-gitee-he-picgo-da-jian-tu-chuang/</id>
-    <published>2021-12-18T14:09:55.655Z</published>
-    <updated>2022-10-23T15:34:33.585Z</updated>
-    
-    
-    <summary type="html">图床搭建</summary>
-    
-    
-    
-    <category term="博客" scheme="http://767879.xyz/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-    <category term="Gitee" scheme="http://767879.xyz/tags/Gitee/"/>
-    
-    <category term="PicGo" scheme="http://767879.xyz/tags/PicGo/"/>
     
   </entry>
   
