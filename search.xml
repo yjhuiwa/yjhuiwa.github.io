@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>XFtp6提示更新无法打开</title>
+      <link href="/2022/10/24/xftp6-ti-shi-geng-xin-wu-fa-da-kai/"/>
+      <url>/2022/10/24/xftp6-ti-shi-geng-xin-wu-fa-da-kai/</url>
+      
+        <content type="html"><![CDATA[<h1 id="XFtp6提示更新无法打开"><a href="#XFtp6提示更新无法打开" class="headerlink" title="XFtp6提示更新无法打开"></a>XFtp6提示更新无法打开</h1><p>Xftp是一个功能强大的<a href="https://baike.baidu.com/item/SFTP/1184182">SFTP</a>、<a href="https://baike.baidu.com/item/FTP/13839">FTP</a> 文件传输软件。我们可以用Xftp安全地在<a href="https://baike.baidu.com/item/UNIX/219943">UNIX</a>/<a href="https://baike.baidu.com/item/Linux/27050">Linux</a> 和 <a href="https://baike.baidu.com/item/Windows/165458">Windows</a> PC 之间传输文件。但是就在我今天愉快的打开XFtp的时候，突然一个弹窗</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212251184.png" alt="image-20211221225108074"></p><p>？？难道是强制更新？<img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212252971.png" alt="image-20211221225249933"></p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212255404.png" alt="image-20211221225513315"></p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212255217.png" alt="image-20211221225532182"></p><p>这升级了半天还是个6啊，再次打开</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212251184.png" alt="img"></p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212258661.png" alt="image-20211221225840621"></p><p><strong>看来得上高科技了</strong></p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol><li><p>右击快捷方式，选择<strong>打开文件所在位置</strong>，找到XFtp安装目录</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212302895.png" alt="image-20211221230220805"></p></li><li><p>找到nslicense.dll文件</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212303207.png" alt="image-20211221230352120"></p></li><li><p>用十六/二进制编辑器打开(<a href="https://sourceforge.net/projects/madedit-mod/">MadEdit</a>)</p><p>CTRL+F查找十六进制序列<code>7F 0C 81 F9 80 33 E1 01 0F</code></p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212316555.png" alt="image-20211221231641405"></p><p>把OF 后的<code>86</code>改为<code>83</code>，保存。</p></li><li><p>OKKKKK</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212323459.png" alt="image-20211221232359275"></p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 服务器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> error </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>线性表</title>
       <link href="/2022/10/24/xian-xing-biao-adt/"/>
       <url>/2022/10/24/xian-xing-biao-adt/</url>
@@ -114,7 +141,7 @@
       <link href="/2021/12/25/git-ti-jiao-dai-ma-bei-ju-jue/"/>
       <url>/2021/12/25/git-ti-jiao-dai-ma-bei-ju-jue/</url>
       
-        <content type="html"><![CDATA[<h1 id="git-提交代码被拒绝"><a href="#git-提交代码被拒绝" class="headerlink" title="git 提交代码被拒绝"></a>git 提交代码被拒绝</h1><p><code>Push to xx/master was rejected</code></p><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>本地代码或者文件与仓库冲突(有不相关内容)，提交被拒绝。</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol><li><p>找到项目根目录，右键<code>Git bush here</code><br><img src="https://gitee.com/yjhuiwa/media/raw/master/image/image-20211225000948416.png" alt="image-20211225000948416"></p><p><br>输入代码**<code>git pull '你的项目分支' master --allow-unrelated-histories</code>**</p><p>这行命令可以允许不相关的代码提交。</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/image-20211225001142580.png" alt="image-20211225001142580"></p><p><br>然后再push就好了。</p></li><li><p>下下策，<strong>删除远程仓库</strong>所有代码，或者<strong>新建仓库</strong>，重新提交。</p></li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="git-提交代码被拒绝"><a href="#git-提交代码被拒绝" class="headerlink" title="git 提交代码被拒绝"></a>git 提交代码被拒绝</h1><p><code>Push to xx/master was rejected</code></p><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>本地代码或者文件与仓库冲突(有不相关内容)，提交被拒绝。</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol><li><p>找到项目根目录，右键<code>Git bush here</code><br><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20211225000948416.png" alt="image-20211225000948416"></p><p><br>输入代码**<code>git pull '你的项目分支' master --allow-unrelated-histories</code>**</p><p>这行命令可以允许不相关的代码提交。</p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20211225001142580.png" alt="image-20211225001142580"></p><p><br>然后再push就好了。</p></li><li><p>下下策，<strong>删除远程仓库</strong>所有代码，或者<strong>新建仓库</strong>，重新提交。</p></li></ol>]]></content>
       
       
       <categories>
@@ -208,33 +235,6 @@
             <tag> website </tag>
             
             <tag> tools </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>XFtp6提示更新无法打开</title>
-      <link href="/2021/12/21/xftp6-ti-shi-geng-xin-wu-fa-da-kai/"/>
-      <url>/2021/12/21/xftp6-ti-shi-geng-xin-wu-fa-da-kai/</url>
-      
-        <content type="html"><![CDATA[<h1 id="XFtp6提示更新无法打开"><a href="#XFtp6提示更新无法打开" class="headerlink" title="XFtp6提示更新无法打开"></a>XFtp6提示更新无法打开</h1><p>Xftp是一个功能强大的<a href="https://baike.baidu.com/item/SFTP/1184182">SFTP</a>、<a href="https://baike.baidu.com/item/FTP/13839">FTP</a> 文件传输软件。我们可以用Xftp安全地在<a href="https://baike.baidu.com/item/UNIX/219943">UNIX</a>/<a href="https://baike.baidu.com/item/Linux/27050">Linux</a> 和 <a href="https://baike.baidu.com/item/Windows/165458">Windows</a> PC 之间传输文件。但是就在我今天愉快的打开XFtp的时候，突然一个弹窗</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212251184.png" alt="image-20211221225108074"></p><p>？？难道是强制更新？<img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212252971.png" alt="image-20211221225249933"></p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212255404.png" alt="image-20211221225513315"></p><p><img src="https://fastly.jsdelivr.net/gh/yjhuiwa/picture/images2/images2/202112212255217.png" alt="image-20211221225532182"></p><p>这升级了半天还是个6啊，再次打开</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212251184.png" alt="img"></p><p><img src="https://fastly.jsdelivr.net/gh/yjhuiwa/picture/images2/images2/202112212258661.png" alt="image-20211221225840621"></p><p><strong>看来得上高科技了</strong></p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol><li><p>右击快捷方式，选择<strong>打开文件所在位置</strong>，找到XFtp安装目录</p><p><img src="https://fastly.jsdelivr.net/gh/yjhuiwa/picture/images2/images2/202112212302895.png" alt="image-20211221230220805"></p></li><li><p>找到nslicense.dll文件</p><p><img src="https://fastly.jsdelivr.net/gh/yjhuiwa/picture/images2/images2/202112212303207.png" alt="image-20211221230352120"></p></li><li><p>用十六/二进制编辑器打开(<a href="https://sourceforge.net/projects/madedit-mod/">MadEdit</a>)</p><p>CTRL+F查找十六进制序列<code>7F 0C 81 F9 80 33 E1 01 0F</code></p><p><img src="https://fastly.jsdelivr.net/gh/yjhuiwa/picture/images2/images2/202112212316555.png" alt="image-20211221231641405"></p><p>把OF 后的<code>86</code>改为<code>83</code>，保存。</p></li><li><p>OKKKKK</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212323459.png" alt="image-20211221232359275"></p></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 服务器 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 服务器 </tag>
-            
-            <tag> error </tag>
             
         </tags>
       

@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-10-23T15:33:38.671Z</updated>
+  <updated>2022-10-24T12:13:00.937Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>XFtp6提示更新无法打开</title>
+    <link href="http://767879.xyz/2022/10/24/xftp6-ti-shi-geng-xin-wu-fa-da-kai/"/>
+    <id>http://767879.xyz/2022/10/24/xftp6-ti-shi-geng-xin-wu-fa-da-kai/</id>
+    <published>2022-10-24T12:13:06.515Z</published>
+    <updated>2022-10-24T12:13:00.937Z</updated>
+    
+    
+    <summary type="html">XFtp6提示更新错误解决办法</summary>
+    
+    
+    
+    <category term="服务器" scheme="http://767879.xyz/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+    <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="error" scheme="http://767879.xyz/tags/error/"/>
+    
+  </entry>
   
   <entry>
     <title>线性表</title>
@@ -122,7 +143,7 @@
     <link href="http://767879.xyz/2021/12/25/git-ti-jiao-dai-ma-bei-ju-jue/"/>
     <id>http://767879.xyz/2021/12/25/git-ti-jiao-dai-ma-bei-ju-jue/</id>
     <published>2021-12-24T16:16:02.922Z</published>
-    <updated>2022-10-24T12:12:28.057Z</updated>
+    <updated>2022-10-24T12:52:37.170Z</updated>
     
     
     <summary type="html">本地代码或者文件与仓库冲突(有不相关内容)，提交被拒绝。</summary>
@@ -196,27 +217,6 @@
     <category term="website" scheme="http://767879.xyz/tags/website/"/>
     
     <category term="tools" scheme="http://767879.xyz/tags/tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>XFtp6提示更新无法打开</title>
-    <link href="http://767879.xyz/2021/12/21/xftp6-ti-shi-geng-xin-wu-fa-da-kai/"/>
-    <id>http://767879.xyz/2021/12/21/xftp6-ti-shi-geng-xin-wu-fa-da-kai/</id>
-    <published>2021-12-21T15:24:38.753Z</published>
-    <updated>2022-10-24T12:13:45.573Z</updated>
-    
-    
-    <summary type="html">XFtp6提示更新错误解决办法</summary>
-    
-    
-    
-    <category term="服务器" scheme="http://767879.xyz/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-    <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    <category term="error" scheme="http://767879.xyz/tags/error/"/>
     
   </entry>
   
