@@ -51,9 +51,9 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="朝花朝拾" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="朝花朝拾" type="application/atom+xml">
 </head>
 
 
@@ -547,7 +547,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"服务器","value":1},{"name":"markdown","value":1},{"name":"算法","value":3},{"name":"操作系统","value":2},{"name":"git","value":1},{"name":"数据库","value":1},{"name":"tools","value":1}],
+                data: [{"name":"markdown","value":1},{"name":"算法","value":3},{"name":"git","value":1},{"name":"服务器","value":1},{"name":"数据库","value":1},{"name":"tools","value":1},{"name":"操作系统","value":2}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -571,7 +571,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["error","时间复杂度","操作系统","服务器","markdown","递归","数组","查找","git","数据库"]
+                data: ["时间复杂度","error","操作系统","markdown","递归","git","服务器","数据库","H2","website"]
             }
         ],
         yAxis: [
@@ -754,18 +754,6 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-                <span class="chip center-align waves-effect waves-light chip-default">服务器</span>
-            </a>
-            
-            
-            
-            <a href="/tags/error/">
-                <span class="chip center-align waves-effect waves-light chip-default">error</span>
-            </a>
-            
-            
-            
             <a href="/tags/markdown/">
                 <span class="chip center-align waves-effect waves-light chip-default">markdown</span>
             </a>
@@ -780,6 +768,48 @@
             
             <a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
                 <span class="chip center-align waves-effect waves-light chip-default">时间复杂度</span>
+            </a>
+            
+            
+            
+            <a href="/tags/git/">
+                <span class="chip center-align waves-effect waves-light chip-default">git</span>
+            </a>
+            
+            
+            
+            <a href="/tags/error/">
+                <span class="chip center-align waves-effect waves-light chip-default">error</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                <span class="chip center-align waves-effect waves-light chip-default">服务器</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                <span class="chip center-align waves-effect waves-light chip-default">数据库</span>
+            </a>
+            
+            
+            
+            <a href="/tags/H2/">
+                <span class="chip center-align waves-effect waves-light chip-default">H2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/website/">
+                <span class="chip center-align waves-effect waves-light chip-default">website</span>
+            </a>
+            
+            
+            
+            <a href="/tags/tools/">
+                <span class="chip center-align waves-effect waves-light chip-default">tools</span>
             </a>
             
             
@@ -802,24 +832,6 @@
             
             
             
-            <a href="/tags/git/">
-                <span class="chip center-align waves-effect waves-light chip-default">git</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                <span class="chip center-align waves-effect waves-light chip-default">数据库</span>
-            </a>
-            
-            
-            
-            <a href="/tags/H2/">
-                <span class="chip center-align waves-effect waves-light chip-default">H2</span>
-            </a>
-            
-            
-            
             <a href="/tags/%E8%BF%9B%E7%A8%8B/">
                 <span class="chip center-align waves-effect waves-light chip-default">进程</span>
             </a>
@@ -828,18 +840,6 @@
             
             <a href="/tags/%E5%B9%B6%E8%A1%8C/">
                 <span class="chip center-align waves-effect waves-light chip-default">并行</span>
-            </a>
-            
-            
-            
-            <a href="/tags/website/">
-                <span class="chip center-align waves-effect waves-light chip-default">website</span>
-            </a>
-            
-            
-            
-            <a href="/tags/tools/">
-                <span class="chip center-align waves-effect waves-light chip-default">tools</span>
             </a>
             
             
@@ -940,12 +940,12 @@
     <div class="row">
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
                    server="netease"
-                   type="playlist"
-                   id="503838841"
+                   type="song"
+                   id="1480611629"
                    fixed='true'
                    autoplay='false'
                    theme='#42b983'
-                   loop='all'
+                   loop='one'
                    order='random'
                    preload='auto'
                    volume='0.7'
@@ -965,7 +965,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2020-2022</span>
             
             <a href="/about" target="_blank">Yjhui</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
@@ -1004,11 +1004,11 @@
                         var days = hours * 24;
                         var years = days * 365;
                         var today = new Date();
-                        var startYear = "2019";
-                        var startMonth = "6";
-                        var startDate = "28";
-                        var startHour = "0";
-                        var startMinute = "0";
+                        var startYear = "2020";
+                        var startMonth = "12";
+                        var startDate = "18";
+                        var startHour = "16";
+                        var startMinute = "43";
                         var startSecond = "0";
                         var todayYear = today.getFullYear();
                         var todayMonth = today.getMonth() + 1;
