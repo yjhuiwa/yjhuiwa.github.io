@@ -31,7 +31,7 @@
     
     
     <entry>
-      <title></title>
+      <title>二分查找</title>
       <link href="/2022/10/24/er-fen-cha-zhao/"/>
       <url>/2022/10/24/er-fen-cha-zhao/</url>
       
@@ -58,11 +58,11 @@
     
     
     <entry>
-      <title></title>
+      <title>求X的n次方</title>
       <link href="/2022/10/24/x-de-n-ci-fang/"/>
       <url>/2022/10/24/x-de-n-ci-fang/</url>
       
-        <content type="html"><![CDATA[<h1 id="求X的n次方"><a href="#求X的n次方" class="headerlink" title="求X的n次方"></a>求X的n次方</h1><h3 id="时间复杂度-O-n"><a href="#时间复杂度-O-n" class="headerlink" title="时间复杂度 O(n)"></a>时间复杂度 O(n)</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int func(int x,int n) {    int result = 1;    for (int i = 0; i &lt; n; i++) {        result *= x;    }    return result;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="递归解法-O-n"><a href="#递归解法-O-n" class="headerlink" title="递归解法 O(n)"></a>递归解法 O(n)</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int func2(int x,int n) {    if (n == 0) {        return 1;    }    return func(x, n-1) * x;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="递归解法2-O-n"><a href="#递归解法2-O-n" class="headerlink" title="递归解法2 O(n)"></a>递归解法2 O(n)</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int func(int x, int n) {    if (n == 0) {        return 1;    }    if (n % 2 == 1) {        result = func(x, n/2) * func(x, n/2) * x;    }    return func(x, n/2) * func(x, n/2);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="递归解法3-O-logn"><a href="#递归解法3-O-logn" class="headerlink" title="递归解法3 O(logn)"></a>递归解法3 O(logn)</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">// 递归解法2的改进，去掉重复的计算过程int func(int x, int n) {    if (n == 0) {        return 1;    }    int t = func(x, n/2);    if(n % 2 ==1){        t = t * t * x;    }    return t * t;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="求X的n次方"><a href="#求X的n次方" class="headerlink" title="求X的n次方"></a>求X的n次方</h1><h3 id="时间复杂度-O-n"><a href="#时间复杂度-O-n" class="headerlink" title="时间复杂度 O(n)"></a>时间复杂度 O(n)</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int func(int x,int n) {    int result = 1;    for (int i = 0; i &lt; n; i++) {        result *= x;    }    return result;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="递归解法-O-n"><a href="#递归解法-O-n" class="headerlink" title="递归解法 O(n)"></a>递归解法 O(n)</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int func2(int x,int n) {    if (n == 0) {        return 1;    }    return func(x, n-1) * x;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="递归解法2-O-n"><a href="#递归解法2-O-n" class="headerlink" title="递归解法2 O(n)"></a>递归解法2 O(n)</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int func(int x, int n) {    if (n == 0) {        return 1;    }    if (n % 2 == 1) {        result = func(x, n/2) * func(x, n/2) * x;    }    return func(x, n/2) * func(x, n/2);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="递归解法3-O-logn"><a href="#递归解法3-O-logn" class="headerlink" title="递归解法3 O(logn)"></a>递归解法3 O(logn)</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">// 递归解法2的改进，去掉重复的计算过程</span><span class="token keyword">int</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">int</span> t <span class="token operator">=</span> <span class="token function">func</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> n<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">if</span><span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        t <span class="token operator">=</span> t <span class="token operator">*</span> t <span class="token operator">*</span> x<span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">return</span> t <span class="token operator">*</span> t<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
@@ -85,7 +85,7 @@
     
     
     <entry>
-      <title></title>
+      <title>时间复杂度-O(x)</title>
       <link href="/2022/10/24/shi-jian-fu-za-du/"/>
       <url>/2022/10/24/shi-jian-fu-za-du/</url>
       
@@ -126,9 +126,9 @@
       
         <tags>
             
-            <tag> git </tag>
-            
             <tag> error </tag>
+            
+            <tag> git </tag>
             
         </tags>
       
@@ -220,7 +220,7 @@
       <link href="/2021/12/21/xftp6-ti-shi-geng-xin-wu-fa-da-kai/"/>
       <url>/2021/12/21/xftp6-ti-shi-geng-xin-wu-fa-da-kai/</url>
       
-        <content type="html"><![CDATA[<h1 id="XFtp6提示更新无法打开"><a href="#XFtp6提示更新无法打开" class="headerlink" title="XFtp6提示更新无法打开"></a>XFtp6提示更新无法打开</h1><p>Xftp是一个功能强大的<a href="https://baike.baidu.com/item/SFTP/1184182">SFTP</a>、<a href="https://baike.baidu.com/item/FTP/13839">FTP</a> 文件传输软件。我们可以用Xftp安全地在<a href="https://baike.baidu.com/item/UNIX/219943">UNIX</a>/<a href="https://baike.baidu.com/item/Linux/27050">Linux</a> 和 <a href="https://baike.baidu.com/item/Windows/165458">Windows</a> PC 之间传输文件。但是就在我今天愉快的打开XFtp的时候，突然一个弹窗</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212251184.png" alt="image-20211221225108074"></p><p>？？难道是强制更新？<img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212252971.png" alt="image-20211221225249933"></p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212255404.png" alt="image-20211221225513315"></p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212255217.png" alt="image-20211221225532182"></p><p>这升级了半天还是个6啊，再次打开</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212251184.png" alt="img"></p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212258661.png" alt="image-20211221225840621"></p><p><strong>看来得上高科技了</strong></p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol><li><p>右击快捷方式，选择<strong>打开文件所在位置</strong>，找到XFtp安装目录</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212302895.png" alt="image-20211221230220805"></p></li><li><p>找到nslicense.dll文件</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212303207.png" alt="image-20211221230352120"></p></li><li><p>用十六/二进制编辑器打开(<a href="https://sourceforge.net/projects/madedit-mod/">MadEdit</a>)</p><p>CTRL+F查找十六进制序列<code>7F 0C 81 F9 80 33 E1 01 0F</code></p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212316555.png" alt="image-20211221231641405"></p><p>把OF 后的<code>86</code>改为<code>83</code>，保存。</p></li><li><p>OKKKKK</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212323459.png" alt="image-20211221232359275"></p></li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="XFtp6提示更新无法打开"><a href="#XFtp6提示更新无法打开" class="headerlink" title="XFtp6提示更新无法打开"></a>XFtp6提示更新无法打开</h1><p>Xftp是一个功能强大的<a href="https://baike.baidu.com/item/SFTP/1184182">SFTP</a>、<a href="https://baike.baidu.com/item/FTP/13839">FTP</a> 文件传输软件。我们可以用Xftp安全地在<a href="https://baike.baidu.com/item/UNIX/219943">UNIX</a>/<a href="https://baike.baidu.com/item/Linux/27050">Linux</a> 和 <a href="https://baike.baidu.com/item/Windows/165458">Windows</a> PC 之间传输文件。但是就在我今天愉快的打开XFtp的时候，突然一个弹窗</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212251184.png" alt="image-20211221225108074"></p><p>？？难道是强制更新？<img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212252971.png" alt="image-20211221225249933"></p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212255404.png" alt="image-20211221225513315"></p><p><img src="https://fastly.jsdelivr.net/gh/yjhuiwa/picture/images2/images2/202112212255217.png" alt="image-20211221225532182"></p><p>这升级了半天还是个6啊，再次打开</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212251184.png" alt="img"></p><p><img src="https://fastly.jsdelivr.net/gh/yjhuiwa/picture/images2/images2/202112212258661.png" alt="image-20211221225840621"></p><p><strong>看来得上高科技了</strong></p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol><li><p>右击快捷方式，选择<strong>打开文件所在位置</strong>，找到XFtp安装目录</p><p><img src="https://fastly.jsdelivr.net/gh/yjhuiwa/picture/images2/images2/202112212302895.png" alt="image-20211221230220805"></p></li><li><p>找到nslicense.dll文件</p><p><img src="https://fastly.jsdelivr.net/gh/yjhuiwa/picture/images2/images2/202112212303207.png" alt="image-20211221230352120"></p></li><li><p>用十六/二进制编辑器打开(<a href="https://sourceforge.net/projects/madedit-mod/">MadEdit</a>)</p><p>CTRL+F查找十六进制序列<code>7F 0C 81 F9 80 33 E1 01 0F</code></p><p><img src="https://fastly.jsdelivr.net/gh/yjhuiwa/picture/images2/images2/202112212316555.png" alt="image-20211221231641405"></p><p>把OF 后的<code>86</code>改为<code>83</code>，保存。</p></li><li><p>OKKKKK</p><p><img src="https://gitee.com/yjhuiwa/media/raw/master/image/202112212323459.png" alt="image-20211221232359275"></p></li></ol>]]></content>
       
       
       <categories>
@@ -232,9 +232,9 @@
       
         <tags>
             
-            <tag> error </tag>
-            
             <tag> 服务器 </tag>
+            
+            <tag> error </tag>
             
         </tags>
       

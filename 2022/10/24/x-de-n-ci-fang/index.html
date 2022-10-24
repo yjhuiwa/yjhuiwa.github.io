@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="朝花朝拾">
+    <meta name="keywords" content="求X的n次方, 朝花朝拾">
     <meta name="description" content="求X的n次方时间复杂度 O(n)int func(int x,int n) {
     int result = 1;
     for (int i = 0; i &amp;lt; n; i++) {
@@ -21,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>朝花朝拾</title>
+    <title>求X的n次方 | 朝花朝拾</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -55,9 +55,9 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="朝花朝拾" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="朝花朝拾" type="application/atom+xml">
 </head>
 
 
@@ -277,12 +277,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">求X的n次方</h1>
                 </div>
             </div>
         </div>
@@ -399,17 +399,17 @@
     return func(x, n/2) * func(x, n/2);
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="递归解法3-O-logn"><a href="#递归解法3-O-logn" class="headerlink" title="递归解法3 O(logn)"></a>递归解法3 O(logn)</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">// 递归解法2的改进，去掉重复的计算过程
-int func(int x, int n) {
-    if (n == 0) {
-        return 1;
-    }
-    int t = func(x, n/2);
-    if(n % 2 ==1){
-        t = t * t * x;
-    }
-    return t * t;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="递归解法3-O-logn"><a href="#递归解法3-O-logn" class="headerlink" title="递归解法3 O(logn)"></a>递归解法3 O(logn)</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">// 递归解法2的改进，去掉重复的计算过程</span>
+<span class="token keyword">int</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">int</span> t <span class="token operator">=</span> <span class="token function">func</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> n<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        t <span class="token operator">=</span> t <span class="token operator">*</span> t <span class="token operator">*</span> x<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> t <span class="token operator">*</span> t<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -534,9 +534,9 @@ int func(int x, int n) {
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="二分查找">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">二分查找</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -587,9 +587,9 @@ int func(int x, int n) {
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="时间复杂度-O(x)">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">时间复杂度-O(x)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
