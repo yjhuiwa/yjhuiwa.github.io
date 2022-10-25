@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>机器人学导论</title>
+      <link href="/2022/10/25/ji-qi-ren-xue-dao-lun/"/>
+      <url>/2022/10/25/ji-qi-ren-xue-dao-lun/</url>
+      
+        <content type="html"><![CDATA[<h2 id="刚体运动状态描述"><a href="#刚体运动状态描述" class="headerlink" title="刚体运动状态描述"></a>刚体运动状态描述</h2><h3 id="平面上需要三个自由度去描述刚体的运动。"><a href="#平面上需要三个自由度去描述刚体的运动。" class="headerlink" title="平面上需要三个自由度去描述刚体的运动。"></a>平面上需要三个自由度去描述刚体的运动。</h3><blockquote><p>x 轴，y轴，旋转角 $\theta$</p></blockquote><h3 id="空间上需要六个自由度取描述刚体运动"><a href="#空间上需要六个自由度取描述刚体运动" class="headerlink" title="空间上需要六个自由度取描述刚体运动"></a>空间上需要六个自由度取描述刚体运动</h3><blockquote><p>x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋转方向</p></blockquote><p>但是这样的表示方法比较复杂，所以引入世界坐标和物体坐标系，用物体坐标系的远点代表物体位置，物体坐标系相对世界坐标系的姿态表示刚体的转动状态。将刚体坐标系轨迹记录下来，然后对时间微分和二次微分即可得到刚体的速度、加速度等信息。</p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025210313050.png" alt="image-20221025210313050"></p><h3 id="刚体运动"><a href="#刚体运动" class="headerlink" title="刚体运动"></a>刚体运动</h3><h4 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h4><p>用世界坐标系原点到刚体坐标系原点的<strong>向量</strong>来表示刚体在空间中的位置和移动状态。</p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025210600280.png" alt="image-20221025210600280"></p><h4 id="转动"><a href="#转动" class="headerlink" title="转动"></a>转动</h4><p>用刚体坐标系在世界坐标系中的投影来表示刚体的转动状态。</p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025212148476.png" alt="image-20221025212148476"></p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025212225350.png" alt="image-20221025212225350"></p><p><strong>${^A_B}R$ 表示B坐标系相对A坐标系的旋转矩阵</strong></p><h4 id="旋转矩阵特性"><a href="#旋转矩阵特性" class="headerlink" title="旋转矩阵特性"></a>旋转矩阵特性</h4><ol><li><p>A对B的旋转矩阵转置既是B对A的旋转矩阵。</p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025214157573.png" alt="image-20221025214157573"></p></li><li><p>${^A_B}R^T{^A_B}R=I_3$ (单位矩阵)</p><p>正交矩阵有这样的特性。因此在算矩阵的逆矩阵时，可直接计算其旋转矩阵。</p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025214632994.png" alt="image-20221025214632994"></p></li></ol><h4 id="旋转矩阵处了描述-B-相对-A-的姿态，也可用于转换。"><a href="#旋转矩阵处了描述-B-相对-A-的姿态，也可用于转换。" class="headerlink" title="旋转矩阵处了描述{B}相对{A}的姿态，也可用于转换。"></a>旋转矩阵处了描述{B}相对{A}的姿态，也可用于转换。</h4><p>eg. 求P点在{A}和{B}两个坐标系的表达法。</p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025220046594.png" alt="image-20221025220046594"></p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025220104075.png" alt="image-20221025220104075"></p><h4 id="进一步描述刚体转动的状态"><a href="#进一步描述刚体转动的状态" class="headerlink" title="进一步描述刚体转动的状态"></a>进一步描述刚体转动的状态</h4><p>当坐标轴绕Z轴旋转$\theta$角度时，此时的坐标系B对A的旋转矩阵可表示为如下形式。</p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025221505493.png" alt="image-20221025221505493"></p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025221511975.png" alt="image-20221025221511975"></p><p>这种表示方法可以解决P点随坐标系旋转$\theta$后，相对原坐标系的位置。</p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025222109217.png" alt="image-20221025222109217"></p><h4 id="总结旋转矩阵的三个用法"><a href="#总结旋转矩阵的三个用法" class="headerlink" title="总结旋转矩阵的三个用法"></a>总结旋转矩阵的三个用法</h4><ol><li><p>描述一个坐标系相对另一个坐标系的姿态</p></li><li><p>求点在不同坐标系中的位置</p><p>$^AP={^A_BR}^BP$</p></li><li><p>求点在同一个坐标系中转动后的位置</p><p>$^AP’=R(\theta)^AP$</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器人学导论 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器人学导论 </tag>
+            
+            <tag> 线性代数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SQL基础</title>
       <link href="/2022/10/25/sql-ji-chu/"/>
       <url>/2022/10/25/sql-ji-chu/</url>
@@ -101,9 +128,9 @@
       
         <tags>
             
-            <tag> 服务器 </tag>
-            
             <tag> error </tag>
+            
+            <tag> 服务器 </tag>
             
         </tags>
       
@@ -207,9 +234,9 @@
       
         <tags>
             
-            <tag> error </tag>
-            
             <tag> git </tag>
+            
+            <tag> error </tag>
             
         </tags>
       
@@ -262,33 +289,6 @@
             <tag> 数据库 </tag>
             
             <tag> H2 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>工具网站</title>
-      <link href="/2021/12/22/shen-qi-de-wang-zhan/"/>
-      <url>/2021/12/22/shen-qi-de-wang-zhan/</url>
-      
-        <content type="html"><![CDATA[<h2 id="1、音频剪辑100Audio"><a href="#1、音频剪辑100Audio" class="headerlink" title="1、音频剪辑100Audio"></a>1、音频剪辑<a href="https://100audio.com/sound/100audio_editor/">100Audio</a></h2><p>100Audio Editor是一个免费的、开源的、基于web的音频和波形编辑器。</p><h2 id="2、空投快传AirPortal"><a href="#2、空投快传AirPortal" class="headerlink" title="2、空投快传AirPortal"></a>2、空投快传<a href="https://airportal.cn/">AirPortal</a></h2><p>一款设计简约的即时文件分享网站，没有繁琐的流程，也不需要下载，甚至不需要账号，你只需要打开网页，上传文件，再点击发送即可；随后系统会自动生成一个取件码，接收方只需要填写取货码并点击接收即可。就好比是一个快递柜，简单，却有效。</p><h2 id="3、视频转GIF图airmore-cn"><a href="#3、视频转GIF图airmore-cn" class="headerlink" title="3、视频转GIF图airmore.cn"></a>3、视频转GIF图<a href="https://airmore.cn/video-to-gif-online">airmore.cn</a></h2><p>将视频转换为Gif动图，快速制作表情包</p><h2 id="4、在线格式转换alltoall-net"><a href="#4、在线格式转换alltoall-net" class="headerlink" title="4、在线格式转换alltoall.net"></a>4、在线格式转换<a href="https://www.alltoall.net/">alltoall.net</a></h2><p>顾名思义，什么都能转</p><h2 id="5、格式转换Convertio"><a href="#5、格式转换Convertio" class="headerlink" title="5、格式转换Convertio"></a>5、格式转换<a href="https://convertio.co/zh/">Convertio</a></h2><p>更强大的格式转换工具，最大可支持100M大小文件格式转换，支持300+种格式</p><h3 id="6、跑马灯retiehe-com"><a href="#6、跑马灯retiehe-com" class="headerlink" title="6、跑马灯retiehe.com**"></a><strong>6、跑马灯<a href="https://tool.retiehe.com/marquee">retiehe.com</a></strong>**</h3><p>就是你想的那种跑马灯</p><h3 id="7、数据生成工具sqlfather"><a href="#7、数据生成工具sqlfather" class="headerlink" title="7、数据生成工具sqlfather"></a><strong>7、数据生成工具<a href="https://sqlfather.com/">sqlfather</a></strong></h3><p>程序员鱼皮自制数据生成工具，帮你轻松生成 SQL 语句、假数据和代码，大幅提升开发效率~ 无论你是前端、后端、测试、数据开发、数据科学的同学，相信这个工具都会对你有帮助。</p><h3 id="8、提取音频-Audio-Extractor-Audio-Extractor-从在线视频中提取音频-audio-extractor-net"><a href="#8、提取音频-Audio-Extractor-Audio-Extractor-从在线视频中提取音频-audio-extractor-net" class="headerlink" title="8、提取音频[Audio Extractor](Audio Extractor - 从在线视频中提取音频 (audio-extractor.net))"></a><strong>8、提取音频[Audio Extractor](<a href="https://audio-extractor.net/cn/">Audio Extractor - 从在线视频中提取音频 (audio-extractor.net)</a>)</strong></h3><p>在线提取视频中的音频信息。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> tools </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> website </tag>
-            
-            <tag> tools </tag>
             
         </tags>
       

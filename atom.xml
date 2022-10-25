@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>朝花朝拾</title>
   
-  <subtitle>Welcome to here...</subtitle>
+  <subtitle>Congratulations</subtitle>
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-10-25T04:14:35.617Z</updated>
+  <updated>2022-10-25T15:08:59.303Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器人学导论</title>
+    <link href="http://767879.xyz/2022/10/25/ji-qi-ren-xue-dao-lun/"/>
+    <id>http://767879.xyz/2022/10/25/ji-qi-ren-xue-dao-lun/</id>
+    <published>2022-10-25T12:33:12.000Z</published>
+    <updated>2022-10-25T15:08:59.303Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;刚体运动状态描述&quot;&gt;&lt;a href=&quot;#刚体运动状态描述&quot; class=&quot;headerlink&quot; title=&quot;刚体运动状态描述&quot;&gt;&lt;/a&gt;刚体运动状态描述&lt;/h2&gt;&lt;h3 id=&quot;平面上需要三个自由度去描述刚体的运动。&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="机器人学导论" scheme="http://767879.xyz/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%E5%AF%BC%E8%AE%BA/"/>
+    
+    
+    <category term="机器人学导论" scheme="http://767879.xyz/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%E5%AF%BC%E8%AE%BA/"/>
+    
+    <category term="线性代数" scheme="http://767879.xyz/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>SQL基础</title>
@@ -101,9 +128,9 @@
     <category term="服务器" scheme="http://767879.xyz/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-    <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
     <category term="error" scheme="http://767879.xyz/tags/error/"/>
+    
+    <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
@@ -204,9 +231,9 @@
     <category term="git" scheme="http://767879.xyz/categories/git/"/>
     
     
-    <category term="error" scheme="http://767879.xyz/tags/error/"/>
-    
     <category term="git" scheme="http://767879.xyz/tags/git/"/>
+    
+    <category term="error" scheme="http://767879.xyz/tags/error/"/>
     
   </entry>
   
@@ -247,27 +274,6 @@
     <category term="数据库" scheme="http://767879.xyz/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     <category term="H2" scheme="http://767879.xyz/tags/H2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>工具网站</title>
-    <link href="http://767879.xyz/2021/12/22/shen-qi-de-wang-zhan/"/>
-    <id>http://767879.xyz/2021/12/22/shen-qi-de-wang-zhan/</id>
-    <published>2021-12-21T16:06:05.577Z</published>
-    <updated>2022-10-25T03:04:06.953Z</updated>
-    
-    
-    <summary type="html">一些有用的在线网站</summary>
-    
-    
-    
-    <category term="tools" scheme="http://767879.xyz/categories/tools/"/>
-    
-    
-    <category term="website" scheme="http://767879.xyz/tags/website/"/>
-    
-    <category term="tools" scheme="http://767879.xyz/tags/tools/"/>
     
   </entry>
   
