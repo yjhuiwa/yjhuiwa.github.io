@@ -184,9 +184,9 @@
     <category term="算法" scheme="http://767879.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="递归" scheme="http://767879.xyz/tags/%E9%80%92%E5%BD%92/"/>
-    
     <category term="时间复杂度" scheme="http://767879.xyz/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
+    
+    <category term="递归" scheme="http://767879.xyz/tags/%E9%80%92%E5%BD%92/"/>
     
   </entry>
   
