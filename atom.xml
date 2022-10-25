@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-10-24T14:19:05.454Z</updated>
+  <updated>2022-10-25T02:47:30.736Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://767879.xyz/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/"/>
     <id>http://767879.xyz/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/</id>
     <published>2022-10-24T14:11:15.448Z</published>
-    <updated>2022-10-24T14:19:05.454Z</updated>
+    <updated>2022-10-25T02:47:30.736Z</updated>
     
     
     <summary type="html">操作系统基础</summary>
@@ -44,7 +44,7 @@
     <link href="http://767879.xyz/2022/10/24/cao-zuo-xi-tong-gai-shu/"/>
     <id>http://767879.xyz/2022/10/24/cao-zuo-xi-tong-gai-shu/</id>
     <published>2022-10-24T13:46:20.969Z</published>
-    <updated>2022-10-24T13:10:45.183Z</updated>
+    <updated>2022-10-25T02:48:30.116Z</updated>
     
     
     <summary type="html">操作系统概述</summary>
@@ -63,7 +63,7 @@
     <link href="http://767879.xyz/2022/10/24/xftp6-ti-shi-geng-xin-wu-fa-da-kai/"/>
     <id>http://767879.xyz/2022/10/24/xftp6-ti-shi-geng-xin-wu-fa-da-kai/</id>
     <published>2022-10-24T12:13:06.515Z</published>
-    <updated>2022-10-24T12:57:42.546Z</updated>
+    <updated>2022-10-25T02:48:14.877Z</updated>
     
     
     <summary type="html">XFtp6提示更新错误解决办法</summary>
@@ -84,15 +84,16 @@
     <link href="http://767879.xyz/2022/10/24/er-fen-cha-zhao/"/>
     <id>http://767879.xyz/2022/10/24/er-fen-cha-zhao/</id>
     <published>2022-10-24T11:22:36.577Z</published>
-    <updated>2022-10-24T13:05:41.906Z</updated>
+    <updated>2022-10-25T02:48:43.186Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;二分查找&quot;&gt;&lt;a href=&quot;#二分查找&quot; class=&quot;headerlink&quot; title=&quot;二分查找&quot;&gt;&lt;/a&gt;二分查找&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;题目描述&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;给定一个 n 个元素有序的（升序）整型数组 nums</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;题目描述&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。&lt;/p&gt;
+&lt;pre</summary>
         
       
     
@@ -112,14 +113,14 @@
     <link href="http://767879.xyz/2022/10/24/x-de-n-ci-fang/"/>
     <id>http://767879.xyz/2022/10/24/x-de-n-ci-fang/</id>
     <published>2022-10-24T11:22:36.575Z</published>
-    <updated>2022-10-24T13:13:32.504Z</updated>
+    <updated>2022-10-25T02:48:21.477Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;求X的n次方&quot;&gt;&lt;a href=&quot;#求X的n次方&quot; class=&quot;headerlink&quot; title=&quot;求X的n次方&quot;&gt;&lt;/a&gt;求X的n次方&lt;/h1&gt;&lt;h3 id=&quot;时间复杂度-O-n&quot;&gt;&lt;a href=&quot;#时间复杂度-O-n&quot;</summary>
+    <summary type="html">&lt;h3 id=&quot;时间复杂度-O-n&quot;&gt;&lt;a href=&quot;#时间复杂度-O-n&quot; class=&quot;headerlink&quot; title=&quot;时间复杂度 O(n)&quot;&gt;&lt;/a&gt;时间复杂度 O(n)&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-c&quot;</summary>
         
       
     
@@ -139,14 +140,15 @@
     <link href="http://767879.xyz/2022/10/24/shi-jian-fu-za-du/"/>
     <id>http://767879.xyz/2022/10/24/shi-jian-fu-za-du/</id>
     <published>2022-10-24T11:22:36.573Z</published>
-    <updated>2022-10-24T12:58:31.335Z</updated>
+    <updated>2022-10-25T02:49:22.576Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;时间复杂度-O-x&quot;&gt;&lt;a href=&quot;#时间复杂度-O-x&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;大O：用来表示算法最坏情况运行时间的上界。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;不同数据规模下时间复杂度的差异&quot;&gt;&lt;a href=&quot;#不同数据规模下时间复杂度的差异&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -164,7 +166,7 @@
     <link href="http://767879.xyz/2021/12/25/git-ti-jiao-dai-ma-bei-ju-jue/"/>
     <id>http://767879.xyz/2021/12/25/git-ti-jiao-dai-ma-bei-ju-jue/</id>
     <published>2021-12-24T16:16:02.922Z</published>
-    <updated>2022-10-24T12:52:37.170Z</updated>
+    <updated>2022-10-25T02:48:00.076Z</updated>
     
     
     <summary type="html">本地代码或者文件与仓库冲突(有不相关内容)，提交被拒绝。</summary>
@@ -185,7 +187,7 @@
     <link href="http://767879.xyz/2021/12/24/markdown-yu-fa/"/>
     <id>http://767879.xyz/2021/12/24/markdown-yu-fa/</id>
     <published>2021-12-24T06:54:34.380Z</published>
-    <updated>2022-10-24T13:04:17.359Z</updated>
+    <updated>2022-10-25T02:48:07.517Z</updated>
     
     
     <summary type="html">markdown基础语法</summary>
@@ -204,7 +206,7 @@
     <link href="http://767879.xyz/2021/12/24/qian-ru-shi-h2-shu-ju-ku/"/>
     <id>http://767879.xyz/2021/12/24/qian-ru-shi-h2-shu-ju-ku/</id>
     <published>2021-12-24T06:21:13.981Z</published>
-    <updated>2022-10-24T12:58:15.832Z</updated>
+    <updated>2022-10-25T02:48:52.579Z</updated>
     
     
     <summary type="html">嵌入式H2数据库配置</summary>
@@ -221,11 +223,11 @@
   </entry>
   
   <entry>
-    <title>神奇的网站</title>
+    <title>工具网站</title>
     <link href="http://767879.xyz/2021/12/22/shen-qi-de-wang-zhan/"/>
     <id>http://767879.xyz/2021/12/22/shen-qi-de-wang-zhan/</id>
     <published>2021-12-21T16:06:05.577Z</published>
-    <updated>2022-10-23T15:32:19.087Z</updated>
+    <updated>2022-10-25T02:49:14.367Z</updated>
     
     
     <summary type="html">一些有用的在线网站</summary>
