@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-10-25T02:47:30.736Z</updated>
+  <updated>2022-10-25T04:14:35.617Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SQL基础</title>
+    <link href="http://767879.xyz/2022/10/25/sql-ji-chu/"/>
+    <id>http://767879.xyz/2022/10/25/sql-ji-chu/</id>
+    <published>2022-10-25T04:08:38.000Z</published>
+    <updated>2022-10-25T04:14:35.617Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;SQL简介&quot;&gt;&lt;a href=&quot;#SQL简介&quot; class=&quot;headerlink&quot; title=&quot;SQL简介&quot;&gt;&lt;/a&gt;SQL简介&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;SQL&lt;/strong&gt; (Structured Query</summary>
+        
+      
+    
+    
+    
+    <category term="SQL" scheme="http://767879.xyz/categories/SQL/"/>
+    
+    
+    <category term="SQL" scheme="http://767879.xyz/tags/SQL/"/>
+    
+    <category term="mysql" scheme="http://767879.xyz/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>进程的描述与控制</title>
@@ -44,7 +72,7 @@
     <link href="http://767879.xyz/2022/10/24/cao-zuo-xi-tong-gai-shu/"/>
     <id>http://767879.xyz/2022/10/24/cao-zuo-xi-tong-gai-shu/</id>
     <published>2022-10-24T13:46:20.969Z</published>
-    <updated>2022-10-25T02:48:30.116Z</updated>
+    <updated>2022-10-25T10:20:28.042Z</updated>
     
     
     <summary type="html">操作系统概述</summary>
@@ -73,9 +101,9 @@
     <category term="服务器" scheme="http://767879.xyz/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-    <category term="error" scheme="http://767879.xyz/tags/error/"/>
-    
     <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="error" scheme="http://767879.xyz/tags/error/"/>
     
   </entry>
   
@@ -176,9 +204,9 @@
     <category term="git" scheme="http://767879.xyz/categories/git/"/>
     
     
-    <category term="git" scheme="http://767879.xyz/tags/git/"/>
-    
     <category term="error" scheme="http://767879.xyz/tags/error/"/>
+    
+    <category term="git" scheme="http://767879.xyz/tags/git/"/>
     
   </entry>
   
@@ -227,7 +255,7 @@
     <link href="http://767879.xyz/2021/12/22/shen-qi-de-wang-zhan/"/>
     <id>http://767879.xyz/2021/12/22/shen-qi-de-wang-zhan/</id>
     <published>2021-12-21T16:06:05.577Z</published>
-    <updated>2022-10-25T02:49:14.367Z</updated>
+    <updated>2022-10-25T03:04:06.953Z</updated>
     
     
     <summary type="html">一些有用的在线网站</summary>

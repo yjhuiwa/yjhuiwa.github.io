@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>SQL基础</title>
+      <link href="/2022/10/25/sql-ji-chu/"/>
+      <url>/2022/10/25/sql-ji-chu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="SQL简介"><a href="#SQL简介" class="headerlink" title="SQL简介"></a>SQL简介</h2><blockquote><p><strong>SQL</strong> (Structured Query Language:结构化查询语言) 是用于管理关系数据库管理系统（RDBMS）。 SQL 的范围包括数据插入、查询、更新和删除，数据库模式创建和修改，以及数据访问控制。</p></blockquote><ul><li>SQL 指结构化查询语言，全称是 Structured Query Language。</li><li>SQL 让您可以访问和处理数据库，包括数据插入、查询、更新和删除。</li><li>SQL 在1986年成为 ANSI（American National Standards Institute 美国国家标准化组织）的一项标准，在 1987 年成为国际标准化组织（ISO）标准。</li></ul><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 这是</span><span class="token comment">/* 注   释 */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SQL </tag>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>进程的描述与控制</title>
       <link href="/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/"/>
       <url>/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/</url>
@@ -37,7 +64,7 @@
       <link href="/2022/10/24/cao-zuo-xi-tong-gai-shu/"/>
       <url>/2022/10/24/cao-zuo-xi-tong-gai-shu/</url>
       
-        <content type="html"><![CDATA[<h2 id="操作系统的概念"><a href="#操作系统的概念" class="headerlink" title="操作系统的概念"></a>操作系统的概念</h2><h3 id="操作系统的功能和目标"><a href="#操作系统的功能和目标" class="headerlink" title="操作系统的功能和目标"></a>操作系统的功能和目标</h3><h4 id="–作为系统资源的管理者"><a href="#–作为系统资源的管理者" class="headerlink" title="–作为系统资源的管理者"></a>–作为系统资源的管理者</h4><pre class="mermaid">graph LRA[作为系统资源的管理者]--&gt;B[提供的功能]A--&gt;C[目标]B--&gt;E[处理机管理]B--&gt;D[存储器管理]B--&gt;H[文件管理]B--&gt;F[设备管理]C--&gt;G[安全,高效]</pre><h4 id="–作为用户和计算机硬件之间的接口"><a href="#–作为用户和计算机硬件之间的接口" class="headerlink" title="–作为用户和计算机硬件之间的接口"></a>–作为用户和计算机硬件之间的接口</h4><pre class="mermaid">graph LRA[作为用户和计算机硬件之间的接口]--&gt;B[提供的功能]A--&gt;C[目标]C--&gt;D[方便用户使用]B--&gt;E[命令接口]B--&gt;F[程序接口]B--&gt;G[GUI]E--&gt;H[联机命令接口]E--&gt;I[脱机命令接口]H---J[说一句做一句,说一堆做一堆]I---J</pre><h4 id="–作为最接近硬件的层次"><a href="#–作为最接近硬件的层次" class="headerlink" title="–作为最接近硬件的层次"></a>–作为最接近硬件的层次</h4><h3 id="操作系统的四个基本特征"><a href="#操作系统的四个基本特征" class="headerlink" title="操作系统的四个基本特征"></a>操作系统的四个基本特征</h3><h4 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h4><p>微观上交替执行，区别于并行：同时执行</p><h4 id="共享"><a href="#共享" class="headerlink" title="共享"></a>共享</h4><p>共享方式：互斥共享（eg. 摄像头资源）、同时共享（宏观/微观）</p><blockquote><p>并发性与共享性互为存在条件</p></blockquote><h4 id="虚拟"><a href="#虚拟" class="headerlink" title="虚拟"></a>虚拟</h4><p>物理实体和逻辑实体</p><pre class="mermaid">graph LRA[虚拟技术]--&gt;B[空分复用技术,如虚拟处理器]A--&gt;C[时分复用技术,如虚拟处理器]</pre><h4 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h4><p>并发性—&gt;异步性</p><h1 id="操作系统的发展过程"><a href="#操作系统的发展过程" class="headerlink" title="操作系统的发展过程"></a>操作系统的发展过程</h1><h3 id="手工操作阶段"><a href="#手工操作阶段" class="headerlink" title="手工操作阶段"></a>手工操作阶段</h3><p>缺点：用户独占全集、人机速度矛盾导致资源利用率极低</p><h3 id="批处理阶段–单道批处理系统"><a href="#批处理阶段–单道批处理系统" class="headerlink" title="批处理阶段–单道批处理系统"></a>批处理阶段–单道批处理系统</h3><p>优点：缓解了一定程度的人机速度矛盾，资源利用率有所提升</p><p>缺点:内存中仅能有一道程序运行，CPU大量的实践是在等待I/O完成</p><h3 id="批处理阶段–多道批处理阶段"><a href="#批处理阶段–多道批处理阶段" class="headerlink" title="批处理阶段–多道批处理阶段"></a>批处理阶段–多道批处理阶段</h3><p>操作系统正式诞生</p><p>优点：躲到程序并发执行，共享计算机资源，资源利用率大幅提升</p><p>缺点：用户响应时间长，没有人机交互功能</p><h3 id="分时操作系统"><a href="#分时操作系统" class="headerlink" title="分时操作系统"></a>分时操作系统</h3><p>优点：以时间片轮转的方式解决人机交互问题</p><p>缺点：不能优先处理一些紧急任务</p><h3 id="实时操作系统"><a href="#实时操作系统" class="headerlink" title="实时操作系统"></a>实时操作系统</h3><p>可以根据任务权重选择优先处理</p><h1 id="OS的运行机制和体系结构"><a href="#OS的运行机制和体系结构" class="headerlink" title="OS的运行机制和体系结构"></a>OS的运行机制和体系结构</h1><pre class="mermaid">graph LRa[OS的运行机制和体系结构]--&gt;b[运行机制]a--&gt;c[操作系统内核]a--&gt;d[操作系统的体系结构]b--&gt;e[两种指令]b--&gt;f[两种处理器状态]b--&gt;g[两种程序]c--&gt;h[时钟管理]c--&gt;i[中断处理]c--&gt;j[原语]c--&gt;k[对系统资源进行管理的功能]d--&gt;l[大内核]d--&gt;m[微内核]e--&gt;n[特权指令]e--&gt;o[非特权指令]f--&gt;p[核心态]f--&gt;q[用户态]g--&gt;r[内核程序]g--&gt;s[应用程序]k--&gt;t[进程管理]k--&gt;u[储存器管理]k--&gt;v[设备管理]n-.-pn-.-rp-.-r</pre><h3 id="操作系统的内核"><a href="#操作系统的内核" class="headerlink" title="操作系统的内核"></a>操作系统的内核</h3><p>内核时计算机配置的底层软件，是操作系统最基本、最核心的部分。</p><h1 id="中断和异常"><a href="#中断和异常" class="headerlink" title="中断和异常"></a>中断和异常</h1><pre class="mermaid">graph LRa[异常和中断]--&gt;b[中断机制的诞生]a--&gt;c[中断的概念和作用]a--&gt;d[中断的分类]d--&gt;e[内中断,异常]d--&gt;f[外中断]a--&gt;g[外中断的处理过程]</pre><h1 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h1><h3 id="系统调用的作用"><a href="#系统调用的作用" class="headerlink" title="系统调用的作用"></a>系统调用的作用</h3><p>应用程序通过系统调用请求操作系统的服务。系统中的各种共享资源都由操作系统统一掌管，因此在用户程序中，凡是与资源有关的操作，都必须通过系统调用的方式向操作系统提出服务请求，由操作系统代为完成。这样可以保证系统的稳定性和安全性，防止用户进行非法操作。</p><h3 id="系统调用与库函数的区别"><a href="#系统调用与库函数的区别" class="headerlink" title="系统调用与库函数的区别"></a>系统调用与库函数的区别</h3><pre class="mermaid">graph LRa[应用程序]--&gt;b[c库函数]b--&gt;d[系统调用]a--&gt;d</pre><h3 id="系统调用的背后"><a href="#系统调用的背后" class="headerlink" title="系统调用的背后"></a>系统调用的背后</h3><pre class="mermaid">graph TBa[传递系统调用参数]--&gt;b[执行陷入指令 用户态]b--&gt;c[执行系统调用相应服务程序 核心态]c--&gt;d[返回用户程序]</pre><ol><li>陷入指令实在用户态执行的，执行陷入指令之后立即引发一个内中断，从而CPU进入核心态</li><li>发出系统调用请求是在用户态，而对系统调用的相应处理在核心态下进行</li><li>陷入指令是唯一一个只能在用户态执行，而不能在核心态执行的指令</li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="操作系统的概念"><a href="#操作系统的概念" class="headerlink" title="操作系统的概念"></a>操作系统的概念</h2><h3 id="操作系统的功能和目标"><a href="#操作系统的功能和目标" class="headerlink" title="操作系统的功能和目标"></a>操作系统的功能和目标</h3><h4 id="–作为系统资源的管理者"><a href="#–作为系统资源的管理者" class="headerlink" title="–作为系统资源的管理者"></a>–作为系统资源的管理者</h4><pre class="mermaid">graph LRA[作为系统资源的管理者]--&gt;B[提供的功能]A--&gt;C[目标]B--&gt;E[处理机管理]B--&gt;D[存储器管理]B--&gt;H[文件管理]B--&gt;F[设备管理]C--&gt;G["安全,高效"]</pre><h4 id="–作为用户和计算机硬件之间的接口"><a href="#–作为用户和计算机硬件之间的接口" class="headerlink" title="–作为用户和计算机硬件之间的接口"></a>–作为用户和计算机硬件之间的接口</h4><pre class="mermaid">graph LRA[作为用户和计算机硬件之间的接口]--&gt;B[提供的功能]A--&gt;C[目标]C--&gt;D[方便用户使用]B--&gt;E[命令接口]B--&gt;F[程序接口]B--&gt;G[GUI]E--&gt;H[联机命令接口]E--&gt;I[脱机命令接口]H---J[说一句做一句,说一堆做一堆]I---J</pre><h4 id="–作为最接近硬件的层次"><a href="#–作为最接近硬件的层次" class="headerlink" title="–作为最接近硬件的层次"></a>–作为最接近硬件的层次</h4><h3 id="操作系统的四个基本特征"><a href="#操作系统的四个基本特征" class="headerlink" title="操作系统的四个基本特征"></a>操作系统的四个基本特征</h3><h4 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h4><p>微观上交替执行，区别于并行：同时执行</p><h4 id="共享"><a href="#共享" class="headerlink" title="共享"></a>共享</h4><p>共享方式：互斥共享（eg. 摄像头资源）、同时共享（宏观/微观）</p><blockquote><p>并发性与共享性互为存在条件</p></blockquote><h4 id="虚拟"><a href="#虚拟" class="headerlink" title="虚拟"></a>虚拟</h4><p>物理实体和逻辑实体</p><pre class="mermaid">graph LRA[虚拟技术]--&gt;B[空分复用技术,如虚拟处理器]A--&gt;C[时分复用技术,如虚拟处理器]</pre><h4 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h4><p>并发性—&gt;异步性</p><h1 id="操作系统的发展过程"><a href="#操作系统的发展过程" class="headerlink" title="操作系统的发展过程"></a>操作系统的发展过程</h1><h3 id="手工操作阶段"><a href="#手工操作阶段" class="headerlink" title="手工操作阶段"></a>手工操作阶段</h3><p>缺点：用户独占全集、人机速度矛盾导致资源利用率极低</p><h3 id="批处理阶段–单道批处理系统"><a href="#批处理阶段–单道批处理系统" class="headerlink" title="批处理阶段–单道批处理系统"></a>批处理阶段–单道批处理系统</h3><p>优点：缓解了一定程度的人机速度矛盾，资源利用率有所提升</p><p>缺点:内存中仅能有一道程序运行，CPU大量的实践是在等待I/O完成</p><h3 id="批处理阶段–多道批处理阶段"><a href="#批处理阶段–多道批处理阶段" class="headerlink" title="批处理阶段–多道批处理阶段"></a>批处理阶段–多道批处理阶段</h3><p>操作系统正式诞生</p><p>优点：躲到程序并发执行，共享计算机资源，资源利用率大幅提升</p><p>缺点：用户响应时间长，没有人机交互功能</p><h3 id="分时操作系统"><a href="#分时操作系统" class="headerlink" title="分时操作系统"></a>分时操作系统</h3><p>优点：以时间片轮转的方式解决人机交互问题</p><p>缺点：不能优先处理一些紧急任务</p><h3 id="实时操作系统"><a href="#实时操作系统" class="headerlink" title="实时操作系统"></a>实时操作系统</h3><p>可以根据任务权重选择优先处理</p><h1 id="OS的运行机制和体系结构"><a href="#OS的运行机制和体系结构" class="headerlink" title="OS的运行机制和体系结构"></a>OS的运行机制和体系结构</h1><pre class="mermaid">graph LRa[OS的运行机制和体系结构]--&gt;b[运行机制]a--&gt;c[操作系统内核]a--&gt;d[操作系统的体系结构]b--&gt;e[两种指令]b--&gt;f[两种处理器状态]b--&gt;g[两种程序]c--&gt;h[时钟管理]c--&gt;i[中断处理]c--&gt;j[原语]c--&gt;k[对系统资源进行管理的功能]d--&gt;l[大内核]d--&gt;m[微内核]e--&gt;n[特权指令]e--&gt;o[非特权指令]f--&gt;p[核心态]f--&gt;q[用户态]g--&gt;r[内核程序]g--&gt;s[应用程序]k--&gt;t[进程管理]k--&gt;u[储存器管理]k--&gt;v[设备管理]n-.-pn-.-rp-.-r</pre><h3 id="操作系统的内核"><a href="#操作系统的内核" class="headerlink" title="操作系统的内核"></a>操作系统的内核</h3><p>内核时计算机配置的底层软件，是操作系统最基本、最核心的部分。</p><h1 id="中断和异常"><a href="#中断和异常" class="headerlink" title="中断和异常"></a>中断和异常</h1><pre class="mermaid">graph LRa[异常和中断]--&gt;b[中断机制的诞生]a--&gt;c[中断的概念和作用]a--&gt;d[中断的分类]d--&gt;e[内中断,异常]d--&gt;f[外中断]a--&gt;g[外中断的处理过程]</pre><h1 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h1><h3 id="系统调用的作用"><a href="#系统调用的作用" class="headerlink" title="系统调用的作用"></a>系统调用的作用</h3><p>应用程序通过系统调用请求操作系统的服务。系统中的各种共享资源都由操作系统统一掌管，因此在用户程序中，凡是与资源有关的操作，都必须通过系统调用的方式向操作系统提出服务请求，由操作系统代为完成。这样可以保证系统的稳定性和安全性，防止用户进行非法操作。</p><h3 id="系统调用与库函数的区别"><a href="#系统调用与库函数的区别" class="headerlink" title="系统调用与库函数的区别"></a>系统调用与库函数的区别</h3><pre class="mermaid">graph LRa[应用程序]--&gt;b[c库函数]b--&gt;d[系统调用]a--&gt;d</pre><h3 id="系统调用的背后"><a href="#系统调用的背后" class="headerlink" title="系统调用的背后"></a>系统调用的背后</h3><pre class="mermaid">graph TBa[传递系统调用参数]--&gt;b[执行陷入指令 用户态]b--&gt;c[执行系统调用相应服务程序 核心态]c--&gt;d[返回用户程序]</pre><ol><li>陷入指令实在用户态执行的，执行陷入指令之后立即引发一个内中断，从而CPU进入核心态</li><li>发出系统调用请求是在用户态，而对系统调用的相应处理在核心态下进行</li><li>陷入指令是唯一一个只能在用户态执行，而不能在核心态执行的指令</li></ol>]]></content>
       
       
       <categories>
@@ -74,9 +101,9 @@
       
         <tags>
             
-            <tag> error </tag>
-            
             <tag> 服务器 </tag>
+            
+            <tag> error </tag>
             
         </tags>
       
@@ -180,9 +207,9 @@
       
         <tags>
             
-            <tag> git </tag>
-            
             <tag> error </tag>
+            
+            <tag> git </tag>
             
         </tags>
       
@@ -247,7 +274,7 @@
       <link href="/2021/12/22/shen-qi-de-wang-zhan/"/>
       <url>/2021/12/22/shen-qi-de-wang-zhan/</url>
       
-        <content type="html"><![CDATA[<h2 id="1、音频剪辑100Audio"><a href="#1、音频剪辑100Audio" class="headerlink" title="1、音频剪辑100Audio"></a>1、音频剪辑<a href="https://100audio.com/sound/100audio_editor/">100Audio</a></h2><p>100Audio Editor是一个免费的、开源的、基于web的音频和波形编辑器。</p><h2 id="2、空投快传AirPortal"><a href="#2、空投快传AirPortal" class="headerlink" title="2、空投快传AirPortal"></a>2、空投快传<a href="https://airportal.cn/">AirPortal</a></h2><p>一款设计简约的即时文件分享网站，没有繁琐的流程，也不需要下载，甚至不需要账号，你只需要打开网页，上传文件，再点击发送即可；随后系统会自动生成一个取件码，接收方只需要填写取货码并点击接收即可。就好比是一个快递柜，简单，却有效。</p><h2 id="3、视频转GIF图airmore-cn"><a href="#3、视频转GIF图airmore-cn" class="headerlink" title="3、视频转GIF图airmore.cn"></a>3、视频转GIF图<a href="https://airmore.cn/video-to-gif-online">airmore.cn</a></h2><p>将视频转换为Gif动图，快速制作表情包</p><h2 id="4、在线格式转换alltoall-net"><a href="#4、在线格式转换alltoall-net" class="headerlink" title="4、在线格式转换alltoall.net"></a>4、在线格式转换<a href="https://www.alltoall.net/">alltoall.net</a></h2><p>顾名思义，什么都能转</p><h2 id="5、格式转换Convertio"><a href="#5、格式转换Convertio" class="headerlink" title="5、格式转换Convertio"></a>5、格式转换<a href="https://convertio.co/zh/">Convertio</a></h2><p>更强大的格式转换工具，最大可支持100M大小文件格式转换，支持300+种格式</p><h2 id="6、跑马灯retiehe-com"><a href="#6、跑马灯retiehe-com" class="headerlink" title="6、跑马灯retiehe.com"></a>6、跑马灯<a href="https://tool.retiehe.com/marquee">retiehe.com</a></h2><p>就是你想的那种跑马灯</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1、音频剪辑100Audio"><a href="#1、音频剪辑100Audio" class="headerlink" title="1、音频剪辑100Audio"></a>1、音频剪辑<a href="https://100audio.com/sound/100audio_editor/">100Audio</a></h2><p>100Audio Editor是一个免费的、开源的、基于web的音频和波形编辑器。</p><h2 id="2、空投快传AirPortal"><a href="#2、空投快传AirPortal" class="headerlink" title="2、空投快传AirPortal"></a>2、空投快传<a href="https://airportal.cn/">AirPortal</a></h2><p>一款设计简约的即时文件分享网站，没有繁琐的流程，也不需要下载，甚至不需要账号，你只需要打开网页，上传文件，再点击发送即可；随后系统会自动生成一个取件码，接收方只需要填写取货码并点击接收即可。就好比是一个快递柜，简单，却有效。</p><h2 id="3、视频转GIF图airmore-cn"><a href="#3、视频转GIF图airmore-cn" class="headerlink" title="3、视频转GIF图airmore.cn"></a>3、视频转GIF图<a href="https://airmore.cn/video-to-gif-online">airmore.cn</a></h2><p>将视频转换为Gif动图，快速制作表情包</p><h2 id="4、在线格式转换alltoall-net"><a href="#4、在线格式转换alltoall-net" class="headerlink" title="4、在线格式转换alltoall.net"></a>4、在线格式转换<a href="https://www.alltoall.net/">alltoall.net</a></h2><p>顾名思义，什么都能转</p><h2 id="5、格式转换Convertio"><a href="#5、格式转换Convertio" class="headerlink" title="5、格式转换Convertio"></a>5、格式转换<a href="https://convertio.co/zh/">Convertio</a></h2><p>更强大的格式转换工具，最大可支持100M大小文件格式转换，支持300+种格式</p><h3 id="6、跑马灯retiehe-com"><a href="#6、跑马灯retiehe-com" class="headerlink" title="6、跑马灯retiehe.com**"></a><strong>6、跑马灯<a href="https://tool.retiehe.com/marquee">retiehe.com</a></strong>**</h3><p>就是你想的那种跑马灯</p><h3 id="7、数据生成工具sqlfather"><a href="#7、数据生成工具sqlfather" class="headerlink" title="7、数据生成工具sqlfather"></a><strong>7、数据生成工具<a href="https://sqlfather.com/">sqlfather</a></strong></h3><p>程序员鱼皮自制数据生成工具，帮你轻松生成 SQL 语句、假数据和代码，大幅提升开发效率~ 无论你是前端、后端、测试、数据开发、数据科学的同学，相信这个工具都会对你有帮助。</p><h3 id="8、提取音频-Audio-Extractor-Audio-Extractor-从在线视频中提取音频-audio-extractor-net"><a href="#8、提取音频-Audio-Extractor-Audio-Extractor-从在线视频中提取音频-audio-extractor-net" class="headerlink" title="8、提取音频[Audio Extractor](Audio Extractor - 从在线视频中提取音频 (audio-extractor.net))"></a><strong>8、提取音频[Audio Extractor](<a href="https://audio-extractor.net/cn/">Audio Extractor - 从在线视频中提取音频 (audio-extractor.net)</a>)</strong></h3><p>在线提取视频中的音频信息。</p>]]></content>
       
       
       <categories>

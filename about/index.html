@@ -289,8 +289,24 @@
 
             <div class="description center-align">
                 
-                   
-			  <span id="jinrishici-sentence">正在加载今日诗词....</span>' 
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
                 
             </div>
         </div>
@@ -317,21 +333,21 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">10</a></span>
+    <span class="count"><a href="/">11</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">7</a></span>
+    <span class="count"><a href="/categories">8</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">15</a></span>
+    <span class="count"><a href="/tags">17</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -347,21 +363,21 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">10</a></span>
+    <span class="count"><a href="/">11</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">7</a></span>
+    <span class="count"><a href="/categories">8</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">15</a></span>
+    <span class="count"><a href="/tags">17</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -505,7 +521,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,4,0,0,0,0,0,0,0,0,0,6],
+                data: [0,0,4,0,0,0,0,0,0,0,0,0,7],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -547,7 +563,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"git","value":1},{"name":"服务器","value":1},{"name":"markdown","value":1},{"name":"算法","value":3},{"name":"tools","value":1},{"name":"数据库","value":1},{"name":"操作系统","value":2}],
+                data: [{"name":"SQL","value":1},{"name":"服务器","value":1},{"name":"算法","value":3},{"name":"git","value":1},{"name":"markdown","value":1},{"name":"操作系统","value":2},{"name":"tools","value":1},{"name":"数据库","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -571,7 +587,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["error","时间复杂度","操作系统","git","服务器","markdown","递归","数组","查找","website"]
+                data: ["error","时间复杂度","操作系统","SQL","mysql","服务器","递归","git","markdown","数组"]
             }
         ],
         yAxis: [
@@ -615,239 +631,6 @@
 
 
                 
-                
-<div class="my-projects">
-    <div class="title center-align" data-aos="zoom-in-up">
-        <i class="fas fa-gift"></i>&nbsp;&nbsp;我的项目
-    </div>
-    <div class="row">
-        
-        
-        <div class="col s12 m6 l4" data-aos="fade-up">
-            <div class="info center-align">
-                <a href="http://github.com/blinkfox/hexo-theme-matery" class="icon"
-                   style="background: linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)" target="_blank">
-                    <i class="fas fa-file-alt"></i>
-                </a>
-                <div class="info-title">
-                    <a href="http://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>
-                </div>
-                <div class="info-desc">This is a Hexo blog theme with &#39;Material Design&#39; and responsive design.</div>
-            </div>
-        </div>
-        
-        <div class="col s12 m6 l4" data-aos="fade-up">
-            <div class="info center-align">
-                <a href="https://github.com/blinkfox/fenix" class="icon"
-                   style="background: linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)" target="_blank">
-                    <i class="fas fa-database"></i>
-                </a>
-                <div class="info-title">
-                    <a href="https://github.com/blinkfox/fenix" target="_blank">Fenix</a>
-                </div>
-                <div class="info-desc">这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。</div>
-            </div>
-        </div>
-        
-        <div class="col s12 m6 l4" data-aos="fade-up">
-            <div class="info center-align">
-                <a href="https://github.com/blinkfox/typora-vue-theme" class="icon"
-                   style="background: linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)" target="_blank">
-                    <i class="fas fa-file-alt"></i>
-                </a>
-                <div class="info-title">
-                    <a href="https://github.com/blinkfox/typora-vue-theme" target="_blank">typora-vue-theme</a>
-                </div>
-                <div class="info-desc">This is a typora theme inspired by Vue document style.</div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-                
-
-                
-                
-<div class="my-skills">
-    <div class="title center-align" data-aos="zoom-in-up">
-        <i class="fas fa-wrench"></i>&nbsp;&nbsp;我的技能
-    </div>
-    <div class="row">
-        
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%); width: 85%">
-                    <span>Java</span>
-                </div>
-                <div class="skill-bar-percent">85%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #9900FF 0%, #CC66FF 100%); width: 80%">
-                    <span>JavaScript</span>
-                </div>
-                <div class="skill-bar-percent">80%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #2196F3 0%, #42A5F5 100%); width: 80%">
-                    <span>HTML5</span>
-                </div>
-                <div class="skill-bar-percent">80%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #00BCD4 0%, #80DEEA 100%); width: 70%">
-                    <span>CSS</span>
-                </div>
-                <div class="skill-bar-percent">70%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #4CAF50 0%, #81C784 100%); width: 90%">
-                    <span>SQL</span>
-                </div>
-                <div class="skill-bar-percent">90%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #FFEB3B 0%, #FFF176 100%); width: 75%">
-                    <span>程序设计</span>
-                </div>
-                <div class="skill-bar-percent">75%</div>
-            </div>
-        </div>
-        
-        
-    </div>
-
-    
-
-    
-    <div class="other-skills chip-container" data-aos="zoom-in-up">
-        <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;其他技能</div>
-        <div class="tag-chips center-align">
-            
-            
-            <a href="/tags/git/">
-                <span class="chip center-align waves-effect waves-light chip-default">git</span>
-            </a>
-            
-            
-            
-            <a href="/tags/error/">
-                <span class="chip center-align waves-effect waves-light chip-default">error</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-                <span class="chip center-align waves-effect waves-light chip-default">服务器</span>
-            </a>
-            
-            
-            
-            <a href="/tags/markdown/">
-                <span class="chip center-align waves-effect waves-light chip-default">markdown</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E9%80%92%E5%BD%92/">
-                <span class="chip center-align waves-effect waves-light chip-default">递归</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
-                <span class="chip center-align waves-effect waves-light chip-default">时间复杂度</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%95%B0%E7%BB%84/">
-                <span class="chip center-align waves-effect waves-light chip-default">数组</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                <span class="chip center-align waves-effect waves-light chip-default">查找</span>
-            </a>
-            
-            
-            
-            <a href="/tags/website/">
-                <span class="chip center-align waves-effect waves-light chip-default">website</span>
-            </a>
-            
-            
-            
-            <a href="/tags/tools/">
-                <span class="chip center-align waves-effect waves-light chip-default">tools</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                <span class="chip center-align waves-effect waves-light chip-default">数据库</span>
-            </a>
-            
-            
-            
-            <a href="/tags/H2/">
-                <span class="chip center-align waves-effect waves-light chip-default">H2</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                <span class="chip center-align waves-effect waves-light chip-default">操作系统</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E8%BF%9B%E7%A8%8B/">
-                <span class="chip center-align waves-effect waves-light chip-default">进程</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E5%B9%B6%E8%A1%8C/">
-                <span class="chip center-align waves-effect waves-light chip-default">并行</span>
-            </a>
-            
-            
-        </div>
-    </div>
-    
-
-</div>
 
                 
 
@@ -914,67 +697,13 @@
 
 
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="song"
-                   id="1480611629"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='one'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="/libs/aplayer/Meting.min.js"></script>
-
-    
 
     <div class="container row center-align"
          style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2020-2022</span>
+                <span id="year">2021-2022</span>
             
             <a href="/about" target="_blank">Yjhui</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
@@ -982,7 +711,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">6.5k</span>
+                        class="white-color">6.8k</span>
             
             
             
@@ -1013,7 +742,7 @@
                         var days = hours * 24;
                         var years = days * 365;
                         var today = new Date();
-                        var startYear = "2020";
+                        var startYear = "2021";
                         var startMonth = "12";
                         var startDate = "18";
                         var startHour = "16";
