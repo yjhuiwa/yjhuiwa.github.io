@@ -55,9 +55,9 @@ SQL 指">
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="朝花朝拾" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="朝花朝拾" type="application/atom+xml">
 </head>
 
 
@@ -342,21 +342,21 @@ SQL 指">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-25
+                    2022-10-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    151
+                    549
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -384,8 +384,45 @@ SQL 指">
 </ul>
 <h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 这是</span>
 <span class="token comment">/* 注
-   释 */</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+   释 
+*/</span>
+<span class="token comment">-- 数据库中的字符串用单引号</span>
+<span class="token comment">-- 查看数据库版本</span>
+<span class="token keyword">select</span> version<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">-- 显示当前数据库</span>
+<span class="token keyword">select</span> <span class="token keyword">database</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">-- 描述表结构 desc</span>
+<span class="token keyword">describe</span> 表名<span class="token punctuation">;</span>
+<span class="token comment">-- 查询字段</span>
+<span class="token keyword">select</span> 字段名<span class="token number">1</span><span class="token punctuation">,</span>字段<span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">from</span> 表名<span class="token punctuation">;</span>
+<span class="token comment">-- 查询所有字段，\* 号效率低，或者写所有字段名</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 表名<span class="token punctuation">;</span>
+<span class="token comment">-- 给查询列起别名</span>
+<span class="token keyword">select</span> 字段名 <span class="token keyword">as</span> 别名 <span class="token keyword">from</span> 表名<span class="token punctuation">;</span>
+<span class="token keyword">as</span> 关键字可以省略
+<span class="token keyword">select</span> 字段名 别名 <span class="token keyword">from</span> 表名<span class="token punctuation">;</span>
+别名有空格 <span class="token keyword">select</span> 字段名 <span class="token string">'as 别名'</span> <span class="token keyword">from</span> 表名<span class="token punctuation">;</span>
+<span class="token comment">-- 字段可以参与数学运算</span>
+<span class="token keyword">select</span> 字段\<span class="token operator">*</span><span class="token number">12</span> <span class="token keyword">from</span> 表名<span class="token punctuation">;</span>
+<span class="token comment">-- 条件查询</span>
+<span class="token keyword">select</span> 字段名 <span class="token keyword">from</span> 表名 <span class="token keyword">where</span> 表名<span class="token punctuation">;</span>
+<span class="token comment">/* 条件 ：
+等于：= 	不等于：&lt;&gt;	
+与：and	字段名 between 左小 and 右大
+或：or 
+查询空条件
+select 字段名 from 表名 where comm is none (not none);  不能用 = none
+*/</span>
+<span class="token comment">-- in 相当于多个or,表示某个范围，not in 不在某个范围</span>
+<span class="token keyword">select</span> 字段名 <span class="token keyword">from</span> 表名 <span class="token keyword">where</span> name <span class="token operator">in</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 表示<span class="token number">100</span>或<span class="token number">200</span>，不是区间
+<span class="token comment">-- 模糊查询关键字like   % 表示任意多个字符 ，_ 表示任意一个字符</span>
+delect name <span class="token keyword">from</span> name_table <span class="token keyword">where</span> name <span class="token operator">like</span> <span class="token string">'y%'</span><span class="token punctuation">;</span> <span class="token comment">-- 表示以y开头的所有名字</span>
+delect name <span class="token keyword">from</span> name_table <span class="token keyword">where</span> name <span class="token operator">like</span> <span class="token string">'_y%'</span><span class="token punctuation">;</span> <span class="token comment">-- 表示第二个字母是y的所有名字</span>
+<span class="token keyword">select</span> name <span class="token keyword">from</span> t <span class="token keyword">where</span> name <span class="token operator">like</span> <span class="token string">'%\_%'</span><span class="token punctuation">;</span> <span class="token comment">-- 表示名字里有下划线的</span>
+<span class="token comment">-- 排序 关键字 order by</span>
+<span class="token keyword">select</span> 字段名 <span class="token keyword">from</span> 表名 <span class="token keyword">order</span> <span class="token keyword">by</span> 排序字段 <span class="token keyword">asc</span><span class="token punctuation">;</span> <span class="token comment">-- asc 升序 dsc 降序</span>
+<span class="token keyword">select</span> 字段名 <span class="token keyword">from</span> 表名 <span class="token keyword">order</span> <span class="token keyword">by</span> sal <span class="token keyword">asc</span><span class="token punctuation">,</span>ename <span class="token keyword">asc</span><span class="token punctuation">;</span> <span class="token comment">-- 当sal相同时，按照ename升序排</span>
+<span class="token keyword">select</span> 字段名 <span class="token keyword">from</span> 表名 <span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token number">2</span><span class="token punctuation">;</span> 	<span class="token comment">-- 按照第二列排序，不建议使用</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -508,13 +545,13 @@ SQL 指">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/10/25/ji-qi-ren-xue-dao-lun/">
+                <a href="/2022/10/25/ji-qi-ren-xue-dao-lun-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="机器人学导论">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="机器人学导论(一)">
                         
-                        <span class="card-title">机器人学导论</span>
+                        <span class="card-title">机器人学导论(一)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -542,8 +579,8 @@ SQL 指">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%E5%AF%BC%E8%AE%BA/">
-                        <span class="chip bg-color">机器人学导论</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/">
+                        <span class="chip bg-color">机器人学</span>
                     </a>
                     
                     <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
@@ -754,7 +791,7 @@ SQL 指">
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">6.9k</span>
+                        class="white-color">8.6k</span>
             
             
             

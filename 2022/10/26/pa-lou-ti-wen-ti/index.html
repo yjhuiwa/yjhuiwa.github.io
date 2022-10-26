@@ -4,11 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="时间复杂度-O(x), 朝花朝拾">
-    <meta name="description" content="大O：用来表示算法最坏情况运行时间的上界。
-不同数据规模下时间复杂度的差异
-不同数据规模下的时间复杂度所用时间不同，所以并不是时间复杂度越低越好。
-一般情况下默认数据规模足够大，此时数据量也就是常数项系数已经不起决定性作用了，所以我们说的时">
+    <meta name="keywords" content="爬楼梯问题, 朝花朝拾">
+    <meta name="description" content="da
+
+每次只能上一个或者两个台阶，给定台阶数，求共有多少种上法
+
+分析到第n个台阶时，前一步有两种上法（一个台阶或者两个台阶），分别对应着第n-1个台阶和第n-2个台阶，所以n个台阶的上法是第n-1个台阶和n-2台阶上法之和。依次类推可发">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>时间复杂度-O(x) | 朝花朝拾</title>
+    <title>爬楼梯问题 | 朝花朝拾</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -276,12 +277,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">时间复杂度-O(x)</h1>
+                    <h1 class="description center-align post-title">爬楼梯问题</h1>
                 </div>
             </div>
         </div>
@@ -305,8 +306,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
-                                <span class="chip bg-color">时间复杂度</span>
+                            <a href="/tags/%E9%80%92%E5%BD%92/">
+                                <span class="chip bg-color">递归</span>
                             </a>
                         
                     </div>
@@ -330,21 +331,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-10-24
+                    2022-10-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-25
+                    2022-10-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    311
+                    295
                 </div>
                 
 
@@ -369,35 +370,49 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>大O：用来表示算法最坏情况运行时间的上界。</strong></p>
-<h3 id="不同数据规模下时间复杂度的差异"><a href="#不同数据规模下时间复杂度的差异" class="headerlink" title="不同数据规模下时间复杂度的差异"></a>不同数据规模下时间复杂度的差异</h3><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221024161321482.png" alt="image-20221024161321482"></p>
-<p>不同数据规模下的时间复杂度所用时间不同，所以并不是时间复杂度越低越好。</p>
-<p>一般情况下默认数据规模足够大，此时数据量也就是常数项系数已经不起决定性作用了，所以我们说的时间复杂度都是神略常数项系数的。</p>
-<h3 id="时间复杂度排行"><a href="#时间复杂度排行" class="headerlink" title="时间复杂度排行"></a>时间复杂度排行</h3><p><strong>仅当数据量不是非常大时：</strong></p>
+                <p>da</p>
 <blockquote>
-<p>O(1)&lt;O(logn)&lt;O(n)&lt;O(n^2^)&lt;O(n^3^)&lt;O(2^n^)</p>
+<p>每次只能上一个或者两个台阶，给定台阶数，求共有多少种上法</p>
 </blockquote>
-<h3 id="复杂表达式化简"><a href="#复杂表达式化简" class="headerlink" title="复杂表达式化简"></a>复杂表达式化简</h3><blockquote>
-<p>$O(2n^2+10n+1000)$</p>
-</blockquote>
-<ul>
-<li><p>去掉常数项：常数项并不会随着n增加而增加操作次数</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>到第n个台阶时，前一步有两种上法（一个台阶或者两个台阶），分别对应着第n-1个台阶和第n-2个台阶，所以n个台阶的上法是第n-1个台阶和n-2台阶上法之和。依次类推可发现这是一个递推公式。</p>
 <blockquote>
-<p>$O(2n^2+10n)$</p>
+<p>f(n)=f(n-1)+f(n-2)</p>
 </blockquote>
-</li>
-<li><p>去掉常数系数</p>
-<blockquote>
-<p>$O(n^2+n)$</p>
-</blockquote>
-</li>
-<li><p>只保留最高项：最高项随n增长的速率远大于其他项</p>
-<blockquote>
-<p>$O(n^2)$</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="关于O-logn"><a href="#关于O-logn" class="headerlink" title="关于O(logn)"></a>关于O(logn)</h3><p>首先logn可以看作以任意数字为底。这里说明的其实是在时间复杂度中底数是被忽略的。原因如下：<br>$$<br>O(log_in)=O(log_ij*log_jn)<br>$$<br>由上述可见$log_ij$是个常数，可以在时间复杂度的计算中被化简。</p>
+<p>解法一：暴力递归</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*
+  暴力递归
+  大量重复计算，递归层太深
+ */</span> 
+<span class="token keyword">int</span> <span class="token function">palouti</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span> <span class="token operator">||</span> n<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">return</span> n<span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token function">palouti</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">palouti</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>解法二：使用map记录部分值，避免重复计算</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*
+  使用map记录部分递归的值，减少重复计算
+ */</span>
+<span class="token keyword">int</span> <span class="token function">palouti2</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span>map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> map<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span> <span class="token operator">||</span> n<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">return</span> n<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> p<span class="token punctuation">,</span>q<span class="token punctuation">;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">!=</span>map<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		p<span class="token operator">=</span>map<span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span> 
+	<span class="token keyword">else</span> <span class="token punctuation">{</span>
+		p<span class="token operator">=</span><span class="token function">palouti2</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>map<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		map<span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>p<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">!=</span>map<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		q<span class="token operator">=</span>map<span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span> 
+	<span class="token keyword">else</span> <span class="token punctuation">{</span>
+		q<span class="token operator">=</span><span class="token function">palouti2</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span>map<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		map<span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">=</span>q<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> p<span class="token operator">+</span>q<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>最后用45做测试，解法一用时<strong>4.035s</strong>，解法二用时<strong>0.0229s</strong>。由此可以看出，一个好的算法有多么重要。</p>
 
                 
             </div>
@@ -424,7 +439,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://767879.xyz/2022/10/24/shi-jian-fu-za-du/">http://767879.xyz/2022/10/24/shi-jian-fu-za-du/</a>
+                    <a href="http://767879.xyz/2022/10/26/pa-lou-ti-wen-ti/">http://767879.xyz/2022/10/26/pa-lou-ti-wen-ti/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -462,8 +477,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
-                                    <span class="chip bg-color">时间复杂度</span>
+                                <a href="/tags/%E9%80%92%E5%BD%92/">
+                                    <span class="chip bg-color">递归</span>
                                 </a>
                             
                         </div>
@@ -513,13 +528,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/10/24/x-de-n-ci-fang/">
+                <a href="/2022/10/26/he-zhi-shao-wei-k-de-zui-duan-zi-shu-zu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="求X的n次方">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="和至少为 K 的最短子数组">
                         
-                        <span class="card-title">求X的n次方</span>
+                        <span class="card-title">和至少为 K 的最短子数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -530,7 +545,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-26
                         </span>
                         <span class="publish-author">
                             
@@ -547,12 +562,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%80%92%E5%BD%92/">
-                        <span class="chip bg-color">递归</span>
+                    <a href="/tags/%E9%98%9F%E5%88%97/">
+                        <span class="chip bg-color">队列</span>
                     </a>
                     
-                    <a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
-                        <span class="chip bg-color">时间复杂度</span>
+                    <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/">
+                        <span class="chip bg-color">前缀和</span>
                     </a>
                     
                 </div>
@@ -566,13 +581,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/25/git-ti-jiao-dai-ma-bei-ju-jue/">
+                <a href="/2022/10/26/ji-qi-ren-xue-dao-lun-er/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="git 提交代码被拒绝">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="机器人学导论(二)">
                         
-                        <span class="card-title">git 提交代码被拒绝</span>
+                        <span class="card-title">机器人学导论(二)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -583,14 +598,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/git/" class="post-category">
-                                    git
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%E5%AF%BC%E8%AE%BA/" class="post-category">
+                                    机器人学导论
                                 </a>
                             
                             
@@ -600,12 +615,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/">
+                        <span class="chip bg-color">机器人学</span>
                     </a>
                     
-                    <a href="/tags/error/">
-                        <span class="chip bg-color">error</span>
+                    <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
+                        <span class="chip bg-color">线性代数</span>
                     </a>
                     
                 </div>

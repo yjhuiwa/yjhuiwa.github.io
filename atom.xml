@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-10-25T15:08:59.303Z</updated>
+  <updated>2022-10-26T15:09:07.870Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -17,11 +17,95 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>机器人学导论</title>
-    <link href="http://767879.xyz/2022/10/25/ji-qi-ren-xue-dao-lun/"/>
-    <id>http://767879.xyz/2022/10/25/ji-qi-ren-xue-dao-lun/</id>
+    <title>和至少为 K 的最短子数组</title>
+    <link href="http://767879.xyz/2022/10/26/he-zhi-shao-wei-k-de-zui-duan-zi-shu-zu/"/>
+    <id>http://767879.xyz/2022/10/26/he-zhi-shao-wei-k-de-zui-duan-zi-shu-zu/</id>
+    <published>2022-10-26T14:36:37.000Z</published>
+    <updated>2022-10-26T15:09:07.870Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;给你一个整数数组 nums 和一个整数 k ，找出 nums 中和至少为 k 的 最短非空子数组 ，并返回该子数组的长度。如果不存在这样的 子数组 ，返回 -1 。子数组 是数组中 连续</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://767879.xyz/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="队列" scheme="http://767879.xyz/tags/%E9%98%9F%E5%88%97/"/>
+    
+    <category term="前缀和" scheme="http://767879.xyz/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爬楼梯问题</title>
+    <link href="http://767879.xyz/2022/10/26/pa-lou-ti-wen-ti/"/>
+    <id>http://767879.xyz/2022/10/26/pa-lou-ti-wen-ti/</id>
+    <published>2022-10-26T04:06:30.000Z</published>
+    <updated>2022-10-26T15:44:34.705Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;da&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每次只能上一个或者两个台阶，给定台阶数，求共有多少种上法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://767879.xyz/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="递归" scheme="http://767879.xyz/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器人学导论(二)</title>
+    <link href="http://767879.xyz/2022/10/26/ji-qi-ren-xue-dao-lun-er/"/>
+    <id>http://767879.xyz/2022/10/26/ji-qi-ren-xue-dao-lun-er/</id>
+    <published>2022-10-26T02:13:09.000Z</published>
+    <updated>2022-10-26T03:40:53.213Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;旋转矩阵与转角&quot;&gt;&lt;a href=&quot;#旋转矩阵与转角&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="机器人学导论" scheme="http://767879.xyz/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%E5%AF%BC%E8%AE%BA/"/>
+    
+    
+    <category term="机器人学" scheme="http://767879.xyz/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/"/>
+    
+    <category term="线性代数" scheme="http://767879.xyz/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器人学导论(一)</title>
+    <link href="http://767879.xyz/2022/10/25/ji-qi-ren-xue-dao-lun-yi/"/>
+    <id>http://767879.xyz/2022/10/25/ji-qi-ren-xue-dao-lun-yi/</id>
     <published>2022-10-25T12:33:12.000Z</published>
-    <updated>2022-10-25T15:08:59.303Z</updated>
+    <updated>2022-10-26T02:14:37.184Z</updated>
     
     
       
@@ -37,7 +121,7 @@
     <category term="机器人学导论" scheme="http://767879.xyz/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%E5%AF%BC%E8%AE%BA/"/>
     
     
-    <category term="机器人学导论" scheme="http://767879.xyz/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%E5%AF%BC%E8%AE%BA/"/>
+    <category term="机器人学" scheme="http://767879.xyz/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/"/>
     
     <category term="线性代数" scheme="http://767879.xyz/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
@@ -48,7 +132,7 @@
     <link href="http://767879.xyz/2022/10/25/sql-ji-chu/"/>
     <id>http://767879.xyz/2022/10/25/sql-ji-chu/</id>
     <published>2022-10-25T04:08:38.000Z</published>
-    <updated>2022-10-25T04:14:35.617Z</updated>
+    <updated>2022-10-26T14:31:28.135Z</updated>
     
     
       
@@ -184,9 +268,9 @@
     <category term="算法" scheme="http://767879.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="时间复杂度" scheme="http://767879.xyz/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
-    
     <category term="递归" scheme="http://767879.xyz/tags/%E9%80%92%E5%BD%92/"/>
+    
+    <category term="时间复杂度" scheme="http://767879.xyz/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
     
   </entry>
   
@@ -242,7 +326,7 @@
     <link href="http://767879.xyz/2021/12/24/markdown-yu-fa/"/>
     <id>http://767879.xyz/2021/12/24/markdown-yu-fa/</id>
     <published>2021-12-24T06:54:34.380Z</published>
-    <updated>2022-10-25T02:48:07.517Z</updated>
+    <updated>2022-10-26T04:04:22.597Z</updated>
     
     
     <summary type="html">markdown基础语法</summary>
