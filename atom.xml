@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-10-26T15:09:07.870Z</updated>
+  <updated>2022-10-26T15:53:42.294Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://767879.xyz/2022/10/26/he-zhi-shao-wei-k-de-zui-duan-zi-shu-zu/"/>
     <id>http://767879.xyz/2022/10/26/he-zhi-shao-wei-k-de-zui-duan-zi-shu-zu/</id>
     <published>2022-10-26T14:36:37.000Z</published>
-    <updated>2022-10-26T15:09:07.870Z</updated>
+    <updated>2022-10-26T15:53:42.294Z</updated>
     
     
       
@@ -49,15 +49,14 @@
     <link href="http://767879.xyz/2022/10/26/pa-lou-ti-wen-ti/"/>
     <id>http://767879.xyz/2022/10/26/pa-lou-ti-wen-ti/</id>
     <published>2022-10-26T04:06:30.000Z</published>
-    <updated>2022-10-26T15:44:34.705Z</updated>
+    <updated>2022-10-26T15:52:46.272Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;da&lt;/p&gt;
-&lt;blockquote&gt;
+    <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;每次只能上一个或者两个台阶，给定台阶数，求共有多少种上法&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot; class=&quot;headerlink&quot;</summary>
@@ -78,7 +77,7 @@
     <link href="http://767879.xyz/2022/10/26/ji-qi-ren-xue-dao-lun-er/"/>
     <id>http://767879.xyz/2022/10/26/ji-qi-ren-xue-dao-lun-er/</id>
     <published>2022-10-26T02:13:09.000Z</published>
-    <updated>2022-10-26T03:40:53.213Z</updated>
+    <updated>2022-10-26T16:02:47.207Z</updated>
     
     
       
@@ -212,9 +211,9 @@
     <category term="服务器" scheme="http://767879.xyz/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-    <category term="error" scheme="http://767879.xyz/tags/error/"/>
-    
     <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="error" scheme="http://767879.xyz/tags/error/"/>
     
   </entry>
   
@@ -315,9 +314,9 @@
     <category term="git" scheme="http://767879.xyz/categories/git/"/>
     
     
-    <category term="git" scheme="http://767879.xyz/tags/git/"/>
-    
     <category term="error" scheme="http://767879.xyz/tags/error/"/>
+    
+    <category term="git" scheme="http://767879.xyz/tags/git/"/>
     
   </entry>
   
@@ -326,7 +325,7 @@
     <link href="http://767879.xyz/2021/12/24/markdown-yu-fa/"/>
     <id>http://767879.xyz/2021/12/24/markdown-yu-fa/</id>
     <published>2021-12-24T06:54:34.380Z</published>
-    <updated>2022-10-26T04:04:22.597Z</updated>
+    <updated>2022-10-26T16:03:24.850Z</updated>
     
     
     <summary type="html">markdown基础语法</summary>
