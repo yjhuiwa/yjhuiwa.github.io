@@ -342,21 +342,21 @@ SQL 指">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-26
+                    2022-10-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    549
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
 
@@ -382,11 +382,7 @@ SQL 指">
 <li>SQL 让您可以访问和处理数据库，包括数据插入、查询、更新和删除。</li>
 <li>SQL 在1986年成为 ANSI（American National Standards Institute 美国国家标准化组织）的一项标准，在 1987 年成为国际标准化组织（ISO）标准。</li>
 </ul>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 这是</span>
-<span class="token comment">/* 注
-   释 
-*/</span>
-<span class="token comment">-- 数据库中的字符串用单引号</span>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 数据库中的字符串用单引号</span>
 <span class="token comment">-- 查看数据库版本</span>
 <span class="token keyword">select</span> version<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">-- 显示当前数据库</span>
@@ -422,7 +418,105 @@ delect name <span class="token keyword">from</span> name_table <span class="toke
 <span class="token comment">-- 排序 关键字 order by</span>
 <span class="token keyword">select</span> 字段名 <span class="token keyword">from</span> 表名 <span class="token keyword">order</span> <span class="token keyword">by</span> 排序字段 <span class="token keyword">asc</span><span class="token punctuation">;</span> <span class="token comment">-- asc 升序 dsc 降序</span>
 <span class="token keyword">select</span> 字段名 <span class="token keyword">from</span> 表名 <span class="token keyword">order</span> <span class="token keyword">by</span> sal <span class="token keyword">asc</span><span class="token punctuation">,</span>ename <span class="token keyword">asc</span><span class="token punctuation">;</span> <span class="token comment">-- 当sal相同时，按照ename升序排</span>
-<span class="token keyword">select</span> 字段名 <span class="token keyword">from</span> 表名 <span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token number">2</span><span class="token punctuation">;</span> 	<span class="token comment">-- 按照第二列排序，不建议使用</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">select</span> 字段名 <span class="token keyword">from</span> 表名 <span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token number">2</span><span class="token punctuation">;</span> 	<span class="token comment">-- 按照第二列排序，不建议使用</span>
+
+
+<span class="token comment">-- 单行处理函数（数据处理函数） 一个输入对应一个输出</span>
+<span class="token keyword">select</span> lower<span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token keyword">from</span> student<span class="token punctuation">;</span> <span class="token comment">-- 小写   大写：upper()</span>
+<span class="token keyword">select</span> substr<span class="token punctuation">(</span>name<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">)</span> <span class="token keyword">from</span> student<span class="token punctuation">;</span>  <span class="token comment">-- 截取子串，索引从1开始</span>
+<span class="token keyword">select</span> concat<span class="token punctuation">(</span><span class="token keyword">No</span><span class="token punctuation">,</span>Name<span class="token punctuation">)</span> <span class="token keyword">from</span> student<span class="token punctuation">;</span> <span class="token comment">-- 字符串拼接</span>
+length<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">-- 字符串长度</span>
+trim<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">-- 去字符串中的空格</span>
+<span class="token function">round</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">,</span>i<span class="token punctuation">)</span>  <span class="token comment">-- 四舍五入,对float保留i位小数，-1 保留到10位，1保留十分位</span>
+rand<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">-- 生成0-1中的随机数</span>
+ifnull<span class="token punctuation">(</span>num<span class="token punctuation">,</span><span class="token keyword">temp</span><span class="token punctuation">)</span>  <span class="token comment">-- 空值处理函数。若num值为空，当作temp处理。在数学运算中，若有空值，则结果位null。</span>
+<span class="token keyword">case</span> 字段 <span class="token keyword">when</span> 值<span class="token number">1</span> <span class="token keyword">then</span> <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">when</span> 值<span class="token number">2</span> <span class="token keyword">then</span> <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">else</span> <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">end</span>  <span class="token comment">-- 只起显示作用，不对数据库做修改</span>
+
+
+<span class="token comment">-- 分组函数  输入多行，输出一行，会自动忽略null，不需要提前对null处理</span>
+<span class="token comment">-- 若无分组，则一张表为一组</span>
+<span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">-- 计数  count(*) 统计结果包括null，参数为具体字段则不包括null</span>
+<span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">-- 求和</span>
+<span class="token function">avg</span><span class="token punctuation">(</span><span class="token punctuation">)</span>	<span class="token comment">-- 平均值</span>
+<span class="token function">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">-- 分组函数不能直接使用在where子句中</span>
+<span class="token keyword">select</span> name<span class="token punctuation">,</span>grade <span class="token keyword">from</span> student <span class="token keyword">where</span> grade<span class="token operator">&gt;</span><span class="token function">min</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">-- 此行语句错误</span>
+<span class="token comment">/*	语句执行顺序
+from -&gt; where -&gt; group by -&gt; select -&gt; order by
+where 执行时还没有分组，不能执行分组函数
+*/</span>
+<span class="token comment">-- 分组查询</span>
+<span class="token keyword">select</span> <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">from</span> <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">group</span> <span class="token keyword">by</span> <span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">select</span> subject<span class="token punctuation">,</span><span class="token function">avg</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token keyword">from</span> student <span class="token keyword">group</span> <span class="token keyword">by</span> subject<span class="token punctuation">;</span>
+<span class="token comment">-- select后只能跟参加分组的字段和分组函数。</span>
+<span class="token comment">-- 不同字段联合分组</span>
+<span class="token keyword">select</span> <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">from</span> <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">group</span> <span class="token keyword">by</span> 字段一<span class="token punctuation">,</span>字段二<span class="token punctuation">;</span>
+
+<span class="token comment">-- 使用having可以对分完组的数据再次过滤  效率低</span>
+<span class="token keyword">select</span> subject<span class="token punctuation">,</span><span class="token function">avg</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token keyword">from</span> student <span class="token keyword">group</span> <span class="token keyword">by</span> subject <span class="token keyword">having</span> <span class="token function">max</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">60</span><span class="token punctuation">;</span>
+<span class="token keyword">select</span> subject<span class="token punctuation">,</span><span class="token function">avg</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token keyword">from</span> student <span class="token keyword">where</span> grade<span class="token operator">&gt;</span><span class="token number">60</span> <span class="token keyword">group</span> <span class="token keyword">by</span> subject<span class="token punctuation">;</span>   <span class="token comment">-- 优先选用</span>
+<span class="token comment">-- 去重关键字  distinct,出现在两个字段前，联合去重。</span>
+<span class="token keyword">select</span> <span class="token keyword">distinct</span> name <span class="token keyword">from</span> student<span class="token punctuation">;</span>
+<span class="token keyword">select</span> name<span class="token punctuation">,</span><span class="token keyword">distinct</span> school <span class="token keyword">from</span> student<span class="token punctuation">;</span>  <span class="token comment">-- 语法错误</span>
+
+<span class="token comment">-- 连接查询 多张表跨表查询 </span>
+<span class="token comment">/* 
+SQL92、SQL99
+内连接
+	等值连接
+	非等值连接
+	自连接
+外连接
+	左外连接（左连接）
+	右外连接（右连接）
+全连接
+*/</span>
+<span class="token comment">-- 多表查询不加条件会出现笛卡尔积现象，效率低</span>
+<span class="token keyword">select</span> name<span class="token punctuation">,</span>className <span class="token keyword">from</span> student<span class="token punctuation">,</span>class <span class="token keyword">where</span> student<span class="token punctuation">.</span>classNo<span class="token operator">=</span>class<span class="token punctuation">.</span><span class="token keyword">no</span><span class="token punctuation">;</span>
+<span class="token keyword">select</span> s<span class="token punctuation">.</span>name<span class="token punctuation">,</span>c<span class="token punctuation">.</span>className <span class="token keyword">from</span> student s<span class="token punctuation">,</span>class c <span class="token keyword">where</span> s<span class="token punctuation">.</span>classNo<span class="token operator">=</span>c<span class="token punctuation">.</span><span class="token keyword">no</span><span class="token punctuation">;</span>
+<span class="token comment">-- 内连接-等值连接	inner可省略 join</span>
+<span class="token comment">-- SQL92</span>
+<span class="token comment">-- select name,className from student,class where student.classNo=class.no;</span>
+<span class="token comment">-- SQL99</span>
+<span class="token keyword">select</span> 
+	name<span class="token punctuation">,</span>className 
+<span class="token keyword">from</span> 
+	student 
+<span class="token keyword">join</span> 
+	class 
+<span class="token keyword">on</span> 
+	student<span class="token punctuation">.</span>classNo<span class="token operator">=</span>class<span class="token punctuation">.</span><span class="token keyword">no</span>
+<span class="token keyword">where</span>
+	筛选条件<span class="token punctuation">;</span>
+<span class="token comment">-- 内连接-非等值连接</span>
+<span class="token keyword">select</span> 
+	name<span class="token punctuation">,</span>className 
+<span class="token keyword">from</span> 
+	student 
+<span class="token keyword">join</span> 
+	class 
+<span class="token keyword">on</span> 
+	student<span class="token punctuation">.</span>classNo <span class="token operator">between</span> <span class="token number">1</span> <span class="token operator">and</span> <span class="token number">3</span>   	<span class="token comment">-- 班级号在1-3之间的</span>
+<span class="token keyword">where</span>
+	筛选条件<span class="token punctuation">;</span>
+<span class="token comment">-- 内连接-自连接  一张表看做两张表</span>
+<span class="token keyword">select</span> s<span class="token punctuation">.</span>name<span class="token punctuation">,</span>b<span class="token punctuation">.</span>name <span class="token keyword">from</span> student s <span class="token keyword">join</span> student b <span class="token keyword">on</span> s<span class="token punctuation">.</span>banzhangNo<span class="token operator">=</span>b<span class="token punctuation">.</span><span class="token keyword">No</span><span class="token punctuation">;</span>
+<span class="token comment">-- 外连接 以左/右表为主表，查询主表所有信息，匹配附表 right outer可省略 join</span>
+<span class="token comment">-- 外连接-右连接</span>
+<span class="token keyword">select</span> 
+	name<span class="token punctuation">,</span>className 
+<span class="token keyword">from</span> 
+	student 
+<span class="token keyword">right</span> <span class="token keyword">join</span> 
+	class 
+<span class="token keyword">on</span> 
+	student<span class="token punctuation">.</span>classNo<span class="token operator">=</span>class<span class="token punctuation">.</span><span class="token keyword">no</span>
+<span class="token keyword">where</span>
+	筛选条件<span class="token punctuation">;</span>
+<span class="token comment">-- 全连接 两张表都是主表</span>
+<span class="token comment">-- 子查询  嵌套的select语句</span>
+<span class="token keyword">select</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword">select</span><span class="token punctuation">)</span> <span class="token keyword">from</span> <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">(</span><span class="token keyword">select</span><span class="token punctuation">)</span> <span class="token keyword">where</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword">select</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -791,7 +885,7 @@ delect name <span class="token keyword">from</span> name_table <span class="toke
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">8.5k</span>
+                        class="white-color">9.2k</span>
             
             
             
