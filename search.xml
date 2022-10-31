@@ -232,9 +232,9 @@
       
         <tags>
             
-            <tag> 服务器 </tag>
-            
             <tag> error </tag>
+            
+            <tag> 服务器 </tag>
             
         </tags>
       
@@ -338,9 +338,9 @@
       
         <tags>
             
-            <tag> error </tag>
-            
             <tag> git </tag>
+            
+            <tag> error </tag>
             
         </tags>
       
