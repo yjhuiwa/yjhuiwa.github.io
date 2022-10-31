@@ -342,21 +342,21 @@ SQL 指">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-27
+                    2022-10-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
 
@@ -516,9 +516,78 @@ SQL92、SQL99
 	筛选条件<span class="token punctuation">;</span>
 <span class="token comment">-- 全连接 两张表都是主表</span>
 <span class="token comment">-- 子查询  嵌套的select语句</span>
-<span class="token keyword">select</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword">select</span><span class="token punctuation">)</span> <span class="token keyword">from</span> <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">(</span><span class="token keyword">select</span><span class="token punctuation">)</span> <span class="token keyword">where</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword">select</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">select</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword">select</span><span class="token punctuation">)</span> <span class="token keyword">from</span> <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">(</span><span class="token keyword">select</span><span class="token punctuation">)</span> <span class="token keyword">where</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword">select</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- union合并查询结果集</span>
+<span class="token keyword">select</span> name<span class="token punctuation">,</span>job <span class="token keyword">from</span> emp <span class="token keyword">where</span> job<span class="token operator">=</span><span class="token string">"manager"</span>
+<span class="token keyword">union</span>
+<span class="token keyword">select</span> name<span class="token punctuation">,</span>job <span class="token keyword">from</span> emp <span class="token keyword">where</span> job<span class="token operator">=</span><span class="token string">"salesman"</span><span class="token punctuation">;</span>  <span class="token comment">-- union 效率更高</span>
+<span class="token comment">-- 要求结果列数相同，类型相同</span>
+
+<span class="token comment">-- limit 将查询结果集中的一部风取出，通常使用在分页查询当中</span>
+<span class="token keyword">select</span> name<span class="token punctuation">,</span>grade <span class="token keyword">from</span> student <span class="token keyword">order</span> <span class="token keyword">by</span> grade <span class="token keyword">desc</span> <span class="token keyword">limit</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">;</span>  <span class="token comment">-- 下标，长度</span>
+<span class="token comment">-- limit在order by排序结果之后执行</span>
+
+<span class="token comment">-- 表的创建</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> 表名<span class="token punctuation">(</span>
+    字段名 数据类型<span class="token punctuation">,</span>
+    字段名<span class="token punctuation">,</span>数据类型 <span class="token keyword">default</span> <span class="token string">"默认值"</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">-- 快速建表</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> student2 <span class="token keyword">as</span> <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> student<span class="token punctuation">;</span>
+<span class="token comment">-- 常见数据类型</span>
+<span class="token comment">/*
+varchar(255)  可变长度字符串，动态分配空间
+char(255) 定长字符串
+int(11)  整型
+bigint	 长整型
+float	 单精度浮点数
+double	 双精度浮点数
+date	 短日期
+datetime 长日期
+clob	 字符大对象，最多存储4G字符串
+blob	 二进制大对象，专门存储图片、声音、视频等
+*/</span>
+
+<span class="token comment">-- 删除表</span>
+<span class="token keyword">drop</span> <span class="token keyword">table</span> student<span class="token punctuation">;</span> <span class="token comment">-- 当表不存在时报错</span>
+<span class="token keyword">drop</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token keyword">exists</span> student<span class="token punctuation">;</span>  <span class="token comment">-- 当表存在时删除</span>
+
+<span class="token comment">-- 插入数据</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> 表名<span class="token punctuation">(</span>字段名<span class="token number">1</span><span class="token punctuation">,</span>字段名<span class="token number">2.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span>值<span class="token number">1</span><span class="token punctuation">,</span>值<span class="token number">2.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">-- 未指定字段值为null</span>
+<span class="token comment">-- 省略insert中的字段名，相当于字段名默认添加，须按顺序和类型</span>
+<span class="token comment">-- insert 插入日期</span>
+<span class="token function">format</span><span class="token punctuation">(</span>数字，<span class="token string">'格式'</span><span class="token punctuation">)</span>
+str_to_date<span class="token punctuation">(</span>字符串，<span class="token string">'日期格式'</span><span class="token punctuation">)</span> <span class="token comment">-- %i分 %s秒</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> student<span class="token punctuation">(</span>birth<span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span>str_to_date<span class="token punctuation">(</span><span class="token string">'1990-10-1'</span><span class="token punctuation">,</span><span class="token string">'%Y-%M-%D'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">-- date_format 查询日期  可以自动类型转换</span>
+<span class="token keyword">select</span> date_format<span class="token punctuation">(</span>birth<span class="token punctuation">,</span><span class="token string">'%Y/%M/%D'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> birth <span class="token keyword">from</span> student<span class="token punctuation">;</span>
+<span class="token comment">-- 插入多条数据</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> student<span class="token punctuation">(</span>name<span class="token punctuation">,</span>age<span class="token punctuation">)</span> <span class="token keyword">values</span>
+<span class="token punctuation">(</span>name1<span class="token punctuation">,</span><span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span>name2<span class="token punctuation">,</span><span class="token number">19</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">-- 查询结果插入表中</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> student2 <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> student<span class="token punctuation">;</span>
+
+<span class="token comment">-- datetime  %h:%i:%s</span>
+<span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">-- 系统当前时间</span>
+
+<span class="token comment">-- 修改数据 update() 无条件修改全表</span>
+<span class="token keyword">update</span> student <span class="token keyword">set</span> name <span class="token operator">=</span><span class="token string">'jack'</span><span class="token punctuation">,</span>birthday<span class="token operator">=</span><span class="token string">'2001-11-05'</span> <span class="token keyword">where</span> id<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- 删除数据 无条件删除全表 删除数据但数据位置不回收，可以rollback恢复，但速率慢</span>
+<span class="token keyword">delete</span> <span class="token keyword">from</span> student <span class="token keyword">where</span> id<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token comment">-- 快速删除表中数据</span>
+<span class="token keyword">truncate</span> <span class="token keyword">table</span> student<span class="token punctuation">;</span><span class="token comment">-- 物理删除，速度快，不能回滚</span>
+
+<span class="token comment">-- 创建表时添加约束</span>
 
 
+
+
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -885,7 +954,7 @@ SQL92、SQL99
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.2k</span>
+                        class="white-color">10k</span>
             
             
             

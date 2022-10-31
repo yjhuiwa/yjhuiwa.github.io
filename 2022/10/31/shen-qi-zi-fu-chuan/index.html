@@ -4,14 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="机器人学导论(一), 朝花朝拾">
-    <meta name="description" content="刚体运动状态描述平面上需要三个自由度去描述刚体的运动。
-x 轴，y轴，旋转角 $\theta$
-
-空间上需要六个自由度取描述刚体运动
-x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋转方向
-
-但是这样的表">
+    <meta name="keywords" content="神奇字符串, 朝花朝拾">
+    <meta name="description" content="
+神奇字符串 s 仅由 ‘1’ 和 ‘2’ 组成，并需要遵守下面的规则：
+神奇字符串 s 的神奇之处在于，串联字符串中 ‘1’ 和 ‘2’ 的连续出现次数可以生成该字符串。s 的前几个元素是 s = “1221121221221121122">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +19,7 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>机器人学导论(一) | 朝花朝拾</title>
+    <title>神奇字符串 | 朝花朝拾</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -279,12 +275,12 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">机器人学导论(一)</h1>
+                    <h1 class="description center-align post-title">神奇字符串</h1>
                 </div>
             </div>
         </div>
@@ -308,12 +304,8 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/">
-                                <span class="chip bg-color">机器人学</span>
-                            </a>
-                        
-                            <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
-                                <span class="chip bg-color">线性代数</span>
+                            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                                <span class="chip bg-color">字符串</span>
                             </a>
                         
                     </div>
@@ -324,8 +316,8 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%E5%AF%BC%E8%AE%BA/" class="post-category">
-                                机器人学导论
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -337,21 +329,21 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-10-25
+                    2022-10-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-26
+                    2022-10-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    509
+                    312
                 </div>
                 
 
@@ -376,47 +368,35 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="刚体运动状态描述"><a href="#刚体运动状态描述" class="headerlink" title="刚体运动状态描述"></a>刚体运动状态描述</h2><h3 id="平面上需要三个自由度去描述刚体的运动。"><a href="#平面上需要三个自由度去描述刚体的运动。" class="headerlink" title="平面上需要三个自由度去描述刚体的运动。"></a>平面上需要三个自由度去描述刚体的运动。</h3><blockquote>
-<p>x 轴，y轴，旋转角 $\theta$</p>
+                <blockquote>
+<p>神奇字符串 s 仅由 ‘1’ 和 ‘2’ 组成，并需要遵守下面的规则：</p>
+<p>神奇字符串 s 的神奇之处在于，串联字符串中 ‘1’ 和 ‘2’ 的连续出现次数可以生成该字符串。<br>s 的前几个元素是 s = “1221121221221121122……” 。如果将 s 中连续的若干 1 和 2 进行分组，可以得到 “1 22 11 2 1 22 1 22 11 2 11 22 ……” 。每组中 1 或者 2 的出现次数分别是 “1 2 2 1 1 2 1 2 2 1 2 2 ……” 。上面的出现次数正是 s 自身。</p>
+<p>给你一个整数 n ，返回在神奇字符串 s 的前 n 个数字中 1 的数目。</p>
 </blockquote>
-<h3 id="空间上需要六个自由度取描述刚体运动"><a href="#空间上需要六个自由度取描述刚体运动" class="headerlink" title="空间上需要六个自由度取描述刚体运动"></a>空间上需要六个自由度取描述刚体运动</h3><blockquote>
-<p>x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋转方向</p>
-</blockquote>
-<p>但是这样的表示方法比较复杂，所以引入世界坐标和物体坐标系，用物体坐标系的远点代表物体位置，物体坐标系相对世界坐标系的姿态表示刚体的转动状态。将刚体坐标系轨迹记录下来，然后对时间微分和二次微分即可得到刚体的速度、加速度等信息。</p>
-<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025210313050.png" alt="image-20221025210313050"></p>
-<h3 id="刚体运动"><a href="#刚体运动" class="headerlink" title="刚体运动"></a>刚体运动</h3><h4 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h4><p>用世界坐标系原点到刚体坐标系原点的<strong>向量</strong>来表示刚体在空间中的位置和移动状态。</p>
-<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025210600280.png" alt="image-20221025210600280"></p>
-<h4 id="转动"><a href="#转动" class="headerlink" title="转动"></a>转动</h4><p>用刚体坐标系在世界坐标系中的投影来表示刚体的转动状态。</p>
-<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025212148476.png" alt="image-20221025212148476"></p>
-<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025212225350.png" alt="image-20221025212225350"></p>
-<p><strong>${^A_B}R$ 表示B坐标系相对A坐标系的旋转矩阵</strong></p>
-<h4 id="旋转矩阵特性"><a href="#旋转矩阵特性" class="headerlink" title="旋转矩阵特性"></a>旋转矩阵特性</h4><ol>
-<li><p>A对B的旋转矩阵转置既是B对A的旋转矩阵。</p>
-<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025214157573.png" alt="image-20221025214157573"></p>
-</li>
-<li><p>${^A_B}R^T{^A_B}R=I_3$ (单位矩阵)</p>
-<p>正交矩阵有这样的特性。因此在算矩阵的逆矩阵时，可直接计算其旋转矩阵。</p>
-<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025214632994.png" alt="image-20221025214632994"></p>
-</li>
-</ol>
-<h4 id="旋转矩阵处了描述-B-相对-A-的姿态，也可用于转换。"><a href="#旋转矩阵处了描述-B-相对-A-的姿态，也可用于转换。" class="headerlink" title="旋转矩阵处了描述{B}相对{A}的姿态，也可用于转换。"></a>旋转矩阵处了描述{B}相对{A}的姿态，也可用于转换。</h4><p>eg. 求P点在{A}和{B}两个坐标系的表达法。</p>
-<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025220046594.png" alt="image-20221025220046594"></p>
-<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025220104075.png" alt="image-20221025220104075"></p>
-<h4 id="进一步描述刚体转动的状态"><a href="#进一步描述刚体转动的状态" class="headerlink" title="进一步描述刚体转动的状态"></a>进一步描述刚体转动的状态</h4><p>当坐标轴绕Z轴旋转$\theta$角度时，此时的坐标系B对A的旋转矩阵可表示为如下形式。</p>
-<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025221505493.png" alt="image-20221025221505493"></p>
-<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025221511975.png" alt="image-20221025221511975"></p>
-<p>这种表示方法可以解决P点随坐标系旋转$\theta$后，相对原坐标系的位置。</p>
-<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/image-20221025222109217.png" alt="image-20221025222109217"></p>
-<h4 id="总结旋转矩阵的三个用法"><a href="#总结旋转矩阵的三个用法" class="headerlink" title="总结旋转矩阵的三个用法"></a>总结旋转矩阵的三个用法</h4><ol>
-<li><p>描述一个坐标系相对另一个坐标系的姿态</p>
-</li>
-<li><p>求点在不同坐标系中的位置</p>
-<p>$^AP={^A_BR}^BP$</p>
-</li>
-<li><p>求点在同一个坐标系中转动后的位置</p>
-<p>$^AP’=R(\theta)^AP$</p>
-</li>
-</ol>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>构造字符串，逐一计数。</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">class Solution <span class="token punctuation">{</span>
+public<span class="token operator">:</span>
+    <span class="token keyword">int</span> <span class="token function">magicalString</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        string s<span class="token operator">=</span><span class="token string">"122"</span><span class="token punctuation">;</span>		<span class="token comment">//初始字符串的值</span>
+        <span class="token keyword">char</span> next<span class="token operator">=</span><span class="token char">'1'</span><span class="token punctuation">;</span>		<span class="token comment">//下一组字符的值</span>
+        <span class="token keyword">int</span> sum<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>			<span class="token comment">//’1‘的个数</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">&lt;=</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token char">'1'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                s<span class="token operator">+=</span>next<span class="token punctuation">;</span>		<span class="token comment">//当标记为为1时，sum++且说明下一组字符数为1个</span>
+                sum<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span><span class="token punctuation">{</span>
+                s<span class="token operator">+=</span>next<span class="token punctuation">;</span>		<span class="token comment">////当标记为为2时，说明下一组字符数为2个</span>
+                s<span class="token operator">+=</span>next<span class="token punctuation">;</span>		
+            <span class="token punctuation">}</span>
+            next<span class="token operator">=</span><span class="token punctuation">(</span>next<span class="token operator">==</span><span class="token char">'1'</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token char">'2'</span><span class="token operator">:</span><span class="token char">'1'</span><span class="token punctuation">;</span>	<span class="token comment">//下一组的字符，1和2交替赋值</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>题解原链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/magical-string/">481. 神奇字符串 - 力扣（LeetCode）</a></p>
 
                 
             </div>
@@ -443,7 +423,7 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://767879.xyz/2022/10/25/ji-qi-ren-xue-dao-lun-yi/">http://767879.xyz/2022/10/25/ji-qi-ren-xue-dao-lun-yi/</a>
+                    <a href="http://767879.xyz/2022/10/31/shen-qi-zi-fu-chuan/">http://767879.xyz/2022/10/31/shen-qi-zi-fu-chuan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -481,12 +461,8 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/">
-                                    <span class="chip bg-color">机器人学</span>
-                                </a>
-                            
-                                <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
-                                    <span class="chip bg-color">线性代数</span>
+                                <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                                    <span class="chip bg-color">字符串</span>
                                 </a>
                             
                         </div>
@@ -532,17 +508,18 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/10/26/ji-qi-ren-xue-dao-lun-er/">
+                <a href="/2022/10/31/shen-qi-zi-fu-chuan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="机器人学导论(二)">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="神奇字符串">
                         
-                        <span class="card-title">机器人学导论(二)</span>
+                        <span class="card-title">神奇字符串</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -552,30 +529,27 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%E5%AF%BC%E8%AE%BA/" class="post-category">
-                                    机器人学导论
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/">
-                        <span class="chip bg-color">机器人学</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
-                        <span class="chip bg-color">线性代数</span>
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                        <span class="chip bg-color">字符串</span>
                     </a>
                     
                 </div>
@@ -589,13 +563,13 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/10/25/sql-ji-chu/">
+                <a href="/2022/10/26/he-zhi-shao-wei-k-de-zui-duan-zi-shu-zu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="SQL基础">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="和至少为 K 的最短子数组">
                         
-                        <span class="card-title">SQL基础</span>
+                        <span class="card-title">和至少为 K 的最短子数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -606,14 +580,14 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SQL/" class="post-category">
-                                    SQL
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -623,12 +597,12 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SQL/">
-                        <span class="chip bg-color">SQL</span>
+                    <a href="/tags/%E9%98%9F%E5%88%97/">
+                        <span class="chip bg-color">队列</span>
                     </a>
                     
-                    <a href="/tags/mysql/">
-                        <span class="chip bg-color">mysql</span>
+                    <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/">
+                        <span class="chip bg-color">前缀和</span>
                     </a>
                     
                 </div>
@@ -750,13 +724,6 @@ x,y,z确定空间位置，$\theta、\lambda、\phi$表示空间中的三个旋�
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
 
 
 
