@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-10-31T15:23:44.837Z</updated>
+  <updated>2022-11-04T14:25:15.775Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -15,6 +15,88 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大数运算</title>
+    <link href="http://767879.xyz/2022/11/04/da-shu-yun-suan/"/>
+    <id>http://767879.xyz/2022/11/04/da-shu-yun-suan/</id>
+    <published>2022-11-04T13:29:44.000Z</published>
+    <updated>2022-11-04T14:25:15.775Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-c&quot; data-language=&quot;c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/*
+  大数加法
+ */&lt;/span&gt;
+&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://767879.xyz/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="大数计算" scheme="http://767879.xyz/tags/%E5%A4%A7%E6%95%B0%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大数运算</title>
+    <link href="http://767879.xyz/2022/11/04/da-shu-jia-fa/"/>
+    <id>http://767879.xyz/2022/11/04/da-shu-jia-fa/</id>
+    <published>2022-11-04T13:29:44.000Z</published>
+    <updated>2022-11-04T14:25:57.495Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-c&quot; data-language=&quot;c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/*
+  大数加法
+ */&lt;/span&gt;
+&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://767879.xyz/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="大数计算" scheme="http://767879.xyz/tags/%E5%A4%A7%E6%95%B0%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络</title>
+    <link href="http://767879.xyz/2022/11/01/ji-suan-ji-wang-luo/"/>
+    <id>http://767879.xyz/2022/11/01/ji-suan-ji-wang-luo/</id>
+    <published>2022-11-01T13:08:10.000Z</published>
+    <updated>2022-11-01T13:15:28.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;tcp:可靠性高&lt;/p&gt;
+&lt;p&gt;TCP:可靠性高&lt;/p&gt;
+&lt;p&gt;UDP:实时性好​&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="计算机网络" scheme="http://767879.xyz/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>神奇字符串</title>
@@ -76,7 +158,7 @@
     <link href="http://767879.xyz/2022/10/26/pa-lou-ti-wen-ti/"/>
     <id>http://767879.xyz/2022/10/26/pa-lou-ti-wen-ti/</id>
     <published>2022-10-26T04:06:30.000Z</published>
-    <updated>2022-10-26T15:52:46.272Z</updated>
+    <updated>2022-11-01T08:11:44.883Z</updated>
     
     
       
@@ -238,9 +320,9 @@
     <category term="服务器" scheme="http://767879.xyz/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-    <category term="error" scheme="http://767879.xyz/tags/error/"/>
-    
     <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="error" scheme="http://767879.xyz/tags/error/"/>
     
   </entry>
   
@@ -341,9 +423,9 @@
     <category term="git" scheme="http://767879.xyz/categories/git/"/>
     
     
-    <category term="git" scheme="http://767879.xyz/tags/git/"/>
-    
     <category term="error" scheme="http://767879.xyz/tags/error/"/>
+    
+    <category term="git" scheme="http://767879.xyz/tags/git/"/>
     
   </entry>
   

@@ -337,14 +337,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-26
+                    2022-11-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    294
+                    284
                 </div>
                 
 
@@ -390,25 +390,21 @@
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*
   使用map记录部分递归的值，减少重复计算
  */</span>
-<span class="token keyword">int</span> <span class="token function">palouti2</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span>map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> map<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;unordered_map&gt;</span></span>
+using namespace std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">palouti2</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span>unordered_map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> map<span class="token punctuation">)</span><span class="token punctuation">{</span>
 	<span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span> <span class="token operator">||</span> n<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">return</span> n<span class="token punctuation">;</span>
-	<span class="token keyword">int</span> p<span class="token punctuation">,</span>q<span class="token punctuation">;</span>
-	<span class="token keyword">if</span><span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">!=</span>map<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-		p<span class="token operator">=</span>map<span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token keyword">auto</span> it<span class="token operator">=</span>map<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>it<span class="token operator">!=</span>map<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">return</span> it<span class="token operator">-&gt;</span>second<span class="token punctuation">;</span>
 	<span class="token punctuation">}</span> 
 	<span class="token keyword">else</span> <span class="token punctuation">{</span>
-		p<span class="token operator">=</span><span class="token function">palouti2</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>map<span class="token punctuation">)</span><span class="token punctuation">;</span>
-		map<span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>p<span class="token punctuation">;</span>
+		map<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">palouti2</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>map<span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">palouti2</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span>map<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> map<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
-	<span class="token keyword">if</span><span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">!=</span>map<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-		q<span class="token operator">=</span>map<span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-	<span class="token punctuation">}</span> 
-	<span class="token keyword">else</span> <span class="token punctuation">{</span>
-		q<span class="token operator">=</span><span class="token function">palouti2</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span>map<span class="token punctuation">)</span><span class="token punctuation">;</span>
-		map<span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">=</span>q<span class="token punctuation">;</span>
-	<span class="token punctuation">}</span>
-	<span class="token keyword">return</span> p<span class="token operator">+</span>q<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>最后用45做测试，解法一用时<strong>4.035s</strong>，解法二用时<strong>0.0229s</strong>。由此可以看出，一个好的算法有多么重要。</p>
 
@@ -768,7 +764,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">10k</span>
+                        class="white-color">10.6k</span>
             
             
             
