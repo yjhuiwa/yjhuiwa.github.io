@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-11-06T12:15:03.714Z</updated>
+  <updated>2022-11-09T14:17:13.937Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>应用层</title>
+    <link href="http://767879.xyz/2022/11/09/ying-yong-ceng/"/>
+    <id>http://767879.xyz/2022/11/09/ying-yong-ceng/</id>
+    <published>2022-11-09T11:08:34.000Z</published>
+    <updated>2022-11-09T14:17:13.937Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;##网络应用例子&lt;/p&gt;
+&lt;p&gt;E-mail、Web、文本消息、远程登陆、P2P文件共享、网络游戏、电话会议…&lt;/p&gt;
+&lt;h2 id=&quot;创建网络应用&quot;&gt;&lt;a href=&quot;#创建网络应用&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="计算机网络" scheme="http://767879.xyz/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="应用层" scheme="http://767879.xyz/tags/%E5%BA%94%E7%94%A8%E5%B1%82/"/>
+    
+  </entry>
   
   <entry>
     <title>内存非连续分配管理方式</title>
@@ -339,9 +366,9 @@
     <category term="服务器" scheme="http://767879.xyz/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-    <category term="error" scheme="http://767879.xyz/tags/error/"/>
-    
     <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="error" scheme="http://767879.xyz/tags/error/"/>
     
   </entry>
   
@@ -442,9 +469,9 @@
     <category term="git" scheme="http://767879.xyz/categories/git/"/>
     
     
-    <category term="git" scheme="http://767879.xyz/tags/git/"/>
-    
     <category term="error" scheme="http://767879.xyz/tags/error/"/>
+    
+    <category term="git" scheme="http://767879.xyz/tags/git/"/>
     
   </entry>
   
