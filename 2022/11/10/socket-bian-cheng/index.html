@@ -5,7 +5,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Socket编程, 朝花朝拾">
-    <meta name="description" content="">
+    <meta name="description" content="// 服务器端
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;WinSock2.h&amp;gt;
+using namespace std;
+int main() {
+	WSADATA wsa_data;
+	WSAS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -51,9 +57,9 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="朝花朝拾" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="朝花朝拾" type="application/atom+xml">
 </head>
 
 
@@ -341,7 +347,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    298
                 </div>
                 
 
@@ -366,7 +372,95 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">// 服务器端</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;WinSock2.h&gt;</span></span>
+using namespace std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	WSADATA wsa_data<span class="token punctuation">;</span>
+	<span class="token function">WSAStartup</span><span class="token punctuation">(</span><span class="token function">MAKEWORD</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>wsa_data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// 创建socket</span>
+	SOCKET server_socket<span class="token operator">=</span><span class="token function">socket</span><span class="token punctuation">(</span>AF_INET<span class="token punctuation">,</span>SOCK_STREAM<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token comment">// 绑定</span>
+	SOCKADDR_IN sock_add_in<span class="token punctuation">;</span>
+	sock_add_in<span class="token punctuation">.</span>sin_family<span class="token operator">=</span>AF_INET<span class="token punctuation">;</span>
+	sock_add_in<span class="token punctuation">.</span>sin_port<span class="token operator">=</span><span class="token function">htons</span><span class="token punctuation">(</span><span class="token number">9090</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token comment">// 接受任意客户端请求，具体IP用inet_addr函数转换，端口用htons()</span>
+	sock_add_in<span class="token punctuation">.</span>sin_addr<span class="token punctuation">.</span>S_un<span class="token punctuation">.</span>S_addr<span class="token operator">=</span>INADDR_ANY<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> bind_result<span class="token operator">=</span><span class="token function">bind</span><span class="token punctuation">(</span>server_socket<span class="token punctuation">,</span><span class="token punctuation">(</span>SOCKADDR<span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>sock_add_in<span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>SOCKADDR_IN<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>bind_result<span class="token operator">==</span>SOCKET_ERROR<span class="token punctuation">)</span><span class="token punctuation">{</span>
+		cout<span class="token operator">&lt;&lt;</span><span class="token string">"bind error"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token comment">// 监听连接</span>
+	<span class="token comment">// socket对象,缓冲区长度</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">int</span> listen_result<span class="token operator">=</span><span class="token function">listen</span><span class="token punctuation">(</span>server_socket<span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>listen_result<span class="token operator">==</span>SOCKET_ERROR<span class="token punctuation">)</span><span class="token punctuation">{</span>
+			cout<span class="token operator">&lt;&lt;</span><span class="token string">"listen error"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+		<span class="token comment">// 连接客户端</span>
+		SOCKADDR_IN client_addr_in<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> client_len<span class="token operator">=</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>SOCKADDR_IN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		SOCKET client_socket<span class="token operator">=</span>INVALID_SOCKET<span class="token punctuation">;</span>
+		<span class="token comment">// 处理请求</span>
+		client_socket <span class="token operator">=</span><span class="token function">accept</span><span class="token punctuation">(</span>server_socket<span class="token punctuation">,</span><span class="token punctuation">(</span>SOCKADDR<span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>client_addr_in<span class="token punctuation">,</span><span class="token operator">&amp;</span>client_len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>client_socket<span class="token operator">==</span>INVALID_SOCKET<span class="token punctuation">)</span><span class="token punctuation">{</span>
+			cout<span class="token operator">&lt;&lt;</span><span class="token string">"client error"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+		<span class="token comment">// 向客户端发送数据</span>
+		<span class="token keyword">char</span> message<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"Build TCP Connect."</span><span class="token punctuation">;</span>
+<span class="token comment">//		scanf("%s",&amp;message);</span>
+		<span class="token function">send</span><span class="token punctuation">(</span>client_socket<span class="token punctuation">,</span>message<span class="token punctuation">,</span><span class="token function">strnlen_s</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token function">closesocket</span><span class="token punctuation">(</span>server_socket<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token function">WSACleanup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//客户端</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;WinSock2.h&gt;</span></span>
+using namespace std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	WSADATA wsa_data<span class="token punctuation">;</span>
+	<span class="token function">WSAStartup</span><span class="token punctuation">(</span><span class="token function">MAKEWORD</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>wsa_data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// 创建socket</span>
+	SOCKET client_socket<span class="token operator">=</span><span class="token function">socket</span><span class="token punctuation">(</span>AF_INET<span class="token punctuation">,</span>SOCK_STREAM<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token comment">// 连接服务器</span>
+	SOCKADDR_IN sock_add_in<span class="token punctuation">;</span>
+	sock_add_in<span class="token punctuation">.</span>sin_family<span class="token operator">=</span>AF_INET<span class="token punctuation">;</span>
+	sock_add_in<span class="token punctuation">.</span>sin_port<span class="token operator">=</span><span class="token function">htons</span><span class="token punctuation">(</span><span class="token number">9090</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	sock_add_in<span class="token punctuation">.</span>sin_addr<span class="token punctuation">.</span>S_un<span class="token punctuation">.</span>S_addr<span class="token operator">=</span><span class="token function">inet_addr</span><span class="token punctuation">(</span><span class="token string">"127.0.0.1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">int</span> connect_result<span class="token operator">=</span><span class="token function">connect</span><span class="token punctuation">(</span>client_socket<span class="token punctuation">,</span><span class="token punctuation">(</span>sockaddr<span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>sock_add_in<span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>SOCKADDR_IN<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>connect_result<span class="token operator">==</span>SOCKET_ERROR<span class="token punctuation">)</span><span class="token punctuation">{</span>
+		cout<span class="token operator">&lt;&lt;</span><span class="token string">"connect error"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token comment">//接收数据</span>
+	<span class="token keyword">char</span> message<span class="token punctuation">[</span><span class="token number">256</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token keyword">int</span> recv_len<span class="token operator">=</span><span class="token function">recv</span><span class="token punctuation">(</span>client_socket<span class="token punctuation">,</span>message<span class="token punctuation">,</span><span class="token number">256</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>recv_len<span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		cout<span class="token operator">&lt;&lt;</span><span class="token string">"recv message: "</span><span class="token operator">&lt;&lt;</span>message<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token function">WSACleanup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -717,7 +811,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">13.2k</span>
+                        class="white-color">13.5k</span>
             
             
             

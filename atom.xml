@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-11-10T12:51:46.600Z</updated>
+  <updated>2022-11-10T14:35:36.007Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -21,8 +21,17 @@
     <link href="http://767879.xyz/2022/11/10/socket-bian-cheng/"/>
     <id>http://767879.xyz/2022/11/10/socket-bian-cheng/</id>
     <published>2022-11-10T12:50:32.000Z</published>
-    <updated>2022-11-10T12:51:46.600Z</updated>
+    <updated>2022-11-10T14:35:36.007Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-c&quot; data-language=&quot;c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 服务器端&lt;/span&gt;
+&lt;span</summary>
+        
+      
     
     
     
