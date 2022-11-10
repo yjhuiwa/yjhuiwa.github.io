@@ -60,9 +60,9 @@ Napster(混合模式)
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="朝花朝拾" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="朝花朝拾" type="application/atom+xml">
 </head>
 
 
@@ -343,21 +343,21 @@ Napster(混合模式)
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-09
+                    2022-11-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    5 分
                 </div>
                 
 
@@ -444,6 +444,46 @@ Napster(混合模式)
 <li>国家的（countries）:  .cn  .us  .nl  .jp</li>
 </ol>
 <p>每个（子）域下面可以划分为若干个子域，树叶是主机。</p>
+<h4 id="P2P应用"><a href="#P2P应用" class="headerlink" title="P2P应用"></a>P2P应用</h4><p>cs模式和P2p模式在文件分发中的区别。将一个大小为F的文件分发给N个客户端耗时：  U 带宽</p>
+<p>cs模式：$D_{c-s}\ge max{NF/U_s,F/d_{min}}$  耗时随N线性增加</p>
+<p>P2P模式：$D_{p2p}\ge max{F/U_s,F/d_{min},NF/(U_s+\sum U_i)}$  耗时随N加速下载</p>
+<h5 id="P2P分类"><a href="#P2P分类" class="headerlink" title="P2P分类"></a>P2P分类</h5><ul>
+<li><p>非结构化 P2P             节点关系任意</p>
+<ul>
+<li><p>集中化目录</p>
+<p>客户端向中心服务器注册本地资源，中心服务器向客户端响应拥有请求资源的其他客户端</p>
+</li>
+<li><p>完全分布式</p>
+<p>泛洪式</p>
+</li>
+<li><p>混合体</p>
+<p>组内集中，组间泛洪。每组设有组长。</p>
+</li>
+</ul>
+</li>
+<li><p>结构化（DsHT) P2P    节点关系有序</p>
+</li>
+</ul>
+<p>###视频流化服务和CDN：上下文</p>
+<p>视频：固定速度显示的图像序列，数字化图像式像素的阵列，每个像素被若干bits表示。</p>
+<h4 id="多媒体流化服务：DASH"><a href="#多媒体流化服务：DASH" class="headerlink" title="多媒体流化服务：DASH"></a>多媒体流化服务：DASH</h4><p>可以动态选择请求不同的质量的块。</p>
+<p>服务器：</p>
+<ul>
+<li>将视频文件分割成多个块</li>
+<li>每个块独立存储，编码于不同码率</li>
+<li>告示文件（manifest file）: 提供不同块的URL</li>
+</ul>
+<p>客户端：</p>
+<ul>
+<li>先获取告示文件</li>
+<li>周期性地测量服务器到客户端的带宽</li>
+<li>查询告示文件，在一个时刻请求一个块，HTTP头部指定字节范围<ul>
+<li>带宽足够则选择最大码率的视频块</li>
+<li>会话的不同时刻可以切换请求不同的编码块</li>
+</ul>
+</li>
+</ul>
+<h4 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h4><p>通过CDN全网部署缓存节点，存储服务内容，就近为用户提供服务，提高用户体验。</p>
 
                 
             </div>
@@ -555,18 +595,17 @@ Napster(混合模式)
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/11/09/ying-yong-ceng/">
+                <a href="/2022/11/10/socket-bian-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="应用层">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Socket编程">
                         
-                        <span class="card-title">应用层</span>
+                        <span class="card-title">Socket编程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -576,9 +615,9 @@ Napster(混合模式)
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-09
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-10
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -591,12 +630,11 @@ Napster(混合模式)
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BA%94%E7%94%A8%E5%B1%82/">
-                        <span class="chip bg-color">应用层</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
                 </div>
@@ -795,7 +833,7 @@ Napster(混合模式)
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">12.8k</span>
+                        class="white-color">13.2k</span>
             
             
             

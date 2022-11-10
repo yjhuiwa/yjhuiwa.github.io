@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-11-09T14:17:13.937Z</updated>
+  <updated>2022-11-10T12:51:46.600Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -17,11 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Socket编程</title>
+    <link href="http://767879.xyz/2022/11/10/socket-bian-cheng/"/>
+    <id>http://767879.xyz/2022/11/10/socket-bian-cheng/</id>
+    <published>2022-11-10T12:50:32.000Z</published>
+    <updated>2022-11-10T12:51:46.600Z</updated>
+    
+    
+    
+    
+    <category term="计算机网络" scheme="http://767879.xyz/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="算法" scheme="http://767879.xyz/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>应用层</title>
     <link href="http://767879.xyz/2022/11/09/ying-yong-ceng/"/>
     <id>http://767879.xyz/2022/11/09/ying-yong-ceng/</id>
     <published>2022-11-09T11:08:34.000Z</published>
-    <updated>2022-11-09T14:17:13.937Z</updated>
+    <updated>2022-11-10T12:49:25.017Z</updated>
     
     
       
@@ -491,27 +508,6 @@
     
     
     <category term="markdown" scheme="http://767879.xyz/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>嵌入式H2数据库</title>
-    <link href="http://767879.xyz/2021/12/24/qian-ru-shi-h2-shu-ju-ku/"/>
-    <id>http://767879.xyz/2021/12/24/qian-ru-shi-h2-shu-ju-ku/</id>
-    <published>2021-12-24T06:21:13.981Z</published>
-    <updated>2022-10-25T02:48:52.579Z</updated>
-    
-    
-    <summary type="html">嵌入式H2数据库配置</summary>
-    
-    
-    
-    <category term="数据库" scheme="http://767879.xyz/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-    <category term="数据库" scheme="http://767879.xyz/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="H2" scheme="http://767879.xyz/tags/H2/"/>
     
   </entry>
   
