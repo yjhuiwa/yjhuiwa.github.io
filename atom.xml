@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-11-12T09:41:36.042Z</updated>
+  <updated>2022-11-15T14:11:56.547Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -17,11 +17,87 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>linux</title>
+    <link href="http://767879.xyz/2022/11/15/linux/"/>
+    <id>http://767879.xyz/2022/11/15/linux/</id>
+    <published>2022-11-15T14:04:12.000Z</published>
+    <updated>2022-11-15T14:11:56.547Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;后台运行&quot;&gt;&lt;a href=&quot;#后台运行&quot; class=&quot;headerlink&quot; title=&quot;后台运行&quot;&gt;&lt;/a&gt;后台运行&lt;/h3&gt;&lt;p&gt;当shell断开时，当前进程终止，&amp;amp;</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="http://767879.xyz/categories/linux/"/>
+    
+    
+    <category term="notag" scheme="http://767879.xyz/tags/notag/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python_fix</title>
+    <link href="http://767879.xyz/2022/11/15/python-fix/"/>
+    <id>http://767879.xyz/2022/11/15/python-fix/</id>
+    <published>2022-11-15T13:24:46.000Z</published>
+    <updated>2022-11-15T14:10:23.061Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;安装lxml&quot;&gt;&lt;a href=&quot;#安装lxml&quot; class=&quot;headerlink&quot; title=&quot;安装lxml&quot;&gt;&lt;/a&gt;安装lxml&lt;/h3&gt;&lt;p&gt;首先&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip3 install</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://767879.xyz/categories/python/"/>
+    
+    
+    <category term="notag" scheme="http://767879.xyz/tags/notag/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据库绪论</title>
+    <link href="http://767879.xyz/2022/11/12/shu-ju-ku-gai-lun/"/>
+    <id>http://767879.xyz/2022/11/12/shu-ju-ku-gai-lun/</id>
+    <published>2022-11-12T13:42:31.000Z</published>
+    <updated>2022-11-12T14:22:40.286Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;数据库系统概述&quot;&gt;&lt;a href=&quot;#数据库系统概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="http://767879.xyz/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="sql" scheme="http://767879.xyz/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vim操作</title>
     <link href="http://767879.xyz/2022/11/12/vim/"/>
     <id>http://767879.xyz/2022/11/12/vim/</id>
     <published>2022-11-12T09:39:57.000Z</published>
-    <updated>2022-11-12T09:41:36.042Z</updated>
+    <updated>2022-11-13T07:54:22.997Z</updated>
     
     
       
@@ -100,7 +176,7 @@
     <link href="http://767879.xyz/2022/11/06/fen-ye-cun-chu-guan-li/"/>
     <id>http://767879.xyz/2022/11/06/fen-ye-cun-chu-guan-li/</id>
     <published>2022-11-06T11:18:27.000Z</published>
-    <updated>2022-11-06T12:15:03.714Z</updated>
+    <updated>2022-11-13T13:11:33.791Z</updated>
     
     
       
@@ -338,7 +414,7 @@
     <link href="http://767879.xyz/2022/10/25/sql-ji-chu/"/>
     <id>http://767879.xyz/2022/10/25/sql-ji-chu/</id>
     <published>2022-10-25T04:08:38.000Z</published>
-    <updated>2022-11-12T13:39:43.547Z</updated>
+    <updated>2022-11-14T14:55:51.773Z</updated>
     
     
       
@@ -352,7 +428,7 @@
     
     
     
-    <category term="SQL" scheme="http://767879.xyz/categories/SQL/"/>
+    <category term="数据库" scheme="http://767879.xyz/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
     <category term="SQL" scheme="http://767879.xyz/tags/SQL/"/>
@@ -450,80 +526,6 @@
     <category term="数组" scheme="http://767879.xyz/tags/%E6%95%B0%E7%BB%84/"/>
     
     <category term="查找" scheme="http://767879.xyz/tags/%E6%9F%A5%E6%89%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>求X的n次方</title>
-    <link href="http://767879.xyz/2022/10/24/x-de-n-ci-fang/"/>
-    <id>http://767879.xyz/2022/10/24/x-de-n-ci-fang/</id>
-    <published>2022-10-24T11:22:36.575Z</published>
-    <updated>2022-10-25T02:48:21.477Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;时间复杂度-O-n&quot;&gt;&lt;a href=&quot;#时间复杂度-O-n&quot; class=&quot;headerlink&quot; title=&quot;时间复杂度 O(n)&quot;&gt;&lt;/a&gt;时间复杂度 O(n)&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-c&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="http://767879.xyz/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="递归" scheme="http://767879.xyz/tags/%E9%80%92%E5%BD%92/"/>
-    
-    <category term="时间复杂度" scheme="http://767879.xyz/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>时间复杂度-O(x)</title>
-    <link href="http://767879.xyz/2022/10/24/shi-jian-fu-za-du/"/>
-    <id>http://767879.xyz/2022/10/24/shi-jian-fu-za-du/</id>
-    <published>2022-10-24T11:22:36.573Z</published>
-    <updated>2022-10-25T02:49:22.576Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;大O：用来表示算法最坏情况运行时间的上界。&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&quot;不同数据规模下时间复杂度的差异&quot;&gt;&lt;a href=&quot;#不同数据规模下时间复杂度的差异&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="http://767879.xyz/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="时间复杂度" scheme="http://767879.xyz/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git 提交代码被拒绝</title>
-    <link href="http://767879.xyz/2021/12/25/git-ti-jiao-dai-ma-bei-ju-jue/"/>
-    <id>http://767879.xyz/2021/12/25/git-ti-jiao-dai-ma-bei-ju-jue/</id>
-    <published>2021-12-24T16:16:02.922Z</published>
-    <updated>2022-10-25T02:48:00.076Z</updated>
-    
-    
-    <summary type="html">本地代码或者文件与仓库冲突(有不相关内容)，提交被拒绝。</summary>
-    
-    
-    
-    <category term="git" scheme="http://767879.xyz/categories/git/"/>
-    
-    
-    <category term="error" scheme="http://767879.xyz/tags/error/"/>
-    
-    <category term="git" scheme="http://767879.xyz/tags/git/"/>
     
   </entry>
   
