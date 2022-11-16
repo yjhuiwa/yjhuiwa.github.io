@@ -4,6 +4,52 @@
   
     
     <entry>
+      <title>VM重置密码</title>
+      <link href="/2022/11/16/vm-chong-zhi-mi-ma/"/>
+      <url>/2022/11/16/vm-chong-zhi-mi-ma/</url>
+      
+        <content type="html"><![CDATA[<p>categories: 虚拟机</p><p><strong>VMware 运行Ubuntu虚拟机时候，忘记登陆密码</strong></p><h3 id="1、重启虚拟机，同时长按shift-进入如下界面"><a href="#1、重启虚拟机，同时长按shift-进入如下界面" class="headerlink" title="1、重启虚拟机，同时长按shift,进入如下界面"></a>1、重启虚拟机，同时长按shift,进入如下界面</h3><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/202211162318093.png" alt="image-20221116230803652"></p><p>2、选择Ubuntu  的高级选项</p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/202211162318339.png" alt="image-20221116230855393"></p><p>3、选择第二个 <code>recovery mode</code></p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/202211162318931.png" alt="image-20221116231021052"></p><p>4、选择倒数第二个 root</p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/202211162318648.png" alt="image-20221116231111092"></p><p>5、输入 回车,然后<code>passwd username</code>，就可以输入新的密码了</p><p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/202211162318040.png" alt="image-20221116231528066"></p><p>6、最后 <code>exit</code> 并且  <code>reboot</code> 重启虚拟机</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> 虚拟机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>传输层</title>
+      <link href="/2022/11/16/chuan-shu-ceng/"/>
+      <url>/2022/11/16/chuan-shu-ceng/</url>
+      
+        <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>网络层（IP）提供主机到主机的通信，传输层（TCP、UDP）提供进程到进程的服务（复用和解复用）。</p><ul><li>TCP: 可靠的、保序的传输<ul><li>多路复用、解复用</li><li>拥塞控制</li><li>流量控制</li><li>建立连接</li></ul></li><li>UDP: 不可靠、不保序的传输<ul><li>多路复用、解复用</li><li>没有尽力而为的为IP服务添加更多的额外服务</li></ul></li><li>都不提供的服务<ul><li>延时保证</li><li>宽带保证</li></ul></li></ul><hr><h2 id="多路复用和解复用"><a href="#多路复用和解复用" class="headerlink" title="多路复用和解复用"></a>多路复用和解复用</h2><ul><li>在发送方主机复用，</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 传输层 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>linux</title>
       <link href="/2022/11/15/linux/"/>
       <url>/2022/11/15/linux/</url>

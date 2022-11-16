@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-11-15T14:11:56.547Z</updated>
+  <updated>2022-11-16T15:18:58.218Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VM重置密码</title>
+    <link href="http://767879.xyz/2022/11/16/vm-chong-zhi-mi-ma/"/>
+    <id>http://767879.xyz/2022/11/16/vm-chong-zhi-mi-ma/</id>
+    <published>2022-11-16T15:04:48.000Z</published>
+    <updated>2022-11-16T15:18:58.218Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;categories: 虚拟机&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;VMware 运行Ubuntu虚拟机时候，忘记登陆密码&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;1、重启虚拟机，同时长按shift-进入如下界面&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="linux" scheme="http://767879.xyz/tags/linux/"/>
+    
+    <category term="虚拟机" scheme="http://767879.xyz/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>传输层</title>
+    <link href="http://767879.xyz/2022/11/16/chuan-shu-ceng/"/>
+    <id>http://767879.xyz/2022/11/16/chuan-shu-ceng/</id>
+    <published>2022-11-16T11:51:34.000Z</published>
+    <updated>2022-11-16T12:21:35.732Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;网络层（IP）提供主机到主机的通信，传输层（TCP、UDP）提供进程到进程的服务（复用和解复用）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TCP:</summary>
+        
+      
+    
+    
+    
+    <category term="计算机网络" scheme="http://767879.xyz/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="传输层" scheme="http://767879.xyz/tags/%E4%BC%A0%E8%BE%93%E5%B1%82/"/>
+    
+  </entry>
   
   <entry>
     <title>linux</title>
@@ -149,7 +203,7 @@
     <link href="http://767879.xyz/2022/11/09/ying-yong-ceng/"/>
     <id>http://767879.xyz/2022/11/09/ying-yong-ceng/</id>
     <published>2022-11-09T11:08:34.000Z</published>
-    <updated>2022-11-12T13:40:15.948Z</updated>
+    <updated>2022-11-16T11:46:43.585Z</updated>
     
     
       
@@ -476,56 +530,6 @@
     
     
     <category term="操作系统" scheme="http://767879.xyz/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>XFtp6提示更新无法打开</title>
-    <link href="http://767879.xyz/2022/10/24/xftp6-ti-shi-geng-xin-wu-fa-da-kai/"/>
-    <id>http://767879.xyz/2022/10/24/xftp6-ti-shi-geng-xin-wu-fa-da-kai/</id>
-    <published>2022-10-24T12:13:06.515Z</published>
-    <updated>2022-10-25T02:48:14.877Z</updated>
-    
-    
-    <summary type="html">XFtp6提示更新错误解决办法</summary>
-    
-    
-    
-    <category term="服务器" scheme="http://767879.xyz/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-    <category term="服务器" scheme="http://767879.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    <category term="error" scheme="http://767879.xyz/tags/error/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>二分查找</title>
-    <link href="http://767879.xyz/2022/10/24/er-fen-cha-zhao/"/>
-    <id>http://767879.xyz/2022/10/24/er-fen-cha-zhao/</id>
-    <published>2022-10-24T11:22:36.577Z</published>
-    <updated>2022-10-25T02:48:43.186Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;题目描述&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。&lt;/p&gt;
-&lt;pre</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="http://767879.xyz/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="数组" scheme="http://767879.xyz/tags/%E6%95%B0%E7%BB%84/"/>
-    
-    <category term="查找" scheme="http://767879.xyz/tags/%E6%9F%A5%E6%89%BE/"/>
     
   </entry>
   
