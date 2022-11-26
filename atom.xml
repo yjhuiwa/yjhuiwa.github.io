@@ -6,7 +6,7 @@
   <link href="http://767879.xyz/atom.xml" rel="self"/>
   
   <link href="http://767879.xyz/"/>
-  <updated>2022-11-16T15:18:58.218Z</updated>
+  <updated>2022-11-26T15:36:58.354Z</updated>
   <id>http://767879.xyz/</id>
   
   <author>
@@ -17,24 +17,107 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>java线程操作</title>
+    <link href="http://767879.xyz/2022/11/26/java-xian-cheng-cao-zuo/"/>
+    <id>http://767879.xyz/2022/11/26/java-xian-cheng-cao-zuo/</id>
+    <published>2022-11-26T15:24:19.000Z</published>
+    <updated>2022-11-26T15:36:58.354Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;java创建子线程&quot;&gt;&lt;a href=&quot;#java创建子线程&quot; class=&quot;headerlink&quot; title=&quot;java创建子线程&quot;&gt;&lt;/a&gt;java创建子线程&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;继承Thread类&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="http://767879.xyz/categories/java/"/>
+    
+    
+    <category term="线程" scheme="http://767879.xyz/tags/%E7%BA%BF%E7%A8%8B/"/>
+    
+    <category term="JAVA" scheme="http://767879.xyz/tags/JAVA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java连接数据库</title>
+    <link href="http://767879.xyz/2022/11/26/java-lian-jie-shu-ju-ku/"/>
+    <id>http://767879.xyz/2022/11/26/java-lian-jie-shu-ju-ku/</id>
+    <published>2022-11-26T15:09:21.000Z</published>
+    <updated>2022-11-26T15:23:38.719Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;首先需要使用MySQL-connector-java&quot;&gt;&lt;a href=&quot;#首先需要使用MySQL-connector-java&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="http://767879.xyz/categories/java/"/>
+    
+    
+    <category term="JAVA" scheme="http://767879.xyz/tags/JAVA/"/>
+    
+    <category term="数据库" scheme="http://767879.xyz/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git</title>
+    <link href="http://767879.xyz/2022/11/17/git/"/>
+    <id>http://767879.xyz/2022/11/17/git/</id>
+    <published>2022-11-17T12:21:20.000Z</published>
+    <updated>2022-11-17T13:20:19.661Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;git&quot;&gt;&lt;a href=&quot;#git&quot; class=&quot;headerlink&quot; title=&quot;git&quot;&gt;&lt;/a&gt;git&lt;/h3&gt;&lt;p&gt;Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。&lt;/p&gt;
+&lt;h3 id=&quot;git-常用命令&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="http://767879.xyz/categories/git/"/>
+    
+    
+    <category term="git" scheme="http://767879.xyz/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>VM重置密码</title>
     <link href="http://767879.xyz/2022/11/16/vm-chong-zhi-mi-ma/"/>
     <id>http://767879.xyz/2022/11/16/vm-chong-zhi-mi-ma/</id>
     <published>2022-11-16T15:04:48.000Z</published>
-    <updated>2022-11-16T15:18:58.218Z</updated>
+    <updated>2022-11-17T12:22:06.542Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;categories: 虚拟机&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;VMware 运行Ubuntu虚拟机时候，忘记登陆密码&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&quot;1、重启虚拟机，同时长按shift-进入如下界面&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;VMware 运行Ubuntu虚拟机时候，忘记登陆密码&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;1、重启虚拟机，同时长按shift-进入如下界面&quot;&gt;&lt;a href=&quot;#1、重启虚拟机，同时长按shift-进入如下界面&quot;</summary>
         
       
     
     
+    
+    <category term="虚拟机" scheme="http://767879.xyz/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
     
     <category term="linux" scheme="http://767879.xyz/tags/linux/"/>
@@ -48,7 +131,7 @@
     <link href="http://767879.xyz/2022/11/16/chuan-shu-ceng/"/>
     <id>http://767879.xyz/2022/11/16/chuan-shu-ceng/</id>
     <published>2022-11-16T11:51:34.000Z</published>
-    <updated>2022-11-16T12:21:35.732Z</updated>
+    <updated>2022-11-20T11:56:09.555Z</updated>
     
     
       
@@ -255,14 +338,15 @@
     <link href="http://767879.xyz/2022/11/06/nei-cun-ji-chu/"/>
     <id>http://767879.xyz/2022/11/06/nei-cun-ji-chu/</id>
     <published>2022-11-06T10:24:28.000Z</published>
-    <updated>2022-11-06T11:22:07.212Z</updated>
+    <updated>2022-11-22T14:10:55.937Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;源代码到程序运行&quot;&gt;&lt;a href=&quot;#源代码到程序运行&quot; class=&quot;headerlink&quot; title=&quot;源代码到程序运行&quot;&gt;&lt;/a&gt;源代码到程序运行&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;编辑源代码 -&amp;gt; 编译 -&amp;gt; 链接 -&amp;gt;</summary>
+    <summary type="html">&lt;h3 id=&quot;内存量级&quot;&gt;&lt;a href=&quot;#内存量级&quot; class=&quot;headerlink&quot; title=&quot;内存量级&quot;&gt;&lt;/a&gt;内存量级&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1k = 2^10 B&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1M = 2^20</summary>
         
       
     
@@ -460,76 +544,6 @@
     <category term="机器人学" scheme="http://767879.xyz/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/"/>
     
     <category term="线性代数" scheme="http://767879.xyz/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL基础</title>
-    <link href="http://767879.xyz/2022/10/25/sql-ji-chu/"/>
-    <id>http://767879.xyz/2022/10/25/sql-ji-chu/</id>
-    <published>2022-10-25T04:08:38.000Z</published>
-    <updated>2022-11-14T14:55:51.773Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;SQL简介&quot;&gt;&lt;a href=&quot;#SQL简介&quot; class=&quot;headerlink&quot; title=&quot;SQL简介&quot;&gt;&lt;/a&gt;SQL简介&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;SQL&lt;/strong&gt; (Structured Query</summary>
-        
-      
-    
-    
-    
-    <category term="数据库" scheme="http://767879.xyz/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-    <category term="SQL" scheme="http://767879.xyz/tags/SQL/"/>
-    
-    <category term="mysql" scheme="http://767879.xyz/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>进程的描述与控制</title>
-    <link href="http://767879.xyz/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/"/>
-    <id>http://767879.xyz/2022/10/24/jin-cheng-de-miao-shu-yu-kong-zhi/</id>
-    <published>2022-10-24T14:11:15.448Z</published>
-    <updated>2022-10-25T02:47:30.736Z</updated>
-    
-    
-    <summary type="html">操作系统基础</summary>
-    
-    
-    
-    <category term="操作系统" scheme="http://767879.xyz/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-    <category term="操作系统" scheme="http://767879.xyz/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="进程" scheme="http://767879.xyz/tags/%E8%BF%9B%E7%A8%8B/"/>
-    
-    <category term="并行" scheme="http://767879.xyz/tags/%E5%B9%B6%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>操作系统概述</title>
-    <link href="http://767879.xyz/2022/10/24/cao-zuo-xi-tong-gai-shu/"/>
-    <id>http://767879.xyz/2022/10/24/cao-zuo-xi-tong-gai-shu/</id>
-    <published>2022-10-24T13:46:20.969Z</published>
-    <updated>2022-10-25T10:20:28.042Z</updated>
-    
-    
-    <summary type="html">操作系统概述</summary>
-    
-    
-    
-    <category term="操作系统" scheme="http://767879.xyz/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-    <category term="操作系统" scheme="http://767879.xyz/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
