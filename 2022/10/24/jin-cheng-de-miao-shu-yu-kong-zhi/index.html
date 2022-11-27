@@ -347,21 +347,21 @@ a[进程的特征]--&amp;gt;b[动态性] &amp;amp;">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-25
+                    2022-11-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.3k
+                    3.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    14 分
                 </div>
                 
 
@@ -754,6 +754,61 @@ semaphore mutex<span class="token operator">=</span><span class="token number">1
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
+<h1 id="管程"><a href="#管程" class="headerlink" title="管程"></a>管程</h1><h4 id="引入管程的原因"><a href="#引入管程的原因" class="headerlink" title="引入管程的原因"></a>引入管程的原因</h4><ol>
+<li>信号量机制存在编写程序困难、易出错的问题</li>
+<li>需要设计一种机制，让程序员写程序时不需要再关注复杂的PV操作。</li>
+</ol>
+<h4 id="管程机制：为了管理进程的同步、互斥"><a href="#管程机制：为了管理进程的同步、互斥" class="headerlink" title="管程机制：为了管理进程的同步、互斥"></a>管程机制：为了管理进程的同步、互斥</h4><p>管程是一种特殊的软件模块，由以下部分组成：</p>
+<ol>
+<li>局部于管程的<strong>共享数据结构</strong>说明</li>
+<li>对该数据结构进行操作的<strong>一组过程（函数）</strong></li>
+<li>对局部于管程的共享数据设置初始值的语句</li>
+<li>管程有一个名字</li>
+</ol>
+<p>管程的特点：</p>
+<ol>
+<li>管程中定义的共享数据结构，只能通过管程中定义的函数进行修改。</li>
+<li>同一时间，只能有一个进程调用管程中的某一函数。</li>
+</ol>
+<p>使用管程解决生产者消费者问题</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">monitor ProducerConsumer
+condition full<span class="token punctuation">,</span> empty<span class="token punctuation">;</span> <span class="token comment">// 条件变量用来实现同步(排队)</span>
+<span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// 缓冲凶中的产品数</span>
+<span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span>Item item<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// 把产品item放入缓冲区</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">==</span> N<span class="token punctuation">)</span>
+		<span class="token function">wait</span> <span class="token punctuation">(</span>full<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	count<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token function">insert_item</span> <span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>
+		<span class="token function">signal</span><span class="token punctuation">(</span>empty<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+Item <span class="token function">remove</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 从缓冲区中取出一个产品</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token function">wait</span> <span class="token punctuation">(</span>empty <span class="token punctuation">)</span> <span class="token punctuation">;</span>
+	count<span class="token operator">--</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">==</span> N <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+		<span class="token function">signal</span><span class="token punctuation">(</span>full<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token function">remove_item</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+end monitor<span class="token punctuation">;</span>
+
+
+<span class="token comment">//生产者进程</span>
+<span class="token function">producer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        item <span class="token operator">=</span> 生产一个产品<span class="token punctuation">;</span>
+        ProdecerConsumer<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>iterm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//消费者进程</span>
+<span class="token function">consumer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        item <span class="token operator">=</span> ProdecerConsumer<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        消费产品item<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -1122,7 +1177,7 @@ semaphore mutex<span class="token operator">=</span><span class="token number">1
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">16k</span>
+                        class="white-color">17k</span>
             
             
             

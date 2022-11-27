@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="内存非连续分配管理方式, 朝花朝拾">
-    <meta name="description" content="基本分页管理将内存空间分为一个个大小相等的小分区，每个分区就是一个“页框”、“页帧”、“内存块”、“物理块”，页框一般比较小。每个页框都有一个编号，即“页框号”。将用户进程的地址也分为与页框大小相等的一个个区域，称为“页”或“页面”，每个页">
+    <meta name="keywords" content="基本分页管理和基本分段存储管理, 朝花朝拾">
+    <meta name="description" content="基本分页管理将内存空间分为一个个大小相等的小分区，每个分区就是一个“页框”、“页帧”、“内存块”、“物理块”，页框一般比较小。每个页框都有一个编号，即“页框号”。
+将用户进程的地址也分为与页框大小相等的一个个区域，称为“页”或“页面”，每个">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>内存非连续分配管理方式 | 朝花朝拾</title>
+    <title>基本分页管理和基本分段存储管理 | 朝花朝拾</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -273,12 +274,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">内存非连续分配管理方式</h1>
+                    <h1 class="description center-align post-title">基本分页管理和基本分段存储管理</h1>
                 </div>
             </div>
         </div>
@@ -334,21 +335,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-13
+                    2022-11-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    235
+                    949
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -366,14 +367,39 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="基本分页管理"><a href="#基本分页管理" class="headerlink" title="基本分页管理"></a>基本分页管理</h3><p>将内存空间分为一个个大小相等的小分区，每个分区就是一个“页框”、“页帧”、“内存块”、“物理块”，页框一般比较小。每个页框都有一个编号，即“页框号”。将用户进程的地址也分为与页框大小相等的一个个区域，称为“页”或“页面”，每个页面也有一个编号，即“页号”。</p>
+                <h3 id="基本分页管理"><a href="#基本分页管理" class="headerlink" title="基本分页管理"></a>基本分页管理</h3><p>将内存空间分为一个个大小相等的小分区，每个分区就是一个“页框”、“页帧”、“内存块”、“物理块”，页框一般比较小。每个页框都有一个编号，即“页框号”。</p>
+<p>将用户进程的地址也分为与页框大小相等的一个个区域，称为“页”或“页面”，每个页面也有一个编号，即“页号”。</p>
 <blockquote>
 <p>如何实现地址的转换？</p>
 </blockquote>
 <p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/202211061958007.png" alt="地址的转换"></p>
+<p>分页存储管理的<strong>逻辑地质结构</strong>如下所示：</p>
+<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/202211272114681.png" alt="image-20221127211125853"></p>
 <p>为了能知道进程的每个页面在内存中从存放的位置，操作系统要为每个进程建立一张页表。进程的每一页对应一个页表项，每个页表项由页号和快好==块号组成，页表记录进程页面和实际存放的内存块之间的对应关系。</p>
 <h4 id="基本地址变换机构"><a href="#基本地址变换机构" class="headerlink" title="基本地址变换机构"></a>基本地址变换机构</h4><p>用于实现逻辑地址到物理地址转换的一组硬件机构</p>
 <p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/202211062015881.png" alt="image-20221106201413261"></p>
+<h4 id="具有快表的地址变换机构"><a href="#具有快表的地址变换机构" class="headerlink" title="具有快表的地址变换机构"></a>具有快表的地址变换机构</h4><p><strong>时间局部性</strong>：如果执行了程序中的某条指令，那么不久后这条指令很可能再次执行；如果某个数据被访问过，不久之后该数据很可能再次被访问（循环结构）。</p>
+<p><strong>空间局部性</strong>：一旦程序访问了某个存储单元，在不久之后，其附近的存储单元也很有可能被访问（连续存储的数组）。</p>
+<p><strong>快表：</strong>又称为联想寄存器（TLB），是一种访问速度比内存快很多的告诉缓冲存储器，用来访问的若干页表项，以加速地址变换的过程。与此对应，内存中的页表称为<strong>慢表</strong>。</p>
+<ol>
+<li>CPU给出逻辑地址，由某个硬件算得页号、页内偏移量，将页号与快表中的所有页号进行比较。</li>
+<li>如果找到匹配的页号，说明要访问的页表项在快表中有副本，则直接从中取得该页对应的内存块号，再将内存块号与页内偏移量拼接成物理地址，最后，访问该物理地址对应的内存单元。因此，若<strong>快表命中</strong>，则访问某个逻辑地址仅需<strong>一次访存</strong>即可。</li>
+<li>如果没有找到匹配的页号，则需要<strong>访问内存中的页表</strong>，找到对应的页表项，得到页面存放的内存块号，再将内存块号与页内偏移量拼接形成物理地址，最后，访问该物理地址对应的内存单元。因此，若快表未命中，则访问某个逻辑地址需要<strong>两次访存</strong>，（找到页表项后，应同时将其存入快表）。但若快表已满，则必须按照一定的算法对旧的页表项进行替换。</li>
+</ol>
+<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/202211272132982.png" alt="image-20221127213158467"></p>
+<h4 id="两级页表"><a href="#两级页表" class="headerlink" title="两级页表"></a>两级页表</h4><h5 id="单级页表问题："><a href="#单级页表问题：" class="headerlink" title="单级页表问题："></a>单级页表问题：</h5><ol>
+<li><p>页表必须连续存放，因此当页表很大时，需要占用很多个连续的页框。</p>
+<p><strong>将页表拆分成若干小页表，然后为小页表建立上级页表（页表目录）</strong></p>
+</li>
+<li><p>没有必要让整个页表常驻内存，因为进程在一段时间内可能只需要访问某几个特定的页面。</p>
+<p><strong>给页表增加标志位，记录是否被调入内存</strong></p>
+</li>
+</ol>
+<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/202211272152152.png" alt="image-20221127215126441"></p>
+<h4 id="基本分段存储管理"><a href="#基本分段存储管理" class="headerlink" title="基本分段存储管理"></a>基本分段存储管理</h4><p>进程的地址空间：按照程序自身的逻辑关系划分为若干个段，每个段都有一个段名，每段从0开始编址。</p>
+<p>内存分配规则：以段为单位进行分配，每个段在内存中占据连续空间，但各段之间不相邻。</p>
+<p><img src="https://yjhui.oss-cn-qingdao.aliyuncs.com/img/202211272206237.png" alt="image-20221127215953499"></p>
+<p><strong>分段系统的逻辑地址由段号（段名）和段内地址（段内偏移量）所组成。</strong></p>
 
                 
             </div>
@@ -723,7 +749,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">16k</span>
+                        class="white-color">17k</span>
             
             
             
